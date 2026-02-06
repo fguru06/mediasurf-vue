@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <defs>
+    <style>
+      .text { font-family: sans-serif; font-weight: bold; fill: #0f172a; }
+      .subtext { font-family: sans-serif; fill: #0f172a; }
+    </style>
+  </defs>
+  
+  <!-- Graphic Icon above -->
+  <g transform="translate(130, 5) scale(0.6)">
+    <!-- Top Left Blue -->
+    <path d="M50 50 L50 0 A50 50 0 0 0 0 50 Z" fill="#0ea5e9"/>
+    <!-- Top Right Orange -->
+    <path d="M54 50 L54 0 A50 50 0 0 1 104 50 Z" fill="#f97316"/>
+    <!-- Bottom Green -->
+    <path d="M0 54 L104 54 A52 25 0 0 1 0 54 Z" fill="#84cc16"/>
+  </g>
+
+  <!-- Main Text -->
+  <text x="150" y="75" text-anchor="middle" class="text" font-size="32" letter-spacing="2">MEDIASURF</text>
+  
+  <!-- Stylized A (Arc) overlay -->
+  <!-- Covering the A in MEDIA roughly -->
+  
+  <!-- Subtext -->
+  <text x="150" y="95" text-anchor="middle" class="subtext" font-size="10" letter-spacing="4">TECHNOLOGIES</text>
+</svg>
