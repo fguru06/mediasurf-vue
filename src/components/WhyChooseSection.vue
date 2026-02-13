@@ -32,10 +32,10 @@
             </div>
           </div>
 
-          <button class="btn-learn-more">
+          <router-link to="/about" class="btn-learn-more">
             Learn More About Us
             <span class="arrow">→</span>
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -169,6 +169,7 @@ export default {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
+  text-decoration: none;
   transition: all 0.3s;
 }
 

@@ -13,8 +13,8 @@
             MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training, onboarding, and educational excellence.
           </p>
           <div class="hero-actions">
-            <button class="btn-primary-lg">Get Started</button>
-            <button class="btn-secondary-lg">Learn More</button>
+            <router-link to="/contact#contact-form" class="btn-primary-lg">Get Started</router-link>
+            <router-link to="/about" class="btn-secondary-lg">Learn More</router-link>
           </div>
         </div>
         
@@ -141,6 +141,10 @@ export default {
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
@@ -159,6 +163,10 @@ export default {
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
 }
 

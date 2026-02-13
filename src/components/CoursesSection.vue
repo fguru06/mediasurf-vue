@@ -44,14 +44,14 @@
                 <span class="price-current">${{ course.price }}</span>
                 <span class="price-original" v-if="course.originalPrice">${{ course.originalPrice }}</span>
               </div>
-              <button class="btn-enroll">Get Quote</button>
+              <router-link to="/contact#contact-form" class="btn-enroll">Get Quote</router-link>
             </div>
           </div>
         </div>
       </div>
 
       <div class="courses-cta">
-        <button class="btn-view-all">View All Services →</button>
+        <router-link to="/#courses" class="btn-view-all">View All Services →</router-link>
       </div>
     </div>
   </section>
@@ -376,6 +376,10 @@ export default {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
 }
 
@@ -398,6 +402,10 @@ export default {
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
 }
 

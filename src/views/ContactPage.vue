@@ -30,7 +30,7 @@
               </svg>
             </div>
             <h3>Email</h3>
-            <p>info@mediasurf.tech</p>
+            <p>info@mediasurf.ca</p>
           </div>
 
           <div class="contact-card">
@@ -40,7 +40,7 @@
               </svg>
             </div>
             <h3>Phone</h3>
-            <p>+1 (555) 123-4567</p>
+            <p>+1 (647) 849-9656</p>
           </div>
 
           <div class="contact-card">
@@ -51,7 +51,7 @@
               </svg>
             </div>
             <h3>Location</h3>
-            <p>San Francisco, CA</p>
+            <p>Waterloo, Ontario, Canada</p>
           </div>
         </div>
       </div>
@@ -265,7 +265,7 @@
         <div class="cta-content">
           <h2>Prefer to Schedule a Call?</h2>
           <p>Book a free 30-minute consultation to discuss your project requirements<br>and see how we can help.</p>
-          <button class="cta-button">Schedule a Consultation</button>
+          <a href="#contact-form" class="cta-button">Schedule a Consultation</a>
         </div>
       </div>
     </section>
@@ -713,6 +713,10 @@ export default {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
 }
 

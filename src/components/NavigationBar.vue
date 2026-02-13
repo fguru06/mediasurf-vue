@@ -39,8 +39,8 @@
         </div>
         
         <div class="nav-actions">
-          <button class="btn-secondary">Client Portal</button>
-          <button class="btn-primary">Get Quote</button>
+          <router-link to="/contact" class="btn-secondary">Client Portal</router-link>
+          <router-link to="/contact#contact-form" class="btn-primary">Get Quote</router-link>
         </div>
         
         <button class="menu-toggle" @click="toggleMenu">
@@ -167,6 +167,10 @@ export default {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
 }
 
@@ -183,6 +187,10 @@ export default {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s;
 }
 
