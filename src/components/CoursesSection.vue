@@ -2,7 +2,7 @@
   <section id="courses" class="courses">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">� Our Services</div>
+        <div class="section-badge">🧭 Our Services</div>
         <h2 class="section-title">Tailored Solutions for Your Business</h2>
         <p class="section-description">
           Comprehensive training development services designed to elevate your team
@@ -154,16 +154,6 @@ export default {
   margin-bottom: 4rem;
 }
 
-.section-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-  color: var(--primary);
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
 
 /* Typography styles inherited from global section-title and section-description */
 

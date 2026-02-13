@@ -19,6 +19,8 @@
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   --gradient-surface: linear-gradient(to bottom right, #f9fafb, #dbeafe);
+  --gradient-hero: linear-gradient(135deg, #2563eb 0%, #1d4ed8 60%, #38bdf8 100%);
+  --gradient-accent: linear-gradient(90deg, #93c5fd 0%, #38bdf8 100%);
   
   /* Spacing */
   --section-spacing: clamp(4rem, 8vw, 6rem); /* Responsive spacing for sections */
@@ -90,6 +92,22 @@ body {
   margin: 0 auto 3rem;
   text-align: center;
   line-height: 1.6;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
 }
 
 .btn-primary {

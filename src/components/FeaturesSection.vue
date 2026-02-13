@@ -29,7 +29,7 @@ export default {
     return {
       features: [
         {
-          icon: '�',
+          icon: '💻',
           title: 'Web Development',
           description: 'Custom web-based training platforms and interactive learning management systems.',
           color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
@@ -93,16 +93,6 @@ export default {
   margin-bottom: 4rem;
 }
 
-.section-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-  color: var(--primary);
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
 
 /* Typography styles inherited from global section-title and section-description */
 

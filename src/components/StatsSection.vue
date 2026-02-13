@@ -24,7 +24,7 @@ export default {
     return {
       stats: [
         {
-          icon: '�',
+          icon: '🤝',
           number: '150+',
           label: 'Happy Clients',
           description: 'Companies worldwide trust our solutions',

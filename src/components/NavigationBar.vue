@@ -11,7 +11,7 @@
           <a href="/#courses" @click="closeMenu">Services</a>
           <router-link to="/about" @click="closeMenu">About</router-link>
           <a href="/#features" @click="closeMenu">Solutions</a>
-          <a href="#contact" @click="closeMenu">Contact</a>
+          <router-link to="/contact" @click="closeMenu">Contact</router-link>
         </div>
         
         <div class="nav-actions">
