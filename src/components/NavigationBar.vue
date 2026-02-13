@@ -209,8 +209,6 @@ export default {
   border-radius: 2px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
-
 @media (max-width: 768px) {
   .nav-content {
     padding: 0.55rem 0.8rem;
