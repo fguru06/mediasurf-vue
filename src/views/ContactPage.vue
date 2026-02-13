@@ -181,6 +181,20 @@
                     <circle cx="12" cy="12" r="10"/>
                     <polyline points="12 6 12 12 16 14"/>
                   </svg>
+                  <span>AI Learning Assistants & Automation</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span>Research-Driven Decision Support</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
                   <span>Content Migration Services</span>
                 </li>
               </ul>
@@ -304,6 +318,18 @@ export default {
   padding: 5rem 0;
   text-align: center;
   overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&h=900&fit=crop');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.14;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 .hero-bg-pattern {

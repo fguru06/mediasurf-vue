@@ -65,6 +65,18 @@ export default {
           color: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
         },
         {
+          icon: '🤖',
+          title: 'AI Learning Assistants',
+          description: 'Automated coaching, content recommendations, and workflow-friendly learning support.',
+          color: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
+        },
+        {
+          icon: '🧠',
+          title: 'Research & Decision Support',
+          description: 'Evidence-based learning strategy, assessment insights, and performance analytics.',
+          color: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)'
+        },
+        {
           icon: '🎨',
           title: 'Custom Design',
           description: 'Branded learning experiences that align with your company\'s visual identity.',

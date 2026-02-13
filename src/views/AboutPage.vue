@@ -12,7 +12,8 @@
           </h1>
           <p class="hero-description">
             We're a team of passionate developers and learning experts dedicated to 
-            transforming corporate education through innovative technology solutions.
+            transforming corporate education through innovative technology solutions,
+            including AI-assisted learning and research-driven insights.
           </p>
           <div class="hero-stats">
             <div class="hero-stat">
@@ -88,7 +89,7 @@
             <p class="text-content">
               MediaSurf Technologies is a specialized consulting firm that bridges the gap 
               between technology and corporate learning. Our team brings together expertise 
-              in web development, instructional design, and educational technology.
+              in web development, instructional design, AI learning tools, and educational technology.
             </p>
             <p class="text-content">
               We work on a contractual basis with organizations of all sizes, from startups 
@@ -230,6 +231,8 @@ const expertise = ref([
   'Learning Management Systems (LMS)',
   'Interactive Course Development',
   'Custom Web Applications',
+  'AI Learning Assistants & Automation',
+  'Learning Analytics & Decision Support',
   'Mobile-Responsive Design',
   'Assessment & Quiz Platforms',
   'Video-Based Learning',
@@ -256,6 +259,18 @@ const expertise = ref([
   background: var(--gradient-hero);
   padding: 5rem 0;
   overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&h=900&fit=crop');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 .hero-bg-pattern {
@@ -358,6 +373,10 @@ const expertise = ref([
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+.hero-stat .stat-label {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Mission & Vision Section */

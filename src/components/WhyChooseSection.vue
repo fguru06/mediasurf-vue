@@ -65,6 +65,12 @@ export default {
           title: 'Fast Delivery',
           description: 'Efficient project timelines without compromising quality',
           color: '#dbeafe'
+        },
+        {
+          icon: '🧠',
+          title: 'AI + Research Depth',
+          description: 'Expertise in learning analytics, evaluation, and complex decision support',
+          color: '#dbeafe'
         }
       ]
     }

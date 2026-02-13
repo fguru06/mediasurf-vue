@@ -63,6 +63,17 @@ export default {
   min-height: 90vh;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.18'%3E%3Cpath d='M60 0v120M0 60h120'/%3E%3C/g%3E%3Ccircle cx='60' cy='60' r='18' stroke='%23ffffff' stroke-opacity='0.2' fill='none'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 .container {
@@ -77,6 +88,8 @@ export default {
   grid-template-columns: 1fr 1.1fr;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {

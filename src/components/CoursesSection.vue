@@ -12,6 +12,10 @@
       <div class="courses-grid">
         <div class="course-card" v-for="(course, index) in courses" :key="index">
           <div class="course-image" :style="{ background: course.gradient }">
+            <div class="course-hero">
+              <div class="course-hero-icon">{{ course.icon }}</div>
+              <div class="course-hero-label">{{ course.category }}</div>
+            </div>
             <div class="course-badge">{{ course.level }}</div>
           </div>
           <div class="course-content">
@@ -63,6 +67,7 @@ export default {
           title: 'Custom LMS Development',
           description: 'Full-featured learning management system tailored to your organization with user management, progress tracking, and analytics.',
           category: 'Web Development',
+          icon: '🧩',
           level: 'Enterprise',
           rating: '5.0',
           students: '50+ Clients',
@@ -76,6 +81,7 @@ export default {
           title: 'Employee Onboarding Program',
           description: 'Complete onboarding solution including welcome modules, company culture training, role-specific content, and interactive quizzes.',
           category: 'Corporate Training',
+          icon: '👋',
           level: 'All Levels',
           rating: '4.9',
           students: '80+ Clients',
@@ -89,6 +95,7 @@ export default {
           title: 'Interactive E-Learning Modules',
           description: 'Engaging multimedia content with videos, animations, simulations, and gamification elements for any topic.',
           category: 'E-Learning Content',
+          icon: '🎓',
           level: 'Custom',
           rating: '4.8',
           students: '120+ Clients',
@@ -102,6 +109,7 @@ export default {
           title: 'Technical Skills Training',
           description: 'Comprehensive training programs for software development, web technologies, and IT skills customized for your team.',
           category: 'Technical Training',
+          icon: '💻',
           level: 'Intermediate',
           rating: '4.9',
           students: '65+ Clients',
@@ -115,6 +123,7 @@ export default {
           title: 'Compliance & Safety Training',
           description: 'Industry-specific compliance training with certification tracking, regulatory updates, and automated reporting.',
           category: 'Compliance',
+          icon: '✅',
           level: 'Required',
           rating: '4.7',
           students: '95+ Clients',
@@ -128,6 +137,7 @@ export default {
           title: 'Quiz & Assessment Platform',
           description: 'Advanced assessment tools with multiple question types, adaptive testing, instant feedback, and detailed analytics.',
           category: 'Quiz Development',
+          icon: '📝',
           level: 'All Levels',
           rating: '5.0',
           students: '70+ Clients',
@@ -136,6 +146,34 @@ export default {
           price: 'Custom',
           originalPrice: null,
           gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
+        },
+        {
+          title: 'AI-Enabled Learning Analytics',
+          description: 'Predictive insights, skills gap detection, and automated coaching recommendations for teams.',
+          category: 'AI & Analytics',
+          icon: '🤖',
+          level: 'Enterprise',
+          rating: '4.9',
+          students: '40+ Clients',
+          duration: '6-8 weeks',
+          lessons: 'Custom Scope',
+          price: 'Custom',
+          originalPrice: null,
+          gradient: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
+        },
+        {
+          title: 'Learning Research & Decision Support',
+          description: 'Program evaluation, assessment validity, and research-backed strategy for complex learning decisions.',
+          category: 'Research',
+          icon: '🧠',
+          level: 'Strategic',
+          rating: '4.8',
+          students: '30+ Clients',
+          duration: '4-6 weeks',
+          lessons: 'Custom Scope',
+          price: 'Custom',
+          originalPrice: null,
+          gradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)'
         }
       ]
     }
@@ -184,6 +222,53 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.course-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.22'%3E%3Cpath d='M60 0v120M0 60h120'/%3E%3C/g%3E%3Ccircle cx='60' cy='60' r='16' stroke='%23ffffff' stroke-opacity='0.25' fill='none'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.course-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.course-hero-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-hero-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .course-badge {
