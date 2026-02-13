@@ -1,7 +1,7 @@
 <template>
   <div class="about-page">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section reveal-on-scroll">
       <div class="hero-bg-pattern"></div>
       <div class="container">
         <div class="hero-content">
@@ -34,7 +34,7 @@
     </section>
 
     <!-- Mission & Vision -->
-    <section class="mission-vision-section">
+    <section class="mission-vision-section reveal-on-scroll">
       <div class="container">
         <div class="cards-grid">
           <div class="mission-card modern-card">
@@ -81,7 +81,7 @@
     </section>
 
     <!-- Team Image Section -->
-    <section class="team-section">
+    <section class="team-section reveal-on-scroll">
       <div class="container">
         <div class="team-grid">
           <div class="team-content">
@@ -118,7 +118,7 @@
     </section>
 
     <!-- Values Section -->
-    <section class="values-section">
+    <section class="values-section reveal-on-scroll">
       <div class="container">
         <div class="section-header">
           <span class="section-badge">Our Values</span>
@@ -180,7 +180,7 @@
     </section>
 
     <!-- Expertise Section -->
-    <section class="expertise-section">
+    <section class="expertise-section reveal-on-scroll">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Our Expertise</h2>
@@ -197,7 +197,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section reveal-on-scroll">
       <div class="cta-overlay"></div>
       <div class="container">
         <div class="cta-content">
@@ -225,7 +225,36 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+
+let observer;
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.reveal-on-scroll');
+  if (!elements.length) {
+    return;
+  }
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
+
+onBeforeUnmount(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 
 const expertise = ref([
   'Learning Management Systems (LMS)',

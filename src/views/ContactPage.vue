@@ -1,7 +1,7 @@
 <template>
   <div class="contact-page">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section reveal-on-scroll">
       <div class="hero-bg-pattern"></div>
       <div class="container">
         <div class="hero-content">
@@ -19,7 +19,7 @@
     </section>
 
     <!-- Contact Info Cards -->
-    <section class="contact-info-section">
+    <section class="contact-info-section reveal-on-scroll">
       <div class="container">
         <div class="contact-cards">
           <div class="contact-card">
@@ -58,7 +58,7 @@
     </section>
 
     <!-- Main Content Section -->
-    <section class="main-content-section">
+    <section class="main-content-section reveal-on-scroll">
       <div class="container">
         <div class="content-grid">
           <!-- Contact Form -->
@@ -260,7 +260,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="cta-section">
+    <section class="cta-section reveal-on-scroll">
       <div class="container">
         <div class="cta-content">
           <h2>Prefer to Schedule a Call?</h2>
@@ -283,7 +283,33 @@ export default {
         company: '',
         phone: '',
         message: ''
-      }
+      },
+      observer: null
+    }
+  },
+  mounted() {
+    const elements = this.$el.querySelectorAll('.reveal-on-scroll');
+    if (!elements.length) {
+      return;
+    }
+
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            this.observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    elements.forEach((el) => this.observer.observe(el));
+  },
+  beforeUnmount() {
+    if (this.observer) {
+      this.observer.disconnect();
     }
   },
   methods: {
