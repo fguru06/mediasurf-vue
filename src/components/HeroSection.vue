@@ -178,12 +178,14 @@ export default {
 .hero-image {
   position: relative;
   animation: fadeInRight 0.8s ease-out;
+  padding-top: 1.5rem;
 }
 
 .image-grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .main-image {
