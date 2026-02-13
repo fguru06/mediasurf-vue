@@ -8,8 +8,8 @@
             Let's discuss how we can create custom e-learning solutions that engage your team and drive results.
           </p>
           <div class="cta-actions">
-            <button class="btn-primary-lg">Get Started Today</button>
-            <button class="btn-secondary-lg">Schedule a Consultation</button>
+            <router-link to="/contact" class="btn-primary-lg">Get Started Today</router-link>
+            <router-link to="/contact#contact-form" class="btn-secondary-lg">Schedule a Consultation</router-link>
           </div>
           <div class="cta-features">
             <div class="feature-item">✓ Free consultation</div>
@@ -179,6 +179,10 @@ export default {
   border-radius: 12px;
   font-weight: 700;
   font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -196,6 +200,10 @@ export default {
   border-radius: 12px;
   font-weight: 700;
   font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
   backdrop-filter: blur(10px);
