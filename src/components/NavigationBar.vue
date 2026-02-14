@@ -121,7 +121,7 @@ export default {
 }
 
 .logo-image {
-  height: clamp(42px, 5vw, 55px);
+  height: clamp(48px, 5.6vw, 64px);
   width: auto;
 }
 
