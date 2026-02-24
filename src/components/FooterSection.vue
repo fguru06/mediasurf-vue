@@ -115,7 +115,7 @@ export default {
 <style scoped>
 .cta-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  background: var(--bg-light);
 }
 
 .container {
@@ -125,11 +125,16 @@ export default {
 }
 
 .cta-card {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: var(--gradient-primary);
   border-radius: 24px;
   padding: 4rem;
   position: relative;
   overflow: hidden;
+}
+
+:root[data-theme="black"] .cta-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
 }
 
 .cta-card::before {
@@ -153,6 +158,10 @@ export default {
   font-weight: 800;
   color: white;
   margin-bottom: 1rem;
+}
+
+:root[data-theme="black"] .cta-title {
+  color: white;
 }
 
 .cta-description {
@@ -185,6 +194,11 @@ export default {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .btn-primary-lg {
+  background: white;
+  color: black;
 }
 
 .btn-primary-lg:hover {

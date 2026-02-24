@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .stats {
   padding: var(--section-spacing) 0;
-  background: var(--gradient-primary);
+  background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
 }

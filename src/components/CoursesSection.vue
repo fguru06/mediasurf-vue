@@ -203,12 +203,13 @@ export default {
 }
 
 .course-card {
-  background: white;
+  background: var(--bg-white);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
   cursor: pointer;
+  border: 1px solid #e5e7eb;
 }
 
 .course-card:hover {
@@ -266,6 +267,7 @@ export default {
   letter-spacing: 0.6px;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.2);
+  color: white;
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -295,7 +297,7 @@ export default {
 }
 
 .course-category {
-  background: #eff6ff;
+  background: var(--bg-light);
   color: var(--primary);
   padding: 0.3rem 0.8rem;
   border-radius: 6px;
@@ -305,19 +307,19 @@ export default {
 
 .course-rating {
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .course-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 0.8rem;
   line-height: 1.3;
 }
 
 .course-description {
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 1.2rem;
@@ -337,7 +339,7 @@ export default {
   align-items: center;
   gap: 0.4rem;
   font-size: 0.9rem;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .stat-icon {
@@ -371,7 +373,7 @@ export default {
 .btn-enroll {
   padding: 0.7rem 1.5rem;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color: white;
+  color: var(--text-on-primary);
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -407,6 +409,17 @@ export default {
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .btn-view-all {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+:root[data-theme="black"] .btn-view-all:hover {
+  background: white;
+  color: black;
 }
 
 .btn-view-all:hover {

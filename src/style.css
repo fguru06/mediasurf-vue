@@ -18,6 +18,7 @@
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-light: #9ca3af;
+  --text-on-primary: #ffffff;
   
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -50,9 +51,21 @@
 }
 
 :root[data-theme="black"] {
-  --primary: #111111;
-  --primary-rgb: 17, 17, 17;
-  --primary-dark: #000000;
+  --bg-white: #000000;
+  --bg-light: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-light: #888888;
+  --text-on-primary: #000000;
+  
+  --primary: #ffffff;
+  --primary-rgb: 255, 255, 255;
+  --primary-dark: #e0e0e0;
+  --primary-light: #333333;
+  
+  --gradient-surface: linear-gradient(to bottom right, #121212, #000000);
+  --gradient-hero: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  --gradient-accent: linear-gradient(90deg, #333333 0%, #666666 100%);
 }
 
 body {
@@ -125,13 +138,20 @@ body {
   box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.08);
 }
 
+:root[data-theme="black"] .section-badge {
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #333;
+  box-shadow: none;
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
   background: var(--primary);
-  color: white;
+  color: var(--text-on-primary);
   border-radius: 0.5rem;
   font-weight: 600;
   transition: all 0.3s ease;

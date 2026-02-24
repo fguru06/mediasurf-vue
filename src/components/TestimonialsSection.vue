@@ -106,7 +106,7 @@ export default {
 }
 
 .testimonial-card {
-  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  background: var(--gradient-surface);
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid #e5e7eb;

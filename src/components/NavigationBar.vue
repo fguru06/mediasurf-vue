@@ -100,6 +100,12 @@ export default {
   padding: 0.75rem 0;
 }
 
+:root[data-theme="black"] .navbar {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -125,6 +131,10 @@ export default {
   width: auto;
 }
 
+:root[data-theme="black"] .logo-image {
+  filter: brightness(0) invert(1);
+}
+
 .nav-links {
   display: flex;
   gap: clamp(0.75rem, 2.4vw, 2rem);
@@ -146,11 +156,22 @@ export default {
   position: relative;
 }
 
+:root[data-theme="black"] .nav-links a {
+  color: #cccccc;
+}
+
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--primary-dark);
   background: rgba(var(--primary-rgb), 0.12);
   box-shadow: inset 0 0 0 1px rgba(var(--primary-rgb), 0.2);
+}
+
+:root[data-theme="black"] .nav-links a:hover,
+:root[data-theme="black"] .nav-links a.active {
+  color: black;
+  background: white;
+  box-shadow: none;
 }
 
 .nav-actions {
@@ -174,6 +195,17 @@ export default {
   transition: all 0.3s;
 }
 
+:root[data-theme="black"] .btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+:root[data-theme="black"] .btn-secondary:hover {
+    background: white;
+    color: black;
+}
+
 .btn-secondary:hover {
   background: var(--primary);
   color: white;
@@ -192,6 +224,16 @@ export default {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s;
+}
+
+:root[data-theme="black"] .btn-primary {
+    background: white;
+    color: black;
+}
+
+:root[data-theme="black"] .btn-primary:hover {
+    background: #e0e0e0;
+    color: black;
 }
 
 .btn-primary:hover {

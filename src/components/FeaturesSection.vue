@@ -115,7 +115,7 @@ export default {
 }
 
 .feature-card {
-  background: white;
+  background: var(--bg-white);
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid #e5e7eb;

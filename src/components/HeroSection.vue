@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .hero {
   padding: var(--section-spacing) 0;
-  background: var(--gradient-primary);
+  background: var(--gradient-hero);
   overflow: hidden;
   min-height: 90vh;
   display: flex;
@@ -149,6 +149,10 @@ export default {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
+:root[data-theme="black"] .btn-primary-lg {
+  color: black;
+}
+
 .btn-primary-lg:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
@@ -227,13 +231,13 @@ export default {
 .badge-overlay {
   position: absolute;
   z-index: 10;
-  background: white;
+  background: var(--bg-white);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   font-weight: 600;
   font-size: 0.9rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -247,11 +251,23 @@ export default {
   color: #1e40af;
 }
 
+:root[data-theme="black"] .badge-top {
+  background: linear-gradient(135deg, #333 0%, #000 100%);
+  color: white;
+  border: 1px solid #444;
+}
+
 .badge-bottom {
   bottom: 1.5rem;
   left: 1.5rem;
   background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
   color: #065f46;
+}
+
+:root[data-theme="black"] .badge-bottom {
+  background: linear-gradient(135deg, #222 0%, #111 100%);
+  color: #fff;
+  border: 1px solid #333;
 }
 
 .badge-icon {

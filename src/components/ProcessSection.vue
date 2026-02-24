@@ -96,7 +96,7 @@ export default {
   width: 70px;
   height: 70px;
   background: var(--gradient-primary);
-  color: white;
+  color: var(--text-on-primary);
   font-size: 1.5rem;
   font-weight: 800;
   border-radius: 50%;
@@ -104,13 +104,13 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.2rem;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.3);
   transition: all 0.3s;
 }
 
 .process-step:hover .step-number {
   transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 15px 40px rgba(var(--primary-rgb), 0.4);
 }
 
 .step-title {
