@@ -49,6 +49,12 @@
   --primary-dark: #1d4ed8;
 }
 
+:root[data-theme="black"] {
+  --primary: #111111;
+  --primary-rgb: 17, 17, 17;
+  --primary-dark: #000000;
+}
+
 body {
   margin: 0;
   min-width: 320px;

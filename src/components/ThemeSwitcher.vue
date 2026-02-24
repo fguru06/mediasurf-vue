@@ -5,10 +5,10 @@ const currentTheme = ref('default');
 
 const setTheme = (theme) => {
   currentTheme.value = theme;
-  if (theme === 'legacy') {
-    document.documentElement.setAttribute('data-theme', 'legacy');
-  } else {
+  if (theme === 'default') {
     document.documentElement.removeAttribute('data-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', theme);
   }
   localStorage.setItem('theme', theme);
 };
@@ -35,6 +35,12 @@ onMounted(() => {
       class="theme-btn legacy-theme"
       :class="{ active: currentTheme === 'legacy' }"
       title="Legacy Theme (#2563eb)"
+    ></button>
+    <button 
+      @click="setTheme('black')" 
+      class="theme-btn black-theme"
+      :class="{ active: currentTheme === 'black' }"
+      title="Black Theme (#111111)"
     ></button>
   </div>
 </template>
@@ -93,6 +99,10 @@ onMounted(() => {
 }
 
 .new-theme {
+
+.black-theme {
+  background-color: #111111;
+}
   background-color: #194583;
 }
 
