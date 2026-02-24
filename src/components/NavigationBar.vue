@@ -148,9 +148,9 @@ export default {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #1d4ed8;
-  background: rgba(37, 99, 235, 0.12);
-  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.2);
+  color: var(--primary-dark);
+  background: rgba(var(--primary-rgb), 0.12);
+  box-shadow: inset 0 0 0 1px rgba(var(--primary-rgb), 0.2);
 }
 
 .nav-actions {
@@ -161,9 +161,9 @@ export default {
 
 .btn-secondary {
   padding: 0.6rem 1.5rem;
-  border: 2px solid #2563eb;
+  border: 2px solid var(--primary);
   background: rgba(255, 255, 255, 0.75);
-  color: #2563eb;
+  color: var(--primary);
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -175,13 +175,13 @@ export default {
 }
 
 .btn-secondary:hover {
-  background: #2563eb;
+  background: var(--primary);
   color: white;
 }
 
 .btn-primary {
   padding: 0.6rem 1.5rem;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -196,7 +196,7 @@ export default {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
 }
 
 .menu-toggle {

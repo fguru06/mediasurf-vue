@@ -117,7 +117,7 @@ export default {
 .testimonial-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border-color: #2563eb;
+  border-color: var(--primary);
 }
 
 .quote-icon {

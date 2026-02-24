@@ -493,7 +493,7 @@ export default {
 
 .contact-link {
   font-size: 1.1rem;
-  color: #2563eb;
+  color: var(--primary);
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
@@ -503,7 +503,7 @@ export default {
 }
 
 .contact-link:hover {
-  color: #1d4ed8;
+  color: var(--primary-dark);
 }
 
 /* Main Content Section */

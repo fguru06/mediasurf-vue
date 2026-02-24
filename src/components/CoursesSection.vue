@@ -173,7 +173,7 @@ export default {
           lessons: 'Custom Scope',
           price: 'Custom',
           originalPrice: null,
-          gradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)'
+          gradient: 'linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%)'
         }
       ]
     }
@@ -296,7 +296,7 @@ export default {
 
 .course-category {
   background: #eff6ff;
-  color: #2563eb;
+  color: var(--primary);
   padding: 0.3rem 0.8rem;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -359,7 +359,7 @@ export default {
 .price-current {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #2563eb;
+  color: var(--primary);
 }
 
 .price-original {
@@ -370,7 +370,7 @@ export default {
 
 .btn-enroll {
   padding: 0.7rem 1.5rem;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -385,7 +385,7 @@ export default {
 
 .btn-enroll:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
 }
 
 .courses-cta {
@@ -396,8 +396,8 @@ export default {
 .btn-view-all {
   padding: 1rem 2.5rem;
   background: white;
-  color: #2563eb;
-  border: 2px solid #2563eb;
+  color: var(--primary);
+  border: 2px solid var(--primary);
   border-radius: 12px;
   font-weight: 600;
   font-size: 1.1rem;
@@ -410,10 +410,10 @@ export default {
 }
 
 .btn-view-all:hover {
-  background: #2563eb;
+  background: var(--primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.3);
 }
 
 @media (max-width: 768px) {

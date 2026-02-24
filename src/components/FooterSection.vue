@@ -125,7 +125,7 @@ export default {
 }
 
 .cta-card {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   border-radius: 24px;
   padding: 4rem;
   position: relative;
@@ -174,7 +174,7 @@ export default {
 .btn-primary-lg {
   padding: 1rem 2.5rem;
   background: white;
-  color: #2563eb;
+  color: var(--primary);
   border: none;
   border-radius: 12px;
   font-weight: 700;
@@ -280,7 +280,7 @@ export default {
 }
 
 .social-link:hover {
-  background: #2563eb;
+  background: var(--primary);
   transform: translateY(-3px);
 }
 
@@ -309,7 +309,7 @@ export default {
 }
 
 .footer-links a:hover {
-  color: #2563eb;
+  color: var(--primary);
 }
 
 .footer-bottom {

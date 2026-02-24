@@ -74,7 +74,7 @@ export default {
           icon: '🧠',
           title: 'Research & Decision Support',
           description: 'Evidence-based learning strategy, assessment insights, and performance analytics.',
-          color: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)'
+          color: 'linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%)'
         },
         {
           icon: '🎨',

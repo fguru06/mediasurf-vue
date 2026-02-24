@@ -174,9 +174,9 @@ export default {
 }
 
 .btn-learn-more:hover {
-  background: #2563eb;
+  background: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.3);
 }
 
 .arrow {
