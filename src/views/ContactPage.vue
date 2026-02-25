@@ -432,7 +432,11 @@ export default {
 /* Contact Info Cards */
 .contact-info-section {
   padding: 3rem 0;
-  background: #f7fafc;
+  background: var(--bg-gray-light);
+}
+
+:root[data-theme="black"] .contact-info-section {
+  background: black;
 }
 
 .contact-cards {
@@ -443,12 +447,18 @@ export default {
 }
 
 .contact-card {
-  background: white;
+  background: var(--bg-white);
   border-radius: 12px;
   padding: 2.5rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+:root[data-theme="black"] .contact-card {
+  background: #111;
+  border: 1px solid #333;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
 }
 
 .contact-card:hover {
@@ -482,12 +492,12 @@ export default {
 .contact-card h3 {
   font-size: 1.5rem;
   margin: 0 0 1rem 0;
-  color: #2d3748;
+  color: var(--text-primary);
 }
 
 .contact-card p {
   font-size: 1.1rem;
-  color: #718096;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -509,7 +519,11 @@ export default {
 /* Main Content Section */
 .main-content-section {
   padding: 4rem 0;
-  background: white;
+  background: var(--bg-white);
+}
+
+:root[data-theme="black"] .main-content-section {
+  background: black;
 }
 
 .content-grid {
@@ -523,11 +537,11 @@ export default {
 .form-container h2 {
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
-  color: #2d3748;
+  color: var(--text-primary);
 }
 
 .form-subtitle {
-  color: #718096;
+  color: var(--text-secondary);
   margin: 0 0 2rem 0;
 }
 
@@ -551,7 +565,7 @@ export default {
 
 .form-group label {
   font-weight: 500;
-  color: #4a5568;
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
@@ -562,7 +576,15 @@ export default {
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
-  background: #f7fafc;
+  background: var(--bg-gray-light);
+  color: var(--text-primary);
+}
+
+:root[data-theme="black"] .form-group input,
+:root[data-theme="black"] .form-group textarea {
+  background: #111;
+  border-color: #333;
+  color: white;
 }
 
 .form-group input:focus,
@@ -570,7 +592,12 @@ export default {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-  background: white;
+  background: var(--bg-white);
+}
+
+:root[data-theme="black"] .form-group input:focus,
+:root[data-theme="black"] .form-group textarea:focus {
+  background: #000;
 }
 
 .form-group textarea {
@@ -611,22 +638,44 @@ export default {
 }
 
 .sidebar-card {
-  background: white;
+  background: var(--bg-white);
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 2rem;
 }
 
+:root[data-theme="black"] .sidebar-card {
+  background: #111;
+  border-color: #333;
+}
+
 .sidebar-card h3 {
   font-size: 1.5rem;
   margin: 0 0 0.5rem 0;
-  color: #2d3748;
+  color: var(--text-primary);
 }
 
 .card-subtitle {
-  color: #718096;
+  color: var(--text-secondary);
   margin: 0 0 1.5rem 0;
   font-size: 0.95rem;
+}
+
+/* Services List */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary)5rem;
 }
 
 /* Services List */
@@ -706,7 +755,11 @@ export default {
   justify-content: space-between;
   padding: 0.75rem 0;
   border-bottom: 1px solid #e2e8f0;
-  color: #4a5568;
+  color: var(--text-secondary);
+}
+
+:root[data-theme="black"] .hours-row {
+  border-bottom-color: #333;
 }
 
 .hours-row:last-of-type {
@@ -715,41 +768,45 @@ export default {
 
 .hours-time {
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
 }
 
 .hours-note {
   font-size: 0.875rem;
-  color: #718096;
+  color: var(--text-secondary);
   margin: 0;
   font-style: italic;
 }
 
 /* CTA Section */
 .cta-section {
-  background: #f7fafc;
+  background: var(--bg-gray-light);
   padding: 4rem 0;
   text-align: center;
+}
+
+:root[data-theme="black"] .cta-section {
+  background: black;
 }
 
 .cta-content h2 {
   font-size: 2rem;
   margin: 0 0 1rem 0;
-  color: #2d3748;
+  color: var(--text-primary);
 }
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #718096;
+  color: var(--text-secondary);
   margin: 0 0 2rem 0;
   line-height: 1.6;
 }
 
 .cta-button {
-  background: white;
-  color: #2d3748;
+  background: var(--bg-white);
+  color: var(--text-primary);
   padding: 1rem 2rem;
-  border: 2px solid #2d3748;
+  border: 2px solid var(--text-primary);
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -759,6 +816,23 @@ export default {
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .cta-button {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.cta-button:hover {
+  background: var(--text-primary);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+:root[data-theme="black"] .cta-button:hover {
+  background: white;
+  color: black;
 }
 
 .cta-button:hover {

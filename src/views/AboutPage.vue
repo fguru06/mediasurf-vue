@@ -411,7 +411,11 @@ const expertise = ref([
 /* Mission & Vision Section */
 .mission-vision-section {
   padding: 5rem 0;
-  background: #f9fafb;
+  background: var(--bg-gray-light);
+}
+
+:root[data-theme="black"] .mission-vision-section {
+  background: var(--bg-white);
 }
 
 .cards-grid {
@@ -424,12 +428,18 @@ const expertise = ref([
 
 .modern-card {
   position: relative;
-  background: white;
+  background: var(--bg-white);
   border-radius: 20px;
   padding: 3rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
+}
+
+:root[data-theme="black"] .modern-card {
+  background: #000;
+  border: 1px solid #333;
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.05);
 }
 
 .modern-card:hover {
@@ -486,12 +496,12 @@ const expertise = ref([
 .card-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .card-content p {
-  color: #4b5563;
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1.05rem;
   margin: 0;
@@ -500,7 +510,11 @@ const expertise = ref([
 /* Team Section */
 .team-section {
   padding: 5rem 0;
-  background: white;
+  background: var(--bg-white);
+}
+
+:root[data-theme="black"] .team-section {
+  background: black;
 }
 
 .team-grid {
@@ -513,13 +527,13 @@ const expertise = ref([
 .section-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1f2937;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
 .text-content {
   font-size: 1.125rem;
-  color: #4b5563;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -537,6 +551,11 @@ const expertise = ref([
   border-radius: 16px;
   border: 2px solid #e5e7eb;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .stat-card {
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  border: 1px solid #333;
 }
 
 .stat-card:hover {
@@ -580,7 +599,11 @@ const expertise = ref([
 /* Values Section */
 .values-section {
   padding: 5rem 0;
-  background: white;
+  background: var(--bg-white);
+}
+
+:root[data-theme="black"] .values-section {
+  background: black;
 }
 
 .section-header {
@@ -591,7 +614,7 @@ const expertise = ref([
 
 .section-subtitle {
   font-size: 1.15rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 1rem auto 0;
 }
@@ -605,12 +628,17 @@ const expertise = ref([
 }
 
 .value-card {
-  background: white;
+  background: var(--bg-white);
   border: 2px solid #f3f4f6;
   border-radius: 20px;
   padding: 2.5rem;
   text-align: center;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .value-card {
+  background: #000;
+  border: 1px solid #333;
 }
 
 .value-card:hover {
@@ -658,12 +686,12 @@ const expertise = ref([
 .value-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .value-description {
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.7;
   font-size: 1rem;
 }
@@ -671,7 +699,11 @@ const expertise = ref([
 /* Expertise Section */
 .expertise-section {
   padding: 5rem 0;
-  background: #f9fafb;
+  background: var(--bg-gray-light);
+}
+
+:root[data-theme="black"] .expertise-section {
+  background: black;
 }
 
 .expertise-grid {
@@ -683,7 +715,7 @@ const expertise = ref([
 }
 
 .expertise-item {
-  background: white;
+  background: var(--bg-white);
   padding: 1.25rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -692,6 +724,11 @@ const expertise = ref([
   align-items: center;
   gap: 1rem;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .expertise-item {
+  background: #111;
+  border: 1px solid #333;
 }
 
 .expertise-item:hover {
@@ -709,7 +746,7 @@ const expertise = ref([
 }
 
 .expertise-item span {
-  color: #374151;
+  color: var(--text-primary);
   font-weight: 500;
   font-size: 1.05rem;
 }
