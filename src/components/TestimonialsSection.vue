@@ -40,42 +40,42 @@ export default {
         {
           text: "MediaSurf Tech delivered an exceptional onboarding platform that reduced our new hire ramp-up time by 40%. Their attention to detail and understanding of our business needs was impressive.",
           name: "Sarah Johnson",
-          role: "Head of HR at TechCorp Global",
+          role: "Head of HR at Nebulon Systems",
           initials: "SJ",
           color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
         },
         {
           text: "The custom LMS they built for us has transformed how we train our employees. The platform is intuitive, scalable, and our team engagement has increased significantly. Excellent work!",
           name: "Michael Chen",
-          role: "Learning & Development Director at FinanceHub",
+          role: "Learning & Development Director at Argent Banking",
           initials: "MC",
           color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
         },
         {
           text: "Working with MediaSurf Tech was a game-changer. They created interactive training modules that our employees actually enjoy. The compliance training completion rate went from 60% to 98%!",
           name: "Emily Rodriguez",
-          role: "Chief Operations Officer at MediCare Plus",
+          role: "Chief Operations Officer at Vitality Health Group",
           initials: "ER",
           color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
         },
         {
           text: "Their e-learning content is top-notch. The team understood our technical training needs perfectly and delivered engaging, practical modules that upskilled our entire development team.",
           name: "David Kim",
-          role: "CTO at InnovateTech Solutions",
+          role: "CTO at Kinetic Soft",
           initials: "DK",
           color: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
         },
         {
           text: "Professional, responsive, and creative. MediaSurf Tech exceeded our expectations in every way. The quiz platform they developed has become integral to our certification program.",
           name: "Lisa Anderson",
-          role: "Training Manager at RetailPro International",
+          role: "Training Manager at Meridian Commerce",
           initials: "LA",
           color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
         },
         {
           text: "From concept to deployment, the MediaSurf Tech team was with us every step. The onboarding system they created is modern, mobile-friendly, and has received rave reviews from new hires.",
           name: "James Wilson",
-          role: "VP of People Operations at StartupVentures",
+          role: "VP of People Operations at BlueSky Ventures",
           initials: "JW",
           color: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
         }
