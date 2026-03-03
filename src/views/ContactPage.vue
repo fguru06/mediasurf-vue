@@ -269,6 +269,21 @@
         </div>
       </div>
     </section>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" v-if="showConfirmation" @click.self="showConfirmation = false">
+      <div class="modal-content">
+        <div class="modal-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. We have received your message and will get back to you within 24 hours.</p>
+        <button class="modal-close-btn" @click="showConfirmation = false">Close</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -284,6 +299,7 @@ export default {
         phone: '',
         message: ''
       },
+      showConfirmation: false,
       observer: null
     }
   },
@@ -313,19 +329,42 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
-      console.log('Form submitted:', this.formData);
-      // Add your form submission logic here
-      alert('Thank you for your message! We will get back to you within 24 hours.');
-      
-      // Reset form
-      this.formData = {
-        fullName: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: ''
-      };
+    async handleSubmit() {
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/info@mediasurf.ca", {
+          method: "POST",
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.formData.fullName,
+            email: this.formData.email,
+            company: this.formData.company,
+            phone: this.formData.phone,
+            message: this.formData.message,
+            _subject: `New submission from ${this.formData.fullName}`
+          })
+        });
+
+        if (response.ok) {
+          this.showConfirmation = true;
+          
+          // Reset form
+          this.formData = {
+            fullName: '',
+            email: '',
+            company: '',
+            phone: '',
+            message: ''
+          };
+        } else {
+          alert('There was an issue sending your message. Please try again later or email us directly at info@mediasurf.ca');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('There was an error sending your message. Please try again later.');
+      }
     }
   }
 }
@@ -868,5 +907,122 @@ export default {
   .cta-content h2 {
     font-size: 1.5rem;
   }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Darker overlay for better contrast */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: var(--bg-card, #1f2937);
+  background: linear-gradient(145deg, var(--bg-card, #1f2937), var(--bg-dark, #111827));
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary, #4ade80), var(--secondary, #3b82f6));
+}
+
+.modal-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke-width: 3;
+}
+
+.modal-content h3 {
+  color: var(--text-primary, #f9fafb);
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.modal-content p {
+  color: var(--text-secondary, #d1d5db);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.modal-close-btn {
+  background: var(--primary, #3b82f6);
+  background: linear-gradient(135deg, var(--primary, #3b82f6) 0%, var(--primary-dark, #2563eb) 100%);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+.modal-close-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.modal-close-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px) scale(0.95); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }
 </style>

@@ -9,7 +9,7 @@ const routes = [
     name: 'Home',
     component: HomePage,
     meta: {
-      title: 'Home - MediaSurf Technologies',
+      title: 'Corporate LMS & E-Learning Solutions in Ontario',
       description: 'MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training and educational excellence.',
       keywords: 'MediaSurf Technologies, eLearning, corporate training, LMS development, web development, onboarding, learning analytics',
       image: '/og-image.svg'
@@ -88,25 +88,33 @@ router.beforeEach((to, from, next) => {
       }
       document.head.appendChild(element);
     }
-    element.setAttribute(attrName, content);
+    // Update attribute logic
+    if (content) {
+      element.setAttribute(attrName, content);
+    }
   };
 
   setMeta('meta[name="description"]', meta.description);
   setMeta('meta[name="keywords"]', meta.keywords);
 
-  const canonicalUrl = `${siteUrl}${to.path}`;
+  // Dynamic Canonical URL (ensure no trailing slash unless root)
+  const path = to.path === '/' ? '/' : to.path.replace(/\/$/, '');
+  const canonicalUrl = `${siteUrl}${path}`;
   setMeta('link[rel="canonical"]', canonicalUrl, 'href', 'link');
 
+  // Open Graph
   setMeta('meta[property="og:title"]', meta.title);
   setMeta('meta[property="og:description"]', meta.description);
   setMeta('meta[property="og:url"]', canonicalUrl);
   setMeta('meta[property="og:image"]', `${siteUrl}${meta.image}`);
+  setMeta('meta[property="og:locale"]', 'en_CA'); // Target Ontario/Canada Market
 
+  // Twitter
   setMeta('meta[property="twitter:title"]', meta.title);
   setMeta('meta[property="twitter:description"]', meta.description);
   setMeta('meta[property="twitter:url"]', canonicalUrl);
   setMeta('meta[property="twitter:image"]', `${siteUrl}${meta.image}`);
-  
+
   next();
 });
 

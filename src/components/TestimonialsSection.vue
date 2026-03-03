@@ -10,16 +10,20 @@
       </div>
 
       <div class="testimonials-grid">
-        <div class="testimonial-card" v-for="(testimonial, index) in testimonials" :key="index">
+        <div class="testimonial-card" v-for="(testimonial, index) in testimonials" :key="index" itemscope itemtype="https://schema.org/Review">
           <div class="quote-icon">"</div>
-          <p class="testimonial-text">{{ testimonial.text }}</p>
-          <div class="testimonial-author">
+          <meta itemprop="itemReviewed" content="MediaSurf Technologies Service">
+          <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none;">
+            <meta itemprop="ratingValue" content="5">
+          </div>
+          <p class="testimonial-text" itemprop="reviewBody">{{ testimonial.text }}</p>
+          <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
             <div class="author-avatar" :style="{ background: testimonial.color }">
               {{ testimonial.initials }}
             </div>
             <div class="author-info">
-              <div class="author-name">{{ testimonial.name }}</div>
-              <div class="author-role">{{ testimonial.role }}</div>
+              <div class="author-name" itemprop="name">{{ testimonial.name }}</div>
+              <div class="author-role" itemprop="jobTitle">{{ testimonial.role }}</div>
             </div>
           </div>
           <div class="testimonial-rating">

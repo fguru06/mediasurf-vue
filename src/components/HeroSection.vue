@@ -24,9 +24,9 @@
             <div class="main-image">
               <div class="badge-overlay badge-top">
                 <span class="badge-icon">😊</span>
-                Trusted by 50+ Companies
+                Trusted by Innovative Teams
               </div>
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" alt="Corporate Training" />
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" width="800" height="500" loading="eager" decoding="async" fetchpriority="high" alt="Corporate Training" />
             </div>
             
             <!-- Bottom images -->
@@ -37,7 +37,7 @@
               <div class="small-image">
                 <div class="badge-overlay badge-bottom">
                   <span class="badge-icon">👥</span>
-                  10+ Years Experience
+                  Industry Expertise
                 </div>
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="Professional Training" />
               </div>
