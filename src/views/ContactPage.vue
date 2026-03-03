@@ -970,7 +970,7 @@ export default {
 }
 
 .modal-content h3 {
-  color: var(--text-primary, #f9fafb);
+  color: white;
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
   font-weight: 800;
@@ -978,7 +978,7 @@ export default {
 }
 
 .modal-content p {
-  color: var(--text-secondary, #d1d5db);
+  color: #e5e7eb;
   margin-bottom: 2rem;
   line-height: 1.6;
   font-size: 1.05rem;
