@@ -9,8 +9,8 @@ const routes = [
     name: 'Home',
     component: HomePage,
     meta: {
-      title: 'Corporate LMS & E-Learning Solutions in Ontario',
-      description: 'MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training and educational excellence.',
+      title: 'Custom LMS & Corporate E-Learning Solutions | MediaSurf Technologies',
+      description: 'MediaSurf Technologies provides custom LMS development and e-learning solutions for businesses in Ontario and across Canada.',
       keywords: 'MediaSurf Technologies, eLearning, corporate training, LMS development, web development, onboarding, learning analytics',
       image: '/og-image.svg'
     }

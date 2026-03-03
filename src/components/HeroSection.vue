@@ -26,20 +26,20 @@
                 <span class="badge-icon">😊</span>
                 Trusted by Innovative Teams
               </div>
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" width="800" height="500" loading="eager" decoding="async" fetchpriority="high" alt="Corporate Training" />
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" width="800" height="500" loading="eager" decoding="async" fetchpriority="high" alt="Custom LMS dashboard development for corporate training" />
             </div>
             
             <!-- Bottom images -->
             <div class="bottom-images">
               <div class="small-image">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop" alt="Team Collaboration" />
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop" alt="Corporate team collaboration and compliance training session" />
               </div>
               <div class="small-image">
                 <div class="badge-overlay badge-bottom">
                   <span class="badge-icon">👥</span>
                   Industry Expertise
                 </div>
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="Professional Training" />
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="Professional e-learning development and skill advancement" />
               </div>
             </div>
           </div>

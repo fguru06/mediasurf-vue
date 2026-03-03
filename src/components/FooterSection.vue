@@ -97,7 +97,13 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="copyright">© 2026 MediaSurf Tech. All rights reserved.</p>
+        <div class="footer-legal-line">
+          <p class="copyright">© 2026 MediaSurf Tech. All rights reserved.</p>
+          <div class="compliance-badges">
+            <span class="compliance-badge" title="AODA Compliant Solutions">♿ AODA Compliant</span>
+            <span class="compliance-badge" title="We serve Ontario">🇨🇦 Ontario Built</span>
+          </div>
+        </div>
         <div class="footer-meta">
           <span>Empowering businesses through innovative learning solutions</span>
         </div>
@@ -342,6 +348,35 @@ export default {
 .footer-meta {
   color: #9ca3af;
   font-size: 0.9rem;
+}
+
+.footer-legal-line {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.compliance-badges {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.compliance-badge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  color: #d1d5db;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.compliance-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
 }
 
 @media (max-width: 968px) {
