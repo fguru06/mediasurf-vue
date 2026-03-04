@@ -13,8 +13,8 @@
             MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training, onboarding, and educational excellence.
           </p>
           <div class="hero-actions">
-            <router-link to="/contact#contact-form" class="btn-primary-lg">Get Started</router-link>
-            <router-link to="/about" class="btn-secondary-lg">Learn More</router-link>
+            <router-link to="/contact#contact-form" class="btn-primary-lg" @click="$emit('track', 'hero_get_started')">Get Started</router-link>
+            <router-link to="/about" class="btn-secondary-lg" @click="$emit('track', 'hero_learn_more')">Learn More</router-link>
           </div>
         </div>
         
@@ -51,7 +51,8 @@
 
 <script>
 export default {
-  name: 'HeroSection'
+  name: 'HeroSection',
+  emits: ['track']
 }
 </script>
 

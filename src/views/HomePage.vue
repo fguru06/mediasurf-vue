@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <div class="reveal-on-scroll">
-      <HeroSection />
+      <HeroSection @track="trackEvent" />
     </div>
     <div class="reveal-on-scroll">
       <FeaturesSection />
@@ -33,6 +33,15 @@ import WhyChooseSection from '../components/WhyChooseSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import TestimonialsSection from '../components/TestimonialsSection.vue';
 import StatsSection from '../components/StatsSection.vue';
+
+const trackEvent = (label) => {
+  if (window.gtag) {
+    window.gtag('event', 'click', {
+      event_category: 'home_engagement',
+      event_label: label
+    });
+  }
+};
 
 let observer;
 

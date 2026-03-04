@@ -115,6 +115,14 @@ router.beforeEach((to, from, next) => {
   setMeta('meta[property="twitter:url"]', canonicalUrl);
   setMeta('meta[property="twitter:image"]', `${siteUrl}${meta.image}`);
 
+  // Google Analytics Page View
+  if (window.gtag) {
+    window.gtag('config', 'G-310ZB3F2R7', {
+      page_path: to.path,
+      page_title: meta.title
+    });
+  }
+
   next();
 });
 

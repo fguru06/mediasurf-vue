@@ -348,6 +348,12 @@ export default {
         });
 
         if (response.ok) {
+          if (window.gtag) {
+            window.gtag('event', 'generate_lead', {
+              event_category: 'form',
+              event_label: 'contact_form_success'
+            });
+          }
           this.showConfirmation = true;
           
           // Reset form
