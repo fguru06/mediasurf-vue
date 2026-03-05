@@ -14,7 +14,7 @@
           </p>
           <p class="hero-highlight">
             🛠️ <span class="hero-highlight-label">Coming Soon</span>
-            MediaSurf Technologies creates custom authoring tools for e-learning, SEO, and other business needs—enabling instructors and companies to define requirements, generate outputs in multiple formats, and use AI to accelerate content and style creation.
+            MediaSurf Tech creates custom authoring tools for e-learning, SEO, and other business needs—enabling instructors and companies to define requirements, generate outputs in multiple formats, and use AI to accelerate content and style creation.
           </p>
           <div class="hero-actions">
             <router-link to="/contact#contact-form" class="btn-primary-lg" @click="$emit('track', 'hero_get_started')">Get Started</router-link>
