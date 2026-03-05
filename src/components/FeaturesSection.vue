@@ -83,6 +83,12 @@ export default {
           color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
         },
         {
+          icon: '🔎',
+          title: 'SEO Authoring Tools',
+          description: 'Custom SEO-focused authoring tools to structure content workflows, metadata, and optimization-ready outputs.',
+          color: 'linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)'
+        },
+        {
           icon: '📊',
           title: 'Analytics & Reporting',
           description: 'Comprehensive tracking and reporting tools to measure training effectiveness.',

@@ -12,6 +12,10 @@
           <p class="hero-description">
             MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training, onboarding, and educational excellence.
           </p>
+          <p class="hero-highlight">
+            🛠️ <span class="hero-highlight-label">Coming Soon</span>
+            MediaSurf Technologies creates custom authoring tools for e-learning, SEO, and other business needs—enabling instructors and companies to define requirements, generate outputs in multiple formats, and use AI to accelerate content and style creation.
+          </p>
           <div class="hero-actions">
             <router-link to="/contact#contact-form" class="btn-primary-lg" @click="$emit('track', 'hero_get_started')">Get Started</router-link>
             <router-link to="/about" class="btn-secondary-lg" @click="$emit('track', 'hero_learn_more')">Learn More</router-link>
@@ -58,7 +62,7 @@ export default {
 
 <style scoped>
 .hero {
-  padding: var(--section-spacing) 0;
+  padding: clamp(7.5rem, 12vw, 9rem) 0 var(--section-spacing);
   background: var(--gradient-hero);
   overflow: hidden;
   min-height: 90vh;
@@ -126,6 +130,38 @@ export default {
   line-height: 1.7;
   margin-bottom: 2.5rem;
   max-width: 540px;
+}
+
+.hero-highlight {
+  display: inline-block;
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  background: var(--bg-white);
+  border: 1px solid rgba(var(--primary-rgb), 0.35);
+  border-left: 4px solid var(--primary);
+  backdrop-filter: blur(8px);
+  max-width: 600px;
+  box-shadow: 0 12px 30px rgba(var(--primary-rgb), 0.25);
+}
+
+.hero-highlight-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--gradient-accent);
+  color: var(--primary-dark);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+:root[data-theme="black"] .hero-highlight-label {
+  color: var(--text-primary);
 }
 
 .hero-actions {
@@ -325,7 +361,7 @@ export default {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 0 40px;
+    padding: 125px 0 40px;
     min-height: auto;
   }
 

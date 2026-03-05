@@ -162,6 +162,20 @@ export default {
           gradient: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
         },
         {
+          title: 'Custom E-Learning Authoring Tool (Coming Soon)',
+          description: 'A next-generation platform from MediaSurf Technologies to create custom authoring tools for e-learning, SEO, and other business needs—allowing instructors and companies to define requirements, generate output in multiple formats, and use AI options for faster content and style creation.',
+          category: 'Product Launch',
+          icon: '🛠️',
+          level: 'Coming Soon',
+          rating: 'New',
+          students: 'Early Access',
+          duration: 'Launch in Progress',
+          lessons: 'Flexible Output',
+          price: 'TBA',
+          originalPrice: null,
+          gradient: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
+        },
+        {
           title: 'Learning Research & Decision Support',
           description: 'Program evaluation, assessment validity, and research-backed strategy for complex learning decisions.',
           category: 'Research',

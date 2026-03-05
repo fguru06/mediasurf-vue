@@ -92,6 +92,11 @@
               in web development, instructional design, AI learning tools, and educational technology.
             </p>
             <p class="text-content">
+              We also create custom authoring tools for organizations to generate and download
+              presentations and learning content with AI-assisted generation, tailored to their
+              unique workflows and business requirements.
+            </p>
+            <p class="text-content">
               We work on a contractual basis with organizations of all sizes, from startups 
               to Fortune 500 companies, delivering customized solutions that meet their 
               unique learning and development challenges.
@@ -258,6 +263,7 @@ onBeforeUnmount(() => {
 
 const expertise = ref([
   'Learning Management Systems (LMS)',
+  'Custom Authoring Tools for AI Content Generation',
   'Interactive Course Development',
   'Custom Web Applications',
   'AI Learning Assistants & Automation',
