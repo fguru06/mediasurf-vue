@@ -12,10 +12,10 @@
           <p class="hero-description">
             MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training, onboarding, and educational excellence.
           </p>
-          <p class="hero-highlight">
-            🛠️ <span class="hero-highlight-label">Coming Soon</span>
-            MediaSurf creates custom authoring tools for e-learning, SEO, and other business needs—enabling instructors and companies to define requirements, generate outputs in multiple formats, and use AI to accelerate content and style creation.
-          </p>
+          <a href="https://pp-ai-tool.mediasurf.ca/" target="_blank" rel="noopener noreferrer" class="hero-highlight promotional-link">
+            ✨ <span class="hero-highlight-label">New Launch</span>
+            Experience our <strong>AI-Powered eLearning Presentation Authoring Tool!</strong> Effortlessly generate and download interactive HTML presentations ready for your LMS platforms. <span class="try-now">Try it now &rarr;</span>
+          </a>
           <div class="hero-actions">
             <router-link to="/contact#contact-form" class="btn-primary-lg" @click="$emit('track', 'hero_get_started')">Get Started</router-link>
             <router-link to="/about" class="btn-secondary-lg" @click="$emit('track', 'hero_learn_more')">Learn More</router-link>
@@ -146,6 +146,24 @@ export default {
   backdrop-filter: blur(8px);
   max-width: 600px;
   box-shadow: 0 12px 30px rgba(var(--primary-rgb), 0.25);
+}
+
+.promotional-link {
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.promotional-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(var(--primary-rgb), 0.35);
+}
+
+.try-now {
+  color: var(--primary);
+  font-weight: 700;
+  margin-left: 0.5rem;
+  white-space: nowrap;
 }
 
 .hero-highlight-label {
