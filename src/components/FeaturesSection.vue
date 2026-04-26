@@ -3,9 +3,9 @@
     <div class="container">
       <div class="section-header">
         <div class="section-badge">✨ Our Expertise</div>
-        <h2 class="section-title">Comprehensive E-Learning Solutions</h2>
+        <h2 class="section-title">End-to-End Course Development Capabilities</h2>
         <p class="section-description">
-          We deliver custom training content and innovative web-based learning experiences for your organization
+          We design learning experiences across technical training, onboarding, compliance, product enablement, and instructor-led programs.
         </p>
       </div>
 
@@ -30,20 +30,20 @@ export default {
       features: [
         {
           icon: '💻',
-          title: 'Web Development',
-          description: 'Custom web-based training platforms and interactive learning management systems.',
+          title: 'LMS Platform Engineering',
+          description: 'Custom learning platforms with secure roles, integrations, and scalable learner delivery.',
           color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
           icon: '📚',
-          title: 'E-Learning Content',
-          description: 'Engaging multimedia content, interactive modules, and SCORM-compliant courses.',
+          title: 'Course Development',
+          description: 'Interactive modules, multimedia lessons, and structured learning paths for any subject area.',
           color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
           icon: '🎓',
-          title: 'Corporate Training',
-          description: 'Customized training programs designed for your team\'s specific skill development needs.',
+          title: 'Technical and Product Training',
+          description: 'Hands-on skill development programs for software, tools, operations, and product adoption.',
           color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
         },
         {
@@ -54,8 +54,8 @@ export default {
         },
         {
           icon: '❓',
-          title: 'Quiz Development',
-          description: 'Interactive assessments and quizzes to measure learning outcomes effectively.',
+          title: 'Assessment and Evaluation',
+          description: 'Question banks, adaptive assessments, and rubric-driven evaluation for measurable outcomes.',
           color: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
         },
         {
@@ -66,14 +66,14 @@ export default {
         },
         {
           icon: '🤖',
-          title: 'AI Learning Assistants',
-          description: 'Automated coaching, content recommendations, and workflow-friendly learning support.',
+          title: 'Instructor Authoring with Learncraft',
+          description: 'Create and edit course content in Learncraft and use live preview to validate learner experience before launch.',
           color: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
         },
         {
           icon: '🧠',
-          title: 'Research & Decision Support',
-          description: 'Evidence-based learning strategy, assessment insights, and performance analytics.',
+          title: 'Learning Strategy and Analytics',
+          description: 'Evidence-based planning, learner behavior insights, and performance analytics for continuous improvement.',
           color: 'linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%)'
         },
         {
@@ -84,8 +84,8 @@ export default {
         },
         {
           icon: '🔎',
-          title: 'SEO Authoring Tools',
-          description: 'Custom SEO-focused authoring tools to structure content workflows, metadata, and optimization-ready outputs.',
+          title: 'Authoring Workflow Automation',
+          description: 'Structured publishing workflows and reusable templates that speed up instructor production cycles.',
           color: 'linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)'
         },
         {

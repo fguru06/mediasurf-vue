@@ -29,20 +29,14 @@
             <img src="/logo.svg" alt="MediaSurf Technologies logo for Corporate E-Learning and LMS Development" class="footer-logo-image" />
           </div>
           <p class="footer-description">
-            Transforming corporate learning through innovative web development and e-learning solutions.
+            Partnering with corporate teams to deliver LMS Development, onboarding programs, and measurable e-learning outcomes.
           </p>
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a href="https://x.com/mediasurftech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="MediaSurf on X">
               <span>𝕏</span>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/company/mediasurf-tech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="MediaSurf on LinkedIn">
               <span>in</span>
-            </a>
-            <a href="#" class="social-link">
-              <span>f</span>
-            </a>
-            <a href="#" class="social-link">
-              <span>▶</span>
             </a>
           </div>
         </div>
@@ -75,11 +69,20 @@
           <h3 class="footer-heading">Resources</h3>
           <ul class="footer-links">
             <li><router-link to="/blog">Blog</router-link></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Client Portal</a></li>
+            <li><router-link to="/contact#contact-form">FAQs</router-link></li>
+            <li>
+              <router-link
+                to="/learncraft"
+                data-track-event="cta_click"
+                data-track-category="footer"
+                data-track-label="footer_learncraft_tool"
+              >
+                Learncraft Authoring Tool
+              </router-link>
+            </li>
             <li><a href="#">Support</a></li>
             <li><a href="#">Request Demo</a></li>
-            <li><a href="#">Get Quote</a></li>
+            <li><router-link to="/contact#contact-form">Get Quote</router-link></li>
           </ul>
         </div>
 

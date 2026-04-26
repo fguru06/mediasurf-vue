@@ -53,6 +53,13 @@ onMounted(() => {
     return;
   }
 
+  // Mobile browsers can fail to trigger intersection callbacks consistently,
+  // which leaves sections hidden. Reveal immediately on small viewports.
+  if (window.matchMedia('(max-width: 900px)').matches) {
+    elements.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
   observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -62,7 +69,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -5% 0px' }
   );
 
   elements.forEach((el) => observer.observe(el));

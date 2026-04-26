@@ -3,10 +3,48 @@
     <div class="container">
       <div class="section-header">
         <div class="section-badge">🧭 Our Services</div>
-        <h2 class="section-title">Tailored Solutions for Your Business</h2>
+        <h2 class="section-title">Course Development and Learning Systems for Every Team</h2>
         <p class="section-description">
-          Comprehensive training development services designed to elevate your team
+          Authoring, course training development, LMS, and analytics for complete learning operations.
         </p>
+      </div>
+
+      <div class="tool-spotlight">
+        <div class="spotlight-content">
+          <p class="spotlight-label">In-House Platform</p>
+          <h3>From Slide Authoring to Learncraft Delivery</h3>
+          <p>
+            Start with our first slide-based presentation authoring tool to create multimedia lessons,
+            export the package, then import and preview it in Learncraft LMS before release.
+          </p>
+          <div class="spotlight-points">
+            <span>Slide Authoring and Multimedia Export</span>
+            <span>Import into Learncraft LMS</span>
+            <span>Instructor Edit and Live Preview</span>
+          </div>
+        </div>
+        <div class="spotlight-cta-group">
+          <a
+            href="https://pp-ai-tool.mediasurf.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="spotlight-cta"
+            data-track-event="tool_cta_click"
+            data-track-category="courses"
+            data-track-label="open_presentation_authoring"
+          >
+            Launch Authoring Tool
+          </a>
+          <router-link
+            to="/learncraft"
+            class="spotlight-cta secondary"
+            data-track-event="tool_cta_click"
+            data-track-category="courses"
+            data-track-label="view_learncraft_workflow"
+          >
+            Learncraft Workflow
+          </router-link>
+        </div>
       </div>
 
       <div class="courses-grid">
@@ -44,7 +82,16 @@
                 <span class="price-current">${{ course.price }}</span>
                 <span class="price-original" v-if="course.originalPrice">${{ course.originalPrice }}</span>
               </div>
-              <router-link :to="course.link || '/contact#contact-form'" class="btn-enroll">{{ course.link ? 'View Service' : 'Get Quote' }}</router-link>
+              <component
+                :is="course.link && course.link.startsWith('http') ? 'a' : 'router-link'"
+                :href="course.link && course.link.startsWith('http') ? course.link : null"
+                :target="course.link && course.link.startsWith('http') ? '_blank' : null"
+                :rel="course.link && course.link.startsWith('http') ? 'noopener noreferrer' : null"
+                :to="course.link && !course.link.startsWith('http') ? course.link : null"
+                class="btn-enroll"
+              >
+                {{ course.link ? 'View Service' : 'Get Quote' }}
+              </component>
             </div>
           </div>
         </div>
@@ -65,7 +112,7 @@ export default {
       courses: [
         {
           title: 'Custom LMS Development',
-          description: 'Full-featured learning management system tailored to your organization with user management, progress tracking, and analytics.',
+          description: 'Enterprise LMS platform design with secure access controls, learner analytics, and integration-ready architecture for corporate training.',
           category: 'Web Development',
           icon: '🧩',
           level: 'Enterprise',
@@ -80,7 +127,7 @@ export default {
         },
         {
           title: 'Employee Onboarding Program',
-          description: 'Complete onboarding solution including welcome modules, company culture training, role-specific content, and interactive quizzes.',
+          description: 'Structured onboarding pathways with role-specific modules, progress milestones, and manager reporting to reduce time-to-productivity.',
           category: 'Corporate Training',
           icon: '👋',
           level: 'All Levels',
@@ -95,7 +142,7 @@ export default {
         },
         {
           title: 'Interactive E-Learning Modules',
-          description: 'Engaging multimedia content with videos, animations, simulations, and gamification elements for any topic.',
+          description: 'Engaging modules with multimedia, scenario-based interactions, and practical activities for any course domain.',
           category: 'E-Learning Content',
           icon: '🎓',
           level: 'Custom',
@@ -109,7 +156,7 @@ export default {
         },
         {
           title: 'Technical Skills Training',
-          description: 'Comprehensive training programs for software development, web technologies, and IT skills customized for your team.',
+          description: 'Technical and product capability programs tailored for developers, operations teams, and customer-facing roles.',
           category: 'Technical Training',
           icon: '💻',
           level: 'Intermediate',
@@ -151,7 +198,7 @@ export default {
         },
         {
           title: 'AI-Enabled Learning Analytics',
-          description: 'Predictive insights, skills gap detection, and automated coaching recommendations for teams.',
+          description: 'Learning analytics dashboards with skills trends, engagement metrics, and progress insights across all course tracks.',
           category: 'AI & Analytics',
           icon: '🤖',
           level: 'Enterprise',
@@ -164,17 +211,18 @@ export default {
           gradient: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
         },
         {
-          title: 'Custom E-Learning Authoring Tool (Coming Soon)',
-          description: 'A next-generation platform from MediaSurf Technologies to create custom authoring tools for e-learning, SEO, and other business needs—allowing instructors and companies to define requirements, generate output in multiple formats, and use AI options for faster content and style creation.',
-          category: 'Product Launch',
+          title: 'Learncraft Course Authoring Tool',
+          description: 'Our in-house authoring tool where instructors can create, edit, and live preview course content before release.',
+          category: 'Authoring Platform',
           icon: '🛠️',
-          level: 'Coming Soon',
-          rating: 'New',
-          students: 'Early Access',
-          duration: 'Launch in Progress',
-          lessons: 'Flexible Output',
-          price: 'TBA',
+          level: 'Live',
+          rating: 'Featured',
+          students: 'Instructor Teams',
+          duration: 'Immediate Access',
+          lessons: 'Create and Edit',
+          price: 'Access',
           originalPrice: null,
+          link: '/learncraft',
           gradient: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
         },
         {
@@ -206,6 +254,84 @@ export default {
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+}
+
+.tool-spotlight {
+  background: linear-gradient(140deg, #0b122a 0%, #101c44 60%, #0f766e 100%);
+  color: #f8fbff;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.6rem;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 20px 44px rgba(11, 18, 42, 0.22);
+}
+
+.spotlight-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  opacity: 0.82;
+  margin-bottom: 0.45rem;
+}
+
+.spotlight-content h3 {
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.spotlight-content p {
+  color: rgba(232, 243, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  max-width: 720px;
+}
+
+.spotlight-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.spotlight-points span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.78rem;
+}
+
+.spotlight-cta {
+  text-decoration: none;
+  color: #0f2d5c;
+  font-weight: 700;
+  background: #f8fbff;
+  padding: 0.78rem 1.2rem;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.spotlight-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.spotlight-cta.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fbff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.spotlight-cta:hover {
+  transform: translateY(-2px);
 }
 
 
@@ -448,6 +574,15 @@ export default {
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
+  }
+
+  .tool-spotlight {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .spotlight-content h3 {
+    font-size: 1.25rem;
   }
 
   .courses-grid {

@@ -5,11 +5,11 @@ export const SEO_METADATA = {
   twitterSite: '@MediaSurfTech',
   pages: {
     home: {
-      title: 'Custom LMS & Corporate E-Learning Solutions | MediaSurf Technologies',
+      title: 'Course Development, LMS & Learning Analytics | MediaSurf Technologies',
       description:
-        'Custom LMS, corporate training, and employee onboarding solutions for Ontario organizations to launch scalable e-learning that improves performance.',
+        'Create slide-based multimedia courses, export to Learncraft LMS, and manage instructor editing with live preview and analytics.',
       keywords:
-        'custom LMS development, corporate e-learning, employee onboarding, Ontario corporate training, MediaSurf Technologies',
+        'authoring, course training development, LMS and analytics, slide based course authoring tool, multimedia course export, Learncraft LMS',
       image: '/og-image.svg'
     },
     about: {
@@ -50,6 +50,14 @@ export const SEO_METADATA = {
         'Insights on custom LMS development, corporate training, and employee onboarding strategies for Ontario organizations.',
       keywords:
         'corporate e-learning blog, lms development insights, onboarding strategy, learning analytics',
+      image: '/og-image.svg'
+    },
+    learncraft: {
+      title: 'Learncraft and Course Authoring Tools | MediaSurf Technologies',
+      description:
+        'Create slide-based course content, export multimedia, and deliver in Learncraft LMS with instructor editing and live preview workflows.',
+      keywords:
+        'learncraft lms, course authoring tool, slide based authoring, multimedia export, live preview',
       image: '/og-image.svg'
     }
   }

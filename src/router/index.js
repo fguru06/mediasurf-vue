@@ -5,6 +5,7 @@ import ContactPage from '../views/ContactPage.vue';
 import CustomLmsDevelopmentPage from '../views/CustomLmsDevelopmentPage.vue';
 import EmployeeOnboardingPage from '../views/EmployeeOnboardingPage.vue';
 import BlogPage from '../views/BlogPage.vue';
+import LearncraftPage from '../views/LearncraftPage.vue';
 import { SEO_METADATA } from '../seo/metadata';
 
 const routes = [
@@ -43,6 +44,12 @@ const routes = [
     name: 'Blog',
     component: BlogPage,
     meta: SEO_METADATA.pages.blog
+  },
+  {
+    path: '/learncraft',
+    name: 'Learncraft',
+    component: LearncraftPage,
+    meta: SEO_METADATA.pages.learncraft
   },
 ];
 

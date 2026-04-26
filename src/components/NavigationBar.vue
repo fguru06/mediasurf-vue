@@ -2,9 +2,9 @@
   <nav class="navbar">
     <div class="container">
       <div class="nav-content">
-        <div class="logo">
+        <router-link to="/" class="logo" @click="closeMenu">
           <img src="/logo.svg" alt="MediaSurf Technologies logo for Corporate E-Learning and LMS Development" class="logo-image" />
-        </div>
+        </router-link>
         
         <div class="nav-links" :class="{ active: menuOpen }">
           <router-link
@@ -40,8 +40,24 @@
         </div>
         
         <div class="nav-actions">
-          <router-link to="/contact" class="btn-secondary">Client Portal</router-link>
-          <router-link to="/contact#contact-form" class="btn-primary">Get Quote</router-link>
+          <router-link
+            to="/learncraft"
+            class="btn-secondary"
+            data-track-event="cta_click"
+            data-track-category="navigation"
+            data-track-label="nav_learncraft"
+          >
+            Learncraft
+          </router-link>
+          <router-link
+            to="/contact#contact-form"
+            class="btn-primary"
+            data-track-event="cta_click"
+            data-track-category="navigation"
+            data-track-label="nav_get_quote"
+          >
+            Get Quote
+          </router-link>
         </div>
         
         <button class="menu-toggle" @click="toggleMenu">
@@ -118,13 +134,15 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 0;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo-image {
@@ -138,20 +156,22 @@ export default {
 
 .nav-links {
   display: flex;
-  gap: clamp(0.75rem, 2.4vw, 2rem);
+  gap: clamp(0.55rem, 1.5vw, 1.2rem);
   align-items: center;
   font-family: 'Space Grotesk', 'Trebuchet MS', 'Segoe UI', sans-serif;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  white-space: nowrap;
+  min-width: 0;
 }
 
 .nav-links a {
   color: #334155;
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(0.85rem, 1.2vw, 0.98rem);
+  font-size: clamp(0.82rem, 0.95vw, 0.92rem);
   letter-spacing: 0.3px;
-  padding: clamp(0.35rem, 0.9vw, 0.45rem) clamp(0.7rem, 1.8vw, 0.95rem);
+  padding: 0.35rem 0.75rem;
   border-radius: 999px;
   transition: color 0.3s, background 0.3s, box-shadow 0.3s;
   position: relative;
@@ -177,12 +197,13 @@ export default {
 
 .nav-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.65rem;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .btn-secondary {
-  padding: 0.6rem 1.5rem;
+  padding: 0.58rem 1.15rem;
   border: 2px solid var(--primary);
   background: rgba(255, 255, 255, 0.75);
   color: var(--primary);
@@ -213,7 +234,7 @@ export default {
 }
 
 .btn-primary {
-  padding: 0.6rem 1.5rem;
+  padding: 0.58rem 1.15rem;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
@@ -260,28 +281,18 @@ export default {
   border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-  .nav-content {
-    padding: 0.55rem 0.8rem;
+@media (max-width: 1140px) {
+  .nav-links a {
+    font-size: 0.84rem;
+    padding: 0.35rem 0.62rem;
   }
 
-  .nav-actions {
-    gap: 0.6rem;
-  }
-
-  .btn-secondary,
-  .btn-primary {
-    padding: 0.5rem 1.1rem;
+  .btn-secondary {
+    display: none;
   }
 }
 
-@media (max-width: 860px) {
-  .nav-content {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .nav-links {
     position: fixed;
     top: 70px;
@@ -289,6 +300,7 @@ export default {
     right: 0;
     background: rgba(255, 255, 255, 0.98);
     flex-direction: column;
+    flex-wrap: nowrap;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
     transform: translateY(-100%);
@@ -296,6 +308,7 @@ export default {
     pointer-events: none;
     transition: all 0.3s;
     border-radius: 0 0 24px 24px;
+    gap: 1rem;
   }
 
   .nav-links.active {
@@ -310,6 +323,21 @@ export default {
 
   .menu-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-content {
+    padding: 0.55rem 0.8rem;
+  }
+
+  .nav-actions {
+    gap: 0.6rem;
+  }
+
+  .btn-secondary,
+  .btn-primary {
+    padding: 0.5rem 1.1rem;
   }
 }
 </style>

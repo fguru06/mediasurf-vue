@@ -3,22 +3,52 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <div class="badge">🚀 Transforming Corporate Learning</div>
+          <div class="badge">Authoring, Course Training Development, LMS, and Analytics</div>
           <h1 class="hero-title">
-            Elevate Your<br>
-            Corporate Learning<br>
-            Experience
+            Build Any Course<br>
+            Experience with LMS<br>
+            and Live Analytics
           </h1>
           <p class="hero-description">
-            MediaSurf Technologies delivers cutting-edge web development and e-learning solutions tailored for corporate training, onboarding, and educational excellence.
+            MediaSurf Technologies helps teams create technical, compliance, onboarding, and product training
+            with custom course development, learning analytics, and instructor-ready authoring workflows.
           </p>
-          <a href="https://pp-ai-tool.mediasurf.ca/" target="_blank" rel="noopener noreferrer" class="hero-highlight promotional-link">
-            ✨ <span class="hero-highlight-label">New Launch</span>
-            Experience our <strong>AI-Powered eLearning Presentation Authoring Tool!</strong> Effortlessly generate and download interactive HTML presentations ready for your LMS platforms. <span class="try-now">Try it now &rarr;</span>
+          <a
+            href="https://pp-ai-tool.mediasurf.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-highlight promotional-link"
+            @click="$emit('track', 'hero_presentation_authoring_tool')"
+          >
+            <span class="hero-highlight-label">NEW</span>
+            Use our <strong>Slide-Based Presentation Authoring Tool</strong> to create multimedia course content and export it for Learncraft LMS delivery. <span class="try-now">Launch Tool &rarr;</span>
           </a>
           <div class="hero-actions">
-            <router-link to="/contact#contact-form" class="btn-primary-lg" @click="$emit('track', 'hero_get_started')">Get Started</router-link>
-            <router-link to="/about" class="btn-secondary-lg" @click="$emit('track', 'hero_learn_more')">Learn More</router-link>
+            <router-link
+              to="/contact#contact-form"
+              class="btn-primary-lg"
+              @click="$emit('track', 'hero_get_started')"
+              data-track-event="cta_click"
+              data-track-category="hero"
+              data-track-label="book_discovery_call"
+            >
+              Book Discovery Call
+            </router-link>
+            <router-link
+              to="/learncraft"
+              class="btn-secondary-lg"
+              @click="$emit('track', 'hero_learn_more')"
+              data-track-event="cta_click"
+              data-track-category="hero"
+              data-track-label="view_tools_workflow"
+            >
+              View Tool Workflow
+            </router-link>
+          </div>
+          <div class="hero-trust-list" aria-label="Learning solution highlights">
+            <span>Course Development for Any Domain</span>
+            <span>Learning Analytics and Reporting</span>
+            <span>Instructor Create/Edit with Live Preview</span>
           </div>
         </div>
         
@@ -185,6 +215,25 @@ export default {
 .hero-actions {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-trust-list span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: #e5edfb;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary-lg {
@@ -393,6 +442,14 @@ export default {
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .hero-trust-list {
+    gap: 0.45rem;
+  }
+
+  .hero-trust-list span {
+    font-size: 0.72rem;
   }
 
   .btn-primary-lg,
