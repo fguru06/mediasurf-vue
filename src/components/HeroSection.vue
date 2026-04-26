@@ -329,7 +329,7 @@ export default {
 
 .collage-frame {
   position: relative;
-  min-height: 620px;
+  min-height: 750px;
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: linear-gradient(145deg, rgba(13, 30, 66, 0.5), rgba(21, 55, 118, 0.42));
