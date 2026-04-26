@@ -44,7 +44,7 @@
                 <span class="price-current">${{ course.price }}</span>
                 <span class="price-original" v-if="course.originalPrice">${{ course.originalPrice }}</span>
               </div>
-              <router-link to="/contact#contact-form" class="btn-enroll">Get Quote</router-link>
+              <router-link :to="course.link || '/contact#contact-form'" class="btn-enroll">{{ course.link ? 'View Service' : 'Get Quote' }}</router-link>
             </div>
           </div>
         </div>
@@ -75,6 +75,7 @@ export default {
           lessons: 'Custom Scope',
           price: 'Custom',
           originalPrice: null,
+          link: '/services/custom-lms-development',
           gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
@@ -89,6 +90,7 @@ export default {
           lessons: '20-40 modules',
           price: 'Custom',
           originalPrice: null,
+          link: '/services/employee-onboarding',
           gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {

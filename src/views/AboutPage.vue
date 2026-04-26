@@ -115,7 +115,7 @@
           <div class="team-image">
             <img 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1080&h=720&fit=crop" 
-              alt="Our team"
+              alt="Corporate E-Learning and LMS Development specialists at MediaSurf"
             />
           </div>
         </div>

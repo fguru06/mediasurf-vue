@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.mediasurf.ca/sitemap.xml
+Disallow: /admin/
+Disallow: /private/
+
+# Priority crawling targets
+Allow: /services/
+Allow: /blog/
+
+Sitemap: https://mediasurf.ca/sitemap.xml
+Sitemap: https://mediasurf.ca/sitemap-blog.xml

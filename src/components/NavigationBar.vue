@@ -3,7 +3,7 @@
     <div class="container">
       <div class="nav-content">
         <div class="logo">
-          <img src="/logo.svg" alt="MediaSurf Technologies" class="logo-image" />
+          <img src="/logo.svg" alt="MediaSurf Technologies logo for Corporate E-Learning and LMS Development" class="logo-image" />
         </div>
         
         <div class="nav-links" :class="{ active: menuOpen }">
@@ -35,6 +35,7 @@
           >
             Solutions
           </router-link>
+          <router-link to="/blog" active-class="active" @click="closeMenu">Blog</router-link>
           <router-link to="/contact" active-class="active" @click="closeMenu">Contact</router-link>
         </div>
         

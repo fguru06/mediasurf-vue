@@ -2,40 +2,47 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import AboutPage from '../views/AboutPage.vue';
 import ContactPage from '../views/ContactPage.vue';
+import CustomLmsDevelopmentPage from '../views/CustomLmsDevelopmentPage.vue';
+import EmployeeOnboardingPage from '../views/EmployeeOnboardingPage.vue';
+import BlogPage from '../views/BlogPage.vue';
+import { SEO_METADATA } from '../seo/metadata';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: HomePage,
-    meta: {
-      title: 'Custom LMS & Corporate E-Learning Solutions | MediaSurf Technologies',
-      description: 'MediaSurf Technologies provides custom LMS development and e-learning solutions for businesses in Ontario and across Canada.',
-      keywords: 'MediaSurf Technologies, eLearning, corporate training, LMS development, web development, onboarding, learning analytics',
-      image: '/og-image.svg'
-    }
+    meta: SEO_METADATA.pages.home
   },
   {
     path: '/about',
     name: 'About',
     component: AboutPage,
-    meta: {
-      title: 'About Us - MediaSurf Technologies',
-      description: 'Learn about MediaSurf Technologies, our mission, vision, and the team of experts dedicated to transforming corporate education.',
-      keywords: 'about MediaSurf, learning design, eLearning experts, corporate training partner, educational technology',
-      image: '/og-image.svg'
-    }
+    meta: SEO_METADATA.pages.about
   },
   {
     path: '/contact',
     name: 'Contact',
     component: ContactPage,
-    meta: {
-      title: 'Contact Us - MediaSurf Technologies',
-      description: 'Get in touch with MediaSurf Technologies to discuss your corporate learning and e-learning project requirements.',
-      keywords: 'contact MediaSurf, eLearning services, corporate training consultation, LMS development quote, web development services',
-      image: '/og-image.svg'
-    }
+    meta: SEO_METADATA.pages.contact
+  },
+  {
+    path: '/services/custom-lms-development',
+    name: 'CustomLmsDevelopment',
+    component: CustomLmsDevelopmentPage,
+    meta: SEO_METADATA.pages.customLmsDevelopment
+  },
+  {
+    path: '/services/employee-onboarding',
+    name: 'EmployeeOnboarding',
+    component: EmployeeOnboardingPage,
+    meta: SEO_METADATA.pages.employeeOnboarding
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: BlogPage,
+    meta: SEO_METADATA.pages.blog
   },
 ];
 
@@ -57,12 +64,12 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const siteUrl = 'https://mediasurf.ca';
+  const siteUrl = SEO_METADATA.siteUrl;
   const defaults = {
-    title: 'MediaSurf Technologies',
-    description: 'MediaSurf Technologies delivers cutting-edge web development and e-learning solutions.',
-    keywords: 'eLearning, corporate training, web development, LMS development, MediaSurf Technologies',
-    image: '/og-image.svg'
+    title: SEO_METADATA.siteName,
+    description: SEO_METADATA.pages.home.description,
+    keywords: SEO_METADATA.pages.home.keywords,
+    image: SEO_METADATA.defaultImage
   };
 
   const meta = {
@@ -107,6 +114,8 @@ router.beforeEach((to, from, next) => {
   setMeta('meta[property="og:description"]', meta.description);
   setMeta('meta[property="og:url"]', canonicalUrl);
   setMeta('meta[property="og:image"]', `${siteUrl}${meta.image}`);
+  setMeta('meta[property="og:type"]', 'website');
+  setMeta('meta[property="og:site_name"]', SEO_METADATA.siteName);
   setMeta('meta[property="og:locale"]', 'en_CA'); // Target Ontario/Canada Market
 
   // Twitter
@@ -114,6 +123,8 @@ router.beforeEach((to, from, next) => {
   setMeta('meta[property="twitter:description"]', meta.description);
   setMeta('meta[property="twitter:url"]', canonicalUrl);
   setMeta('meta[property="twitter:image"]', `${siteUrl}${meta.image}`);
+  setMeta('meta[property="twitter:card"]', 'summary_large_image');
+  setMeta('meta[property="twitter:site"]', SEO_METADATA.twitterSite);
 
   // Google Analytics Page View
   if (window.gtag) {

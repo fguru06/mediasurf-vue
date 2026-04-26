@@ -1,5 +1,6 @@
 <template>
   <div class="home-page">
+    <HomeSeoSchema />
     <div class="reveal-on-scroll">
       <HeroSection @track="trackEvent" />
     </div>
@@ -33,6 +34,7 @@ import WhyChooseSection from '../components/WhyChooseSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import TestimonialsSection from '../components/TestimonialsSection.vue';
 import StatsSection from '../components/StatsSection.vue';
+import HomeSeoSchema from '../components/HomeSeoSchema.vue';
 
 const trackEvent = (label) => {
   if (window.gtag) {

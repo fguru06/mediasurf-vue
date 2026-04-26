@@ -1,6 +1,9 @@
 <template>
   <section class="stats">
     <div class="container">
+      <div class="sr-only">
+        <h2>Corporate E-Learning and LMS Development Impact</h2>
+      </div>
       <div class="stats-grid">
         <div class="stat-card" v-for="(stat, index) in stats" :key="index">
           <div class="stat-icon" :style="{ background: stat.gradient }">
@@ -81,6 +84,18 @@ export default {
   padding: 0 var(--container-padding);
   position: relative;
   z-index: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .stats-grid {

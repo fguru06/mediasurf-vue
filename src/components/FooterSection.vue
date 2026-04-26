@@ -26,7 +26,7 @@
       <div class="footer-content">
         <div class="footer-column footer-brand">
           <div class="footer-logo">
-            <img src="/logo.svg" alt="MediaSurf Technologies" class="footer-logo-image" />
+            <img src="/logo.svg" alt="MediaSurf Technologies logo for Corporate E-Learning and LMS Development" class="footer-logo-image" />
           </div>
           <p class="footer-description">
             Transforming corporate learning through innovative web development and e-learning solutions.
@@ -50,23 +50,23 @@
         <div class="footer-column">
           <h3 class="footer-heading">Services</h3>
           <ul class="footer-links">
-            <li><a href="#">Web Development</a></li>
+            <li><router-link to="/services/custom-lms-development">Web Development</router-link></li>
             <li><a href="#">E-Learning Content</a></li>
             <li><a href="#">Corporate Training</a></li>
             <li><a href="#">Quiz Development</a></li>
-            <li><a href="#">Employee Onboarding</a></li>
-            <li><a href="#">Custom LMS</a></li>
+            <li><router-link to="/services/employee-onboarding">Employee Onboarding</router-link></li>
+            <li><router-link to="/services/custom-lms-development">Custom LMS</router-link></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3 class="footer-heading">Company</h3>
           <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
+            <li><router-link to="/about">About Us</router-link></li>
             <li><a href="#">Our Team</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Case Studies</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><router-link to="/contact">Contact</router-link></li>
             <li><a href="#">Careers</a></li>
           </ul>
         </div>
@@ -74,7 +74,7 @@
         <div class="footer-column">
           <h3 class="footer-heading">Resources</h3>
           <ul class="footer-links">
-            <li><a href="#">Blog</a></li>
+            <li><router-link to="/blog">Blog</router-link></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Client Portal</a></li>
             <li><a href="#">Support</a></li>

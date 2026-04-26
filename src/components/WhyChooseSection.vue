@@ -6,7 +6,7 @@
           <div class="image-wrapper">
             <img 
               src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=600&fit=crop" 
-              alt="Team working on laptop"
+              alt="Corporate E-Learning and LMS Development strategy session"
               class="main-image"
             />
           </div>
