@@ -53,28 +53,18 @@
         </div>
         
         <div class="hero-image">
-          <div class="image-grid">
-            <!-- Main image with badge -->
-            <div class="main-image">
-              <div class="badge-overlay badge-top">
-                <span class="badge-icon">😊</span>
-                Trusted by Innovative Teams
-              </div>
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" width="800" height="500" loading="eager" decoding="async" fetchpriority="high" alt="Corporate E-Learning LMS Development dashboard for enterprise training" />
-            </div>
-            
-            <!-- Bottom images -->
-            <div class="bottom-images">
-              <div class="small-image">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop" alt="Corporate E-Learning collaboration workshop for onboarding and compliance" />
-              </div>
-              <div class="small-image">
-                <div class="badge-overlay badge-bottom">
-                  <span class="badge-icon">👥</span>
-                  Industry Expertise
-                </div>
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="LMS Development planning for Corporate E-Learning program rollout" />
-              </div>
+          <div class="collage-frame" aria-label="Authoring and Learncraft workflow collage">
+            <div class="collage-label">Tool Workflow Snapshot</div>
+            <div
+              v-for="(card, index) in collageCards"
+              :key="index"
+              class="collage-card"
+              :class="card.className"
+              :style="{ backgroundImage: `linear-gradient(140deg, rgba(10, 16, 38, 0.18), rgba(15, 118, 110, 0.18)), url('${card.image}')` }"
+              role="img"
+              :aria-label="card.alt"
+            >
+              <span class="collage-chip">{{ card.chip }}</span>
             </div>
           </div>
         </div>
@@ -86,7 +76,55 @@
 <script>
 export default {
   name: 'HeroSection',
-  emits: ['track']
+  emits: ['track'],
+  data() {
+    return {
+      collageCards: [
+        {
+          image: '/learncraft/hero-home.png',
+          alt: 'Slide-based authoring dashboard for course training development',
+          chip: 'Authoring Home',
+          className: 'card-home'
+        },
+        {
+          image: '/learncraft/hero-templates.png',
+          alt: 'Course templates for authoring course training development workflows',
+          chip: 'Templates',
+          className: 'card-templates'
+        },
+        {
+          image: '/learncraft/hero-editor.png',
+          alt: 'Presentation editor for multimedia LMS development content',
+          chip: 'Slide Editor',
+          className: 'card-editor'
+        },
+        {
+          image: '/learncraft/hero-live-editor.png',
+          alt: 'Learncraft live editor showing course content updates and preview',
+          chip: 'Live Edit',
+          className: 'card-live'
+        },
+        {
+          image: '/learncraft/hero-inspector.png',
+          alt: 'Learning analytics and content inspector panel in authoring workflow',
+          chip: 'Props and Analytics',
+          className: 'card-inspector'
+        },
+        {
+          image: '/learncraft/gallery-editor-quiz.png',
+          alt: 'Quiz editing experience with content inspector and lesson canvas',
+          chip: 'Quiz Authoring',
+          className: 'card-quiz'
+        },
+        {
+          image: '/learncraft/gallery-learner-progress.png',
+          alt: 'Learner progress and module completion tracking interface',
+          chip: 'Learner Progress',
+          className: 'card-progress'
+        }
+      ]
+    };
+  }
 }
 </script>
 
@@ -286,96 +324,113 @@ export default {
 .hero-image {
   position: relative;
   animation: fadeInRight 0.8s ease-out;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 
-.image-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.main-image {
+.collage-frame {
   position: relative;
-  border-radius: 20px;
+  min-height: 620px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(145deg, rgba(13, 30, 66, 0.5), rgba(21, 55, 118, 0.42));
+  box-shadow: 0 24px 54px rgba(2, 10, 28, 0.45);
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-.main-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 16 / 10;
-}
-
-.bottom-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.small-image {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-}
-
-.small-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 4 / 3;
-}
-
-.badge-overlay {
+.collage-label {
   position: absolute;
-  z-index: 10;
-  background: var(--bg-white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  animation: fadeInScale 0.6s ease-out 0.5s both;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  background: rgba(13, 24, 53, 0.8);
+  color: #e5edfb;
+  border: 1px solid rgba(147, 197, 253, 0.36);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.badge-top {
-  top: 1.5rem;
-  right: 1.5rem;
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  color: #1e40af;
+.collage-card {
+  position: absolute;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 14px 32px rgba(4, 9, 27, 0.35);
+  overflow: hidden;
 }
 
-:root[data-theme="black"] .badge-top {
-  background: linear-gradient(135deg, #333 0%, #000 100%);
-  color: white;
-  border: 1px solid #444;
+.collage-chip {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: rgba(10, 17, 40, 0.8);
+  color: #f8fbff;
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  border-radius: 999px;
+  padding: 0.28rem 0.62rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
-.badge-bottom {
-  bottom: 1.5rem;
-  left: 1.5rem;
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-  color: #065f46;
+.card-home {
+  width: 64%;
+  height: 46%;
+  right: 1.2rem;
+  top: 2.8rem;
+  transform: rotate(-2.5deg);
 }
 
-:root[data-theme="black"] .badge-bottom {
-  background: linear-gradient(135deg, #222 0%, #111 100%);
-  color: #fff;
-  border: 1px solid #333;
+.card-templates {
+  width: 43%;
+  height: 33%;
+  left: 1.4rem;
+  top: 6.8rem;
+  transform: rotate(2.5deg);
 }
 
-.badge-icon {
-  font-size: 1.1rem;
+.card-editor {
+  width: 48%;
+  height: 36%;
+  right: 0.9rem;
+  bottom: 1.2rem;
+  transform: rotate(2deg);
+}
+
+.card-live {
+  width: 50%;
+  height: 31%;
+  left: 1.2rem;
+  bottom: 1.1rem;
+  transform: rotate(-3.5deg);
+}
+
+.card-inspector {
+  width: 30%;
+  height: 24%;
+  right: 2.3rem;
+  top: 0.95rem;
+  transform: rotate(6deg);
+}
+
+.card-quiz {
+  width: 46%;
+  height: 27%;
+  left: 2.1rem;
+  top: 21.9rem;
+  transform: rotate(-5deg);
+}
+
+.card-progress {
+  width: 42%;
+  height: 25%;
+  right: 1.3rem;
+  top: 28.2rem;
+  transform: rotate(3deg);
 }
 
 @keyframes fadeInLeft {
@@ -424,6 +479,10 @@ export default {
   .hero-description {
     max-width: 100%;
   }
+
+  .collage-frame {
+    min-height: 560px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -458,23 +517,22 @@ export default {
     justify-content: center;
   }
 
-  .bottom-images {
-    grid-template-columns: 1fr;
+  .collage-frame {
+    min-height: 500px;
   }
 
-  .badge-overlay {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem;
+  .collage-label {
+    font-size: 0.66rem;
   }
 
-  .badge-top {
-    top: 1rem;
-    right: 1rem;
-  }
-
-  .badge-bottom {
-    bottom: 1rem;
-    left: 1rem;
+  .card-home,
+  .card-templates,
+  .card-editor,
+  .card-live,
+  .card-inspector,
+  .card-quiz,
+  .card-progress {
+    transform: none;
   }
 }
 </style>

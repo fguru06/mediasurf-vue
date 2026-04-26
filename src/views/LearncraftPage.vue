@@ -2,47 +2,75 @@
   <div class="learncraft-page">
     <section class="hero-section">
       <div class="container">
-        <p class="eyebrow">MediaSurf Tools</p>
-        <h1>{{ heroCopy.title }}</h1>
-        <p class="lead">{{ heroCopy.description }}</p>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">MediaSurf Tools</p>
+            <h1>{{ heroCopy.title }}</h1>
+            <p class="lead">{{ heroCopy.description }}</p>
 
-        <div class="hero-actions">
-          <a
-            href="https://pp-ai-tool.mediasurf.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-primary"
-            data-track-event="tool_cta_click"
-            data-track-category="tools"
-            data-track-label="launch_presentation_authoring"
-          >
-            Launch Presentation Authoring Tool
-          </a>
-          <a
-            href="https://learncraft.mediasurf.ca/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-secondary"
-            data-track-event="tool_cta_click"
-            data-track-category="tools"
-            data-track-label="open_learncraft"
-          >
-            Open Learncraft LMS
-          </a>
-          <router-link
-            to="/contact#contact-form"
-            class="btn-outline"
-            data-track-event="tool_cta_click"
-            data-track-category="tools"
-            data-track-label="book_tool_demo"
-          >
-            Book a Tool Demo
-          </router-link>
-        </div>
+            <div class="hero-actions">
+              <a
+                href="https://pp-ai-tool.mediasurf.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+                data-track-event="tool_cta_click"
+                data-track-category="tools"
+                data-track-label="launch_presentation_authoring"
+              >
+                Launch Presentation Authoring Tool
+              </a>
+              <a
+                href="https://learncraft.mediasurf.ca/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary"
+                data-track-event="tool_cta_click"
+                data-track-category="tools"
+                data-track-label="open_learncraft"
+              >
+                Open Learncraft LMS
+              </a>
+              <router-link
+                to="/contact#contact-form"
+                class="btn-outline"
+                data-track-event="tool_cta_click"
+                data-track-category="tools"
+                data-track-label="book_tool_demo"
+              >
+                Book a Tool Demo
+              </router-link>
+            </div>
 
-        <div class="variant-note">
-          Active copy variant: <strong>{{ activeVariant.toUpperCase() }}</strong>
-          <span>Switch with <code>?variant=a</code> or <code>?variant=b</code></span>
+            <div class="variant-note">
+              Active copy variant: <strong>{{ activeVariant.toUpperCase() }}</strong>
+              <span>Switch with <code>?variant=a</code> or <code>?variant=b</code></span>
+            </div>
+          </div>
+
+          <div class="hero-product" aria-label="Learncraft product preview">
+            <img
+              class="hero-product-main"
+              src="/learncraft/hero-home.png"
+              alt="Learncraft dashboard and course creation workspace"
+              loading="eager"
+              decoding="async"
+            />
+            <img
+              class="hero-product-float hero-product-float-left"
+              src="/learncraft/hero-editor.png"
+              alt="Slide editor interface in Learncraft"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="hero-product-float hero-product-float-right"
+              src="/learncraft/hero-live-editor.png"
+              alt="Live content editing and preview in Learncraft"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -100,6 +128,28 @@
         </div>
       </div>
     </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <h2>Learncraft Product Collage</h2>
+        <p class="gallery-subtitle">
+          Real interface snapshots showing authoring, module management, live editing, and learner-side progression.
+        </p>
+        <div class="gallery-grid" aria-label="Learncraft UI collage gallery">
+          <article
+            v-for="(shot, index) in galleryShots"
+            :key="index"
+            class="gallery-tile"
+            :class="shot.size"
+            :style="{ backgroundImage: `linear-gradient(140deg, rgba(9, 14, 33, 0.16), rgba(68, 56, 162, 0.2)), url('${shot.src}')` }"
+            role="img"
+            :aria-label="shot.alt"
+          >
+            <span class="gallery-chip">{{ shot.label }}</span>
+          </article>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -129,6 +179,51 @@ const heroCopy = computed(() => {
       'Our first slide-based authoring tool helps you create multimedia course content, then import it into Learncraft LMS to edit, preview, and publish confidently.'
   };
 });
+
+const galleryShots = [
+  {
+    src: '/learncraft/gallery-editor-quiz.png',
+    alt: 'Quiz editor panel and inline lesson block editing in Learncraft',
+    label: 'Quiz Authoring',
+    size: 'tile-lg'
+  },
+  {
+    src: '/learncraft/gallery-live-iframe.png',
+    alt: 'Embedded content block displayed in Learncraft live editor',
+    label: 'Embedded Media',
+    size: 'tile-md'
+  },
+  {
+    src: '/learncraft/gallery-learner-progress.png',
+    alt: 'Learner progress view with module completion tracking',
+    label: 'Learner Progress',
+    size: 'tile-md'
+  },
+  {
+    src: '/learncraft/gallery-lesson-quiz.png',
+    alt: 'Lesson quiz view with submit controls and progression panel',
+    label: 'Lesson Quiz View',
+    size: 'tile-lg'
+  },
+  {
+    src: '/learncraft/gallery-content-authoring.png',
+    alt: 'Content authoring workspace with AI generation and block tools',
+    label: 'Content Authoring',
+    size: 'tile-lg'
+  },
+  {
+    src: '/learncraft/gallery-module-list.png',
+    alt: 'Module and lesson list management interface in Learncraft',
+    label: 'Module Manager',
+    size: 'tile-sm'
+  },
+  {
+    src: '/learncraft/gallery-live-editor-wide.png',
+    alt: 'Live editor canvas with inline block editing controls',
+    label: 'Live Editor',
+    size: 'tile-md'
+  }
+];
 </script>
 
 <style scoped>
@@ -147,6 +242,17 @@ const heroCopy = computed(() => {
   background: var(--gradient-hero);
   color: white;
   padding: 5rem 0 4rem;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -215,8 +321,48 @@ h1 {
   margin-left: 0.6rem;
 }
 
+.hero-product {
+  position: relative;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(7, 13, 30, 0.35);
+  box-shadow: 0 22px 44px rgba(4, 10, 28, 0.35);
+  padding: 0.9rem;
+  min-height: 360px;
+}
+
+.hero-product-main {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hero-product-float {
+  position: absolute;
+  width: 38%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 14px 28px rgba(6, 10, 26, 0.4);
+}
+
+.hero-product-float-left {
+  left: -1.1rem;
+  bottom: -1.3rem;
+  transform: rotate(-5deg);
+}
+
+.hero-product-float-right {
+  right: -1.1rem;
+  top: -1.1rem;
+  transform: rotate(4deg);
+}
+
 .workflow-section,
-.preview-section {
+.preview-section,
+.gallery-section {
   padding: 3.5rem 0;
 }
 
@@ -226,6 +372,10 @@ h1 {
 
 .preview-section {
   background: var(--bg-white);
+}
+
+.gallery-section {
+  background: var(--bg-light);
 }
 
 h2 {
@@ -277,10 +427,98 @@ h2 {
   padding-left: 1.1rem;
 }
 
+.gallery-subtitle {
+  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 860px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 130px;
+  gap: 0.9rem;
+}
+
+.gallery-tile {
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid #d5deea;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(7, 13, 30, 0.12);
+}
+
+.gallery-chip {
+  position: absolute;
+  top: 0.55rem;
+  left: 0.55rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #e5edfb;
+  background: rgba(10, 17, 40, 0.78);
+  border: 1px solid rgba(147, 197, 253, 0.4);
+  border-radius: 999px;
+  padding: 0.26rem 0.56rem;
+}
+
+.tile-lg {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.tile-md {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.tile-sm {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
 @media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-product {
+    min-height: 0;
+    margin-top: 0.5rem;
+  }
+
+  .hero-product-float {
+    width: 34%;
+  }
+
+  .hero-product-float-left {
+    left: 0.2rem;
+    bottom: -0.9rem;
+  }
+
+  .hero-product-float-right {
+    right: 0.2rem;
+    top: -0.8rem;
+  }
+
   .workflow-grid,
   .preview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .tile-lg,
+  .tile-md,
+  .tile-sm {
+    grid-column: span 1;
+    grid-row: span 1;
   }
 }
 </style>
