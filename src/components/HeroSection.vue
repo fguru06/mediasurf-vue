@@ -423,7 +423,7 @@ export default {
 .collage-label {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
   z-index: 3;
   background: rgba(13, 24, 53, 0.85);
   color: #e5edfb;
