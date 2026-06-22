@@ -31,6 +31,15 @@
             <span class="hero-highlight-label">NEW</span>
             Use our <strong>Slide-Based Presentation Authoring Tool</strong> to create multimedia course content and export it for Learncraft LMS delivery. <span class="try-now">Launch Tool &rarr;</span>
           </a>
+          <router-link
+            to="/learncraft"
+            class="hero-learncraft-badge"
+            @click="$emit('track', 'hero_learncraft_featured')"
+          >
+            <span class="learncraft-badge-star">★</span>
+            <span><strong>Learncraft LMS</strong> — Our best product. Create, edit &amp; deliver courses with live instructor preview.</span>
+            <span class="learncraft-badge-arrow">&rarr;</span>
+          </router-link>
           <div class="hero-actions">
             <router-link
               to="/contact#contact-form"
@@ -325,6 +334,56 @@ export default {
 
 :root[data-theme="black"] .hero-highlight-label {
   color: var(--text-primary);
+}
+
+/* ---- Learncraft featured badge ---- */
+.hero-learncraft-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(139, 92, 246, 0.2));
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  text-decoration: none;
+  max-width: 620px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-learncraft-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.25);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.28), rgba(139, 92, 246, 0.28));
+}
+
+.learncraft-badge-star {
+  font-size: 1.2rem;
+  color: #f59e0b;
+  animation: lcStarPulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes lcStarPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.8; }
+}
+
+.learncraft-badge-arrow {
+  color: #f59e0b;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.hero-learncraft-badge:hover .learncraft-badge-arrow {
+  transform: translateX(3px);
 }
 
 .hero-actions {

@@ -4,32 +4,34 @@
       <div class="container">
         <div class="hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">MediaSurf Tools</p>
+            <p class="eyebrow">
+              <span class="eyebrow-star">★</span> MediaSurf Flagship Product
+            </p>
             <h1>{{ heroCopy.title }}</h1>
             <p class="lead">{{ heroCopy.description }}</p>
 
             <div class="hero-actions">
               <a
-                href="https://pp-ai-tool.mediasurf.ca/"
+                href="https://learncraft.mediasurf.ca/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-primary"
                 data-track-event="tool_cta_click"
                 data-track-category="tools"
-                data-track-label="launch_presentation_authoring"
+                data-track-label="open_learncraft"
               >
-                Launch Presentation Authoring Tool
+                Open Learncraft LMS
               </a>
               <a
-                href="https://learncraft.mediasurf.ca/login"
+                href="https://pp-ai-tool.mediasurf.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-secondary"
                 data-track-event="tool_cta_click"
                 data-track-category="tools"
-                data-track-label="open_learncraft"
+                data-track-label="launch_presentation_authoring"
               >
-                Open Learncraft LMS
+                Launch Authoring Tool
               </a>
               <router-link
                 to="/contact#contact-form"
@@ -38,7 +40,7 @@
                 data-track-category="tools"
                 data-track-label="book_tool_demo"
               >
-                Book a Tool Demo
+                Book a Demo
               </router-link>
             </div>
 
@@ -167,16 +169,16 @@ const activeVariant = computed(() => {
 const heroCopy = computed(() => {
   if (activeVariant.value === 'b') {
     return {
-      title: 'From Slide Authoring to LMS Delivery in One Workflow',
+      title: 'Learncraft LMS — The Best Course Authoring & Delivery Platform',
       description:
-        'Design courses in our presentation authoring tool, export multimedia content, and deliver through Learncraft with instructor edit control and live learner preview.'
+        'Our flagship product. Build slide-based courses, edit with live instructor preview, manage learner progress, and deliver training that actually works. The most complete authoring-to-delivery workflow available.'
     };
   }
 
   return {
-    title: 'Create, Export, and Deliver Courses with MediaSurf Tools',
+    title: 'Learncraft LMS — Create, Edit & Deliver Better Courses',
     description:
-      'Our first slide-based authoring tool helps you create multimedia course content, then import it into Learncraft LMS to edit, preview, and publish confidently.'
+      'The best all-in-one LMS for instructor-led course creation. Author multimedia content, preview as learners see it, track progress, and publish with confidence — all in one platform.'
   };
 });
 
@@ -256,12 +258,26 @@ const galleryShots = [
 }
 
 .eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-bottom: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 0.78rem;
   font-weight: 700;
+}
+
+.eyebrow-star {
+  display: inline-flex;
+  color: #f59e0b;
+  font-size: 1rem;
+  animation: eyebrowStarPulse 2s ease-in-out infinite;
+}
+
+@keyframes eyebrowStarPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
 }
 
 h1 {

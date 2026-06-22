@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar" :class="{ 'navbar-scrolled': isScrolled }">
     <div class="container">
       <div class="nav-content">
         <router-link to="/" class="logo" @click="closeMenu">
@@ -20,7 +20,7 @@
             to="/#courses"
             active-class=""
             exact-active-class=""
-            :class="{ active: isHashActive('courses') }"
+            :class="{ active: isServicesActive }"
             @click="closeMenu"
           >
             Services
@@ -30,7 +30,7 @@
             to="/#features"
             active-class=""
             exact-active-class=""
-            :class="{ active: isHashActive('features') }"
+            :class="{ active: isSolutionsActive }"
             @click="closeMenu"
           >
             Solutions
@@ -40,15 +40,17 @@
         </div>
         
         <div class="nav-actions">
-          <router-link
-            to="/learncraft"
-            class="btn-secondary"
+          <a
+            href="https://learncraft.mediasurf.ca/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-learncraft"
             data-track-event="cta_click"
             data-track-category="navigation"
             data-track-label="nav_learncraft"
           >
-            Learncraft
-          </router-link>
+            <span class="btn-learncraft-star">★</span> Learncraft
+          </a>
           <router-link
             to="/contact#contact-form"
             class="btn-primary"
@@ -60,7 +62,7 @@
           </router-link>
         </div>
         
-        <button class="menu-toggle" @click="toggleMenu">
+        <button class="menu-toggle" @click="toggleMenu" :class="{ open: menuOpen }">
           <span></span>
           <span></span>
           <span></span>
@@ -75,7 +77,11 @@ export default {
   name: 'NavigationBar',
   data() {
     return {
-      menuOpen: false
+      menuOpen: false,
+      activeSection: '',
+      isScrolled: false,
+      observer: null,
+      scrollSections: ['home', 'courses', 'features']
     }
   },
   computed: {
@@ -86,8 +92,42 @@ export default {
       return this.$route.hash
     },
     isHomeActive() {
-      return this.currentPath === '/' && !this.currentHash
+      if (this.currentPath !== '/') return false
+      // On homepage: highlight Home when hero is visible or nothing else is active
+      if (this.activeSection === 'home' || this.activeSection === '') return true
+      // Also active when scrolling past hero but before courses
+      return !this.activeSection
+    },
+    isServicesActive() {
+      if (this.currentPath !== '/') return false
+      return this.activeSection === 'courses'
+    },
+    isSolutionsActive() {
+      if (this.currentPath !== '/') return false
+      return this.activeSection === 'features'
     }
+  },
+  watch: {
+    $route(to) {
+      this.closeMenu()
+      // Re-setup scroll spy when navigating to homepage
+      this.$nextTick(() => {
+        this.teardownScrollSpy()
+        if (to.path === '/') {
+          this.setupScrollSpy()
+        }
+      })
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+    if (this.$route.path === '/') {
+      this.$nextTick(() => this.setupScrollSpy())
+    }
+  },
+  beforeUnmount() {
+    this.teardownScrollSpy()
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     toggleMenu() {
@@ -96,8 +136,39 @@ export default {
     closeMenu() {
       this.menuOpen = false
     },
-    isHashActive(sectionId) {
-      return this.currentPath === '/' && this.currentHash === `#${sectionId}`
+    handleScroll() {
+      this.isScrolled = window.scrollY > 50
+    },
+    setupScrollSpy() {
+      if (this.observer) return
+      this.observer = new IntersectionObserver(
+        (entries) => {
+          // Sort visible entries by how much of the section is in view
+          const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+          
+          if (visible.length > 0) {
+            this.activeSection = visible[0].target.id
+          }
+        },
+        {
+          threshold: [0, 0.15, 0.3, 0.5, 0.7],
+          rootMargin: '-80px 0px -40% 0px'
+        }
+      )
+
+      this.scrollSections.forEach(id => {
+        const el = document.getElementById(id)
+        if (el) this.observer.observe(el)
+      })
+    },
+    teardownScrollSpy() {
+      if (this.observer) {
+        this.observer.disconnect()
+        this.observer = null
+      }
+      this.activeSection = ''
     }
   }
 }
@@ -109,18 +180,33 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(248, 250, 252, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
   z-index: 1000;
   padding: 0.75rem 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-scrolled {
+  background: rgba(248, 250, 252, 0.95);
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.1);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.45rem 0;
 }
 
 :root[data-theme="black"] .navbar {
-  background: rgba(0, 0, 0, 0.9);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="black"] .navbar-scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .container {
@@ -148,6 +234,11 @@ export default {
 .logo-image {
   height: clamp(48px, 5.6vw, 64px);
   width: auto;
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-scrolled .logo-image {
+  height: clamp(40px, 4.8vw, 54px);
 }
 
 :root[data-theme="black"] .logo-image {
@@ -171,9 +262,9 @@ export default {
   font-weight: 600;
   font-size: clamp(0.82rem, 0.95vw, 0.92rem);
   letter-spacing: 0.3px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+  transition: color 0.25s, background 0.25s, box-shadow 0.25s;
   position: relative;
 }
 
@@ -181,14 +272,22 @@ export default {
   color: #cccccc;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   color: var(--primary-dark);
-  background: rgba(var(--primary-rgb), 0.12);
-  box-shadow: inset 0 0 0 1px rgba(var(--primary-rgb), 0.2);
+  background: rgba(var(--primary-rgb), 0.08);
 }
 
-:root[data-theme="black"] .nav-links a:hover,
+:root[data-theme="black"] .nav-links a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+  color: var(--primary-dark);
+  background: rgba(var(--primary-rgb), 0.14);
+  box-shadow: inset 0 0 0 1px rgba(var(--primary-rgb), 0.25);
+}
+
 :root[data-theme="black"] .nav-links a.active {
   color: black;
   background: white;
@@ -215,6 +314,55 @@ export default {
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+}
+
+.btn-learncraft {
+  padding: 0.58rem 1.15rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-learncraft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  pointer-events: none;
+}
+
+.btn-learncraft-star {
+  font-size: 0.85rem;
+  animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.btn-learncraft:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+}
+
+:root[data-theme="black"] .btn-learncraft {
+  box-shadow: 0 2px 12px rgba(245, 158, 11, 0.3);
+}
+
+:root[data-theme="black"] .btn-learncraft:hover {
+  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.55);
 }
 
 :root[data-theme="black"] .btn-secondary {
@@ -266,19 +414,38 @@ export default {
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1001;
 }
 
 .menu-toggle span {
-  width: 25px;
-  height: 3px;
+  width: 26px;
+  height: 2.5px;
   background: #1a1a1a;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
+  transform-origin: center;
+}
+
+:root[data-theme="black"] .menu-toggle span {
+  background: #e0e0e0;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 @media (max-width: 1140px) {
@@ -287,8 +454,9 @@ export default {
     padding: 0.35rem 0.62rem;
   }
 
-  .btn-secondary {
-    display: none;
+  .btn-learncraft {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.82rem;
   }
 }
 

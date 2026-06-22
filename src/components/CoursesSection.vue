@@ -111,6 +111,21 @@ export default {
     return {
       courses: [
         {
+          title: 'Learncraft LMS — Best Product',
+          description: 'Our flagship LMS platform. Instructors create, edit, quiz, and live-preview course content. The most complete authoring-to-delivery workflow available.',
+          category: '⭐ Featured Product',
+          icon: '🏆',
+          level: 'Flagship',
+          rating: 'Best Seller',
+          students: 'Instructor Teams',
+          duration: 'Immediate Access',
+          lessons: 'Create & Deliver',
+          price: 'Access',
+          originalPrice: null,
+          link: '/learncraft',
+          gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #8b5cf6 100%)'
+        },
+        {
           title: 'Custom LMS Development',
           description: 'Enterprise LMS platform design with secure access controls, learner analytics, and integration-ready architecture for corporate training.',
           category: 'Web Development',
@@ -209,21 +224,6 @@ export default {
           price: 'Custom',
           originalPrice: null,
           gradient: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
-        },
-        {
-          title: 'Learncraft Course Authoring Tool',
-          description: 'Our in-house authoring tool where instructors can create, edit, and live preview course content before release.',
-          category: 'Authoring Platform',
-          icon: '🛠️',
-          level: 'Live',
-          rating: 'Featured',
-          students: 'Instructor Teams',
-          duration: 'Immediate Access',
-          lessons: 'Create and Edit',
-          price: 'Access',
-          originalPrice: null,
-          link: '/learncraft',
-          gradient: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)'
         },
         {
           title: 'Learning Research & Decision Support',
