@@ -1,5 +1,13 @@
 <template>
   <section id="home" class="hero">
+    <!-- Geometric grid overlay -->
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <div class="hero-circles" aria-hidden="true">
+      <span class="circle circle-1"></span>
+      <span class="circle circle-2"></span>
+      <span class="circle circle-3"></span>
+    </div>
+
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
@@ -51,20 +59,21 @@
             <span>Instructor Create/Edit with Live Preview</span>
           </div>
         </div>
-        
+
         <div class="hero-image">
           <div class="collage-frame" aria-label="Authoring and Learncraft workflow collage">
             <div class="collage-label">Tool Workflow Snapshot</div>
             <div
               v-for="(card, index) in collageCards"
               :key="index"
-              class="collage-card"
+              class="panel collage-card"
               :class="card.className"
               :style="{ backgroundImage: `linear-gradient(140deg, rgba(10, 16, 38, 0.18), rgba(15, 118, 110, 0.18)), url('${card.image}')` }"
               role="img"
               :aria-label="card.alt"
             >
               <span class="collage-chip">{{ card.chip }}</span>
+              <div class="panel-glow" aria-hidden="true"></div>
             </div>
           </div>
         </div>
@@ -121,6 +130,18 @@ export default {
           alt: 'Learner progress and module completion tracking interface',
           chip: 'Learner Progress',
           className: 'card-progress'
+        },
+        {
+          image: '/learncraft/gallery-content-authoring.png',
+          alt: 'Content authoring interface with rich media lesson builder',
+          chip: 'Content Builder',
+          className: 'card-content'
+        },
+        {
+          image: '/learncraft/gallery-live-editor-wide.png',
+          alt: 'Wide live editor preview with real-time course rendering',
+          chip: 'Live Preview',
+          className: 'card-live-wide'
         }
       ]
     };
@@ -129,9 +150,12 @@ export default {
 </script>
 
 <style scoped>
+/* =============================================
+   Hero Section — Navy → Indigo Gradient
+   ============================================= */
 .hero {
   padding: clamp(7.5rem, 12vw, 9rem) 0 var(--section-spacing);
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, #0a1628 0%, #141c3a 30%, #1a2156 60%, #1e266d 100%);
   overflow: hidden;
   min-height: 90vh;
   display: flex;
@@ -139,14 +163,66 @@ export default {
   position: relative;
 }
 
-.hero::before {
-  content: '';
+/* ---- Geometric grid overlay ---- */
+.hero-grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.18'%3E%3Cpath d='M60 0v120M0 60h120'/%3E%3C/g%3E%3Ccircle cx='60' cy='60' r='18' stroke='%23ffffff' stroke-opacity='0.2' fill='none'/%3E%3C/svg%3E");
-  background-size: 120px 120px;
-  opacity: 0.35;
   pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 70%);
+}
+
+/* ---- Floating geometric circles ---- */
+.hero-circles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(147, 197, 253, 0.15);
+  animation: floatCircle 20s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 420px;
+  height: 420px;
+  top: -10%;
+  right: -5%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 280px;
+  height: 280px;
+  bottom: -8%;
+  left: 55%;
+  border-color: rgba(56, 189, 248, 0.12);
+  animation-delay: -7s;
+}
+
+.circle-3 {
+  width: 180px;
+  height: 180px;
+  top: 30%;
+  right: 42%;
+  border-color: rgba(147, 197, 253, 0.1);
+  animation-delay: -14s;
+}
+
+@keyframes floatCircle {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(15px, -20px) rotate(5deg); }
+  50% { transform: translate(-10px, 10px) rotate(-3deg); }
+  75% { transform: translate(20px, 5px) rotate(2deg); }
 }
 
 .container {
@@ -173,15 +249,15 @@ export default {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  color: #e5edfb;
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
   font-weight: 500;
   font-size: 0.95rem;
   margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(147, 197, 253, 0.22);
 }
 
 .hero-title {
@@ -190,11 +266,12 @@ export default {
   line-height: 1.15;
   color: white;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-description {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(229, 237, 251, 0.92);
   line-height: 1.7;
   margin-bottom: 2.5rem;
   max-width: 540px;
@@ -270,14 +347,14 @@ export default {
   font-size: 0.78rem;
   letter-spacing: 0.02em;
   color: #e5edfb;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(147, 197, 253, 0.2);
 }
 
 .btn-primary-lg {
   padding: 1rem 2.5rem;
   background: white;
-  color: var(--primary);
+  color: #141c3a;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -304,7 +381,7 @@ export default {
   padding: 1rem 2.5rem;
   background: transparent;
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(147, 197, 253, 0.35);
   border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
@@ -317,23 +394,29 @@ export default {
 }
 
 .btn-secondary-lg:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(147, 197, 253, 0.08);
+  border-color: rgba(147, 197, 253, 0.55);
 }
 
+/* =============================================
+   Image Collage — Floating Panels
+   ============================================= */
 .hero-image {
   position: relative;
   animation: fadeInRight 0.8s ease-out;
   padding-top: 1rem;
+  perspective: 800px;
 }
 
 .collage-frame {
   position: relative;
   min-height: 750px;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: linear-gradient(145deg, rgba(13, 30, 66, 0.5), rgba(21, 55, 118, 0.42));
-  box-shadow: 0 24px 54px rgba(2, 10, 28, 0.45);
+  border: 1px solid rgba(147, 197, 253, 0.18);
+  background: linear-gradient(145deg, rgba(13, 30, 66, 0.55), rgba(26, 33, 86, 0.45));
+  box-shadow:
+    0 24px 54px rgba(2, 10, 28, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   overflow: hidden;
 }
 
@@ -342,24 +425,54 @@ export default {
   top: 1rem;
   left: 1rem;
   z-index: 3;
-  background: rgba(13, 24, 53, 0.8);
+  background: rgba(13, 24, 53, 0.85);
   color: #e5edfb;
-  border: 1px solid rgba(147, 197, 253, 0.36);
+  border: 1px solid rgba(147, 197, 253, 0.4);
   border-radius: 999px;
   padding: 0.4rem 0.85rem;
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 700;
+  backdrop-filter: blur(6px);
+}
+
+/* ---- Interactive panels with hover effects ---- */
+.panel {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  will-change: transform, box-shadow;
+}
+
+.panel:hover {
+  transform: scale(1.05) translateY(-5px) !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.4), 0 0 30px rgba(56, 189, 248, 0.15) !important;
+  z-index: 5 !important;
+}
+
+.panel:hover .panel-glow {
+  opacity: 1;
+}
+
+/* Glow overlay — hidden by default, shown on hover */
+.panel-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .collage-card {
   position: absolute;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  border: 1px solid rgba(147, 197, 253, 0.22);
   background-size: cover;
   background-position: center;
-  box-shadow: 0 14px 32px rgba(4, 9, 27, 0.35);
+  box-shadow: 0 14px 32px rgba(4, 9, 27, 0.4);
   overflow: hidden;
 }
 
@@ -367,72 +480,104 @@ export default {
   position: absolute;
   top: 0.6rem;
   left: 0.6rem;
-  background: rgba(10, 17, 40, 0.8);
+  background: rgba(10, 17, 40, 0.85);
   color: #f8fbff;
-  border: 1px solid rgba(147, 197, 253, 0.35);
+  border: 1px solid rgba(147, 197, 253, 0.38);
   border-radius: 999px;
   padding: 0.28rem 0.62rem;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+  z-index: 1;
+  backdrop-filter: blur(4px);
 }
 
+/* ---- Individual card positions ---- */
 .card-home {
-  width: 64%;
-  height: 46%;
+  width: 62%;
+  height: 44%;
   right: 1.2rem;
   top: 2.8rem;
   transform: rotate(-2.5deg);
+  z-index: 1;
 }
 
 .card-templates {
-  width: 43%;
-  height: 33%;
+  width: 40%;
+  height: 30%;
   left: 1.4rem;
   top: 6.8rem;
   transform: rotate(2.5deg);
+  z-index: 2;
 }
 
 .card-editor {
-  width: 48%;
-  height: 36%;
+  width: 44%;
+  height: 34%;
   right: 0.9rem;
   bottom: 1.2rem;
   transform: rotate(2deg);
+  z-index: 2;
 }
 
 .card-live {
-  width: 50%;
-  height: 31%;
+  width: 46%;
+  height: 28%;
   left: 1.2rem;
   bottom: 1.1rem;
   transform: rotate(-3.5deg);
+  z-index: 3;
 }
 
 .card-inspector {
-  width: 30%;
-  height: 24%;
+  width: 28%;
+  height: 22%;
   right: 2.3rem;
   top: 0.95rem;
   transform: rotate(6deg);
+  z-index: 4;
 }
 
 .card-quiz {
-  width: 46%;
-  height: 27%;
+  width: 42%;
+  height: 24%;
   left: 2.1rem;
-  top: 21.9rem;
+  top: 19.8rem;
   transform: rotate(-5deg);
+  z-index: 2;
 }
 
 .card-progress {
-  width: 42%;
-  height: 25%;
+  width: 38%;
+  height: 22%;
   right: 1.3rem;
-  top: 28.2rem;
+  top: 27.8rem;
   transform: rotate(3deg);
+  z-index: 2;
 }
 
+/* New cards */
+.card-content {
+  width: 35%;
+  height: 23%;
+  left: 1.5rem;
+  top: 1.8rem;
+  transform: rotate(-1.5deg);
+  z-index: 3;
+}
+
+.card-live-wide {
+  width: 48%;
+  height: 26%;
+  right: 1rem;
+  top: 20.5rem;
+  transform: rotate(1.5deg);
+  z-index: 1;
+}
+
+/* =============================================
+   Keyframes
+   ============================================= */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -466,6 +611,33 @@ export default {
   }
 }
 
+/* =============================================
+   Reduced motion — accessibility
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .panel:hover {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .panel-glow {
+    transition: none !important;
+  }
+
+  .circle {
+    animation: none !important;
+  }
+
+  .hero-text,
+  .hero-image {
+    animation: none !important;
+  }
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -482,6 +654,10 @@ export default {
 
   .collage-frame {
     min-height: 560px;
+  }
+
+  .hero-image {
+    perspective: none;
   }
 }
 
@@ -525,14 +701,24 @@ export default {
     font-size: 0.66rem;
   }
 
+  .hero-image {
+    perspective: none;
+  }
+
   .card-home,
   .card-templates,
   .card-editor,
   .card-live,
   .card-inspector,
   .card-quiz,
-  .card-progress {
-    transform: none;
+  .card-progress,
+  .card-content,
+  .card-live-wide {
+    transform: none !important;
+  }
+
+  .panel:hover {
+    transform: scale(1.02) translateY(-2px) !important;
   }
 }
 </style>
