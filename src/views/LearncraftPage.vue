@@ -53,8 +53,8 @@
           <div class="hero-product" aria-label="Learncraft product preview">
             <img
               class="hero-product-main"
-              src="/learncraft/hero-home.png"
-              alt="Learncraft dashboard and course creation workspace"
+              src="/learncraft/learn-powerpoint.png"
+              alt="PowerPoint slide authoring in Learncraft"
               loading="eager"
               decoding="async"
             />
@@ -69,6 +69,13 @@
               class="hero-product-float hero-product-float-right"
               src="/learncraft/hero-live-editor.png"
               alt="Live content editing and preview in Learncraft"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="hero-product-float hero-product-float-bottom"
+              src="/learncraft/hero-home.png"
+              alt="Learncraft dashboard and course creation workspace"
               loading="lazy"
               decoding="async"
             />
@@ -374,6 +381,13 @@ h1 {
   right: -1.1rem;
   top: -1.1rem;
   transform: rotate(4deg);
+}
+
+.hero-product-float-bottom {
+  right: -1.5rem;
+  bottom: -2rem;
+  transform: rotate(-3deg);
+  width: 44%;
 }
 
 .workflow-section,
