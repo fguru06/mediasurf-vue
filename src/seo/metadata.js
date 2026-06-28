@@ -59,6 +59,30 @@ export const SEO_METADATA = {
       keywords:
         'LearnCraft Authoring Suite, AI course generator, GPT-4o course generator, AI course authoring, block editor LMS, auto quiz generator, flashcard generator, branching scenarios, SCORM compliant, xAPI, curriculum authoring, instructional design, live preview, corporate training, elearning platform',
       image: '/og-image.svg'
+    },
+    privacy: {
+      title: 'Privacy Policy | MediaSurf Technologies',
+      description:
+        'MediaSurf Technologies Privacy Policy — how we collect, use, and protect your personal data. PIPEDA and GDPR compliant. Learn about your data rights.',
+      keywords:
+        'privacy policy, data protection, PIPEDA, GDPR, personal data, MediaSurf privacy',
+      image: '/og-image.svg'
+    },
+    terms: {
+      title: 'Terms of Service | MediaSurf Technologies',
+      description:
+        'Terms of Service for MediaSurf Technologies — governing your use of our website, LearnCraft, PitStop, and all related services.',
+      keywords:
+        'terms of service, terms and conditions, MediaSurf terms, legal agreement',
+      image: '/og-image.svg'
+    },
+    cookiePolicy: {
+      title: 'Cookie Policy | MediaSurf Technologies',
+      description:
+        'MediaSurf Technologies Cookie Policy — how we use cookies, Google Analytics, and tracking technologies. Manage your cookie preferences.',
+      keywords:
+        'cookie policy, cookies, Google Analytics, tracking, cookie consent, MediaSurf cookies',
+      image: '/og-image.svg'
     }
   }
 };

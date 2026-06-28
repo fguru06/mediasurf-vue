@@ -6,6 +6,9 @@ import CustomLmsDevelopmentPage from '../views/CustomLmsDevelopmentPage.vue';
 import EmployeeOnboardingPage from '../views/EmployeeOnboardingPage.vue';
 import BlogPage from '../views/BlogPage.vue';
 import LearncraftPage from '../views/LearncraftPage.vue';
+import PrivacyPage from '../views/PrivacyPage.vue';
+import TermsPage from '../views/TermsPage.vue';
+import CookiePolicyPage from '../views/CookiePolicyPage.vue';
 import { SEO_METADATA } from '../seo/metadata';
 
 const routes = [
@@ -50,6 +53,24 @@ const routes = [
     name: 'Learncraft',
     component: LearncraftPage,
     meta: SEO_METADATA.pages.learncraft
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: PrivacyPage,
+    meta: SEO_METADATA.pages.privacy
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: TermsPage,
+    meta: SEO_METADATA.pages.terms
+  },
+  {
+    path: '/cookie-policy',
+    name: 'CookiePolicy',
+    component: CookiePolicyPage,
+    meta: SEO_METADATA.pages.cookiePolicy
   },
 ];
 

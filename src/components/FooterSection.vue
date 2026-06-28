@@ -89,9 +89,9 @@
         <div class="footer-column">
           <h3 class="footer-heading">Legal</h3>
           <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
+            <li><router-link to="/privacy">Privacy Policy</router-link></li>
+            <li><router-link to="/terms">Terms of Service</router-link></li>
+            <li><router-link to="/cookie-policy">Cookie Policy</router-link></li>
             <li><a href="#">Accessibility</a></li>
             <li><a href="#">Licenses</a></li>
             <li><a href="#">Sitemap</a></li>

@@ -2,6 +2,7 @@
 import NavigationBar from './components/NavigationBar.vue'
 import FooterSection from './components/FooterSection.vue'
 import ThemeSwitcher from './components/ThemeSwitcher.vue'
+import CookieConsent from './components/CookieConsent.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import ThemeSwitcher from './components/ThemeSwitcher.vue'
     </main>
     <FooterSection />
     <ThemeSwitcher />
+    <CookieConsent />
   </div>
 </template>
 
