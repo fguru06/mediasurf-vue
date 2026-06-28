@@ -11,67 +11,99 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <div class="badge">Authoring, Course Training Development, LMS, and Analytics</div>
+          <div class="badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            AI-First Learning Technology Company
+          </div>
           <h1 class="hero-title">
-            Build Any Course<br>
-            Experience with LMS<br>
-            and Live Analytics
+            AI-Powered Products<br>
+            &amp; Custom Learning<br>
+            Platforms That Scale
           </h1>
           <p class="hero-description">
-            MediaSurf Technologies helps teams create technical, compliance, onboarding, and product training
-            with custom course development, learning analytics, and instructor-ready authoring workflows.
+            MediaSurf builds AI course generators, instructor authoring tools, and industry-specific LMS platforms.
+            From automated content creation to hands-on training delivery — we power the full learning lifecycle.
           </p>
-          <a
-            href="https://pp-ai-tool.mediasurf.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hero-highlight promotional-link"
-            @click="$emit('track', 'hero_presentation_authoring_tool')"
-          >
-            <span class="hero-highlight-label">NEW</span>
-            Use our <strong>Slide-Based Presentation Authoring Tool</strong> to create multimedia course content and export it for Learncraft LMS delivery. <span class="try-now">Launch Tool &rarr;</span>
-          </a>
-          <router-link
-            to="/learncraft"
-            class="hero-learncraft-badge"
-            @click="$emit('track', 'hero_learncraft_featured')"
-          >
-            <span class="learncraft-badge-star">★</span>
-            <span><strong>Learncraft LMS</strong> — Our best product. Create, edit &amp; deliver courses with live instructor preview.</span>
-            <span class="learncraft-badge-arrow">&rarr;</span>
-          </router-link>
+
+          <!-- Product pills -->
+          <div class="hero-products">
+            <a
+              href="https://learncraft.mediasurf.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-product-pill pill-ppai"
+              @click="$emit('track', 'hero_pp_ai_tool')"
+            >
+              <span class="pill-icon">📊</span>
+              <span class="pill-content">
+                <strong>PowerPoint AI Tool</strong>
+                <small>AI-Powered Slide Builder &amp; Course Converter</small>
+              </span>
+              <span class="pill-arrow">&rarr;</span>
+            </a>
+            <a
+              href="https://learncraft.mediasurf.ca/editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-product-pill pill-flagship"
+              @click="$emit('track', 'hero_learncraft_suite')"
+            >
+              <span class="pill-icon">✨</span>
+              <span class="pill-content">
+                <strong>LearnCraft Authoring Suite</strong>
+                <small>AI Course Generator &amp; Live Editor</small>
+              </span>
+              <span class="pill-badge-flagship">Flagship</span>
+              <span class="pill-arrow">&rarr;</span>
+            </a>
+            <a
+              href="https://pitstop.mediasurf.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-product-pill pill-pitstop"
+              @click="$emit('track', 'hero_pitstop')"
+            >
+              <span class="pill-icon">🔧</span>
+              <span class="pill-content">
+                <strong>PitStop</strong>
+                <small>Mobile Mechanic Marketplace</small>
+              </span>
+              <span class="pill-arrow">&rarr;</span>
+            </a>
+          </div>
+
           <div class="hero-actions">
+            <a
+              href="#products"
+              class="btn-primary-lg"
+              @click="$emit('track', 'hero_explore_products')"
+              data-track-event="cta_click"
+              data-track-category="hero"
+              data-track-label="explore_products"
+            >
+              Explore Our Products
+            </a>
             <router-link
               to="/contact#contact-form"
-              class="btn-primary-lg"
-              @click="$emit('track', 'hero_get_started')"
+              class="btn-secondary-lg"
+              @click="$emit('track', 'hero_book_call')"
               data-track-event="cta_click"
               data-track-category="hero"
               data-track-label="book_discovery_call"
             >
               Book Discovery Call
             </router-link>
-            <router-link
-              to="/learncraft"
-              class="btn-secondary-lg"
-              @click="$emit('track', 'hero_learn_more')"
-              data-track-event="cta_click"
-              data-track-category="hero"
-              data-track-label="view_tools_workflow"
-            >
-              View Tool Workflow
-            </router-link>
           </div>
-          <div class="hero-trust-list" aria-label="Learning solution highlights">
-            <span>Course Development for Any Domain</span>
-            <span>Learning Analytics and Reporting</span>
-            <span>Instructor Create/Edit with Live Preview</span>
+          <div class="hero-trust-list" aria-label="Platform capabilities">
+            <span>AI-Powered Course Generation</span>
+            <span>SCORM &amp; xAPI Compliant</span>
+            <span>Enterprise-Ready LMS</span>
           </div>
         </div>
 
         <div class="hero-image">
-          <div class="collage-frame" aria-label="Authoring and Learncraft workflow collage">
-            <div class="collage-label">Tool Workflow Snapshot</div>
+          <div class="collage-frame" aria-label="MediaSurf product ecosystem preview">
+            <div class="collage-label">AI Learning Ecosystem</div>
             <div
               v-for="(card, index) in collageCards"
               :key="index"
@@ -100,56 +132,56 @@ export default {
       collageCards: [
         {
           image: '/learncraft/hero-home.png',
-          alt: 'Slide-based authoring dashboard for course training development',
-          chip: 'Authoring Home',
+          alt: 'AI-powered course authoring dashboard with content generation tools',
+          chip: 'AI Generator',
           className: 'card-home'
         },
         {
           image: '/learncraft/hero-templates.png',
-          alt: 'Course templates for authoring course training development workflows',
-          chip: 'Templates',
+          alt: 'Smart course templates with AI-assisted content structuring',
+          chip: 'Smart Templates',
           className: 'card-templates'
         },
         {
           image: '/learncraft/hero-editor.png',
-          alt: 'Presentation editor for multimedia LMS development content',
-          chip: 'Slide Editor',
+          alt: 'AI-enhanced slide editor for multimedia course development',
+          chip: 'AI Slide Editor',
           className: 'card-editor'
         },
         {
           image: '/learncraft/hero-live-editor.png',
-          alt: 'Learncraft live editor showing course content updates and preview',
-          chip: 'Live Edit',
+          alt: 'Live instructor editor with real-time preview and AI suggestions',
+          chip: 'Live + AI',
           className: 'card-live'
         },
         {
           image: '/learncraft/hero-inspector.png',
-          alt: 'Learning analytics and content inspector panel in authoring workflow',
-          chip: 'Props and Analytics',
+          alt: 'AI learning analytics dashboard with content inspector',
+          chip: 'AI Analytics',
           className: 'card-inspector'
         },
         {
           image: '/learncraft/gallery-editor-quiz.png',
-          alt: 'Quiz editing experience with content inspector and lesson canvas',
-          chip: 'Quiz Authoring',
+          alt: 'AI-generated quiz authoring with auto-assessment tools',
+          chip: 'AI Quizzes',
           className: 'card-quiz'
         },
         {
           image: '/learncraft/gallery-learner-progress.png',
-          alt: 'Learner progress and module completion tracking interface',
-          chip: 'Learner Progress',
+          alt: 'AI-powered learner progress tracking and adaptive paths',
+          chip: 'Smart Progress',
           className: 'card-progress'
         },
         {
           image: '/learncraft/gallery-content-authoring.png',
-          alt: 'Content authoring interface with rich media lesson builder',
-          chip: 'Content Builder',
+          alt: 'AI content builder with rich media and auto-generated lessons',
+          chip: 'AI Content',
           className: 'card-content'
         },
         {
           image: '/learncraft/gallery-live-editor-wide.png',
-          alt: 'Wide live editor preview with real-time course rendering',
-          chip: 'Live Preview',
+          alt: 'Full AI-powered live editor with real-time collaborative preview',
+          chip: 'AI Live Preview',
           className: 'card-live-wide'
         }
       ]
@@ -263,19 +295,46 @@ export default {
   color: #e5edfb;
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
   margin-bottom: 2rem;
   border: 1px solid rgba(147, 197, 253, 0.22);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px rgba(56, 189, 248, 0.6); }
+  50% { opacity: 0.5; box-shadow: 0 0 20px rgba(56, 189, 248, 0.9); }
 }
 
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1.15;
-  color: white;
   margin-bottom: 1.5rem;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 25%, #38bdf8 50%, #a78bfa 75%, #f9a8d4 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heroTextShimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+}
+
+@keyframes heroTextShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
 }
 
 .hero-description {
@@ -286,104 +345,142 @@ export default {
   max-width: 540px;
 }
 
-.hero-highlight {
-  display: inline-block;
-  color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.5;
+/* ---- Product Pills ---- */
+.hero-products {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
   margin-bottom: 2rem;
-  padding: 0.9rem 1.1rem;
-  border-radius: 12px;
-  background: var(--bg-white);
-  border: 1px solid rgba(var(--primary-rgb), 0.35);
-  border-left: 4px solid var(--primary);
-  backdrop-filter: blur(8px);
-  max-width: 600px;
-  box-shadow: 0 12px 30px rgba(var(--primary-rgb), 0.25);
 }
 
-.promotional-link {
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.promotional-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(var(--primary-rgb), 0.35);
-}
-
-.try-now {
-  color: var(--primary);
-  font-weight: 700;
-  margin-left: 0.5rem;
-  white-space: nowrap;
-}
-
-.hero-highlight-label {
+.hero-product-pill {
   display: inline-flex;
   align-items: center;
-  margin-right: 0.45rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  background: var(--gradient-accent);
-  color: var(--primary-dark);
-  font-weight: 800;
-  letter-spacing: 0.3px;
-}
-
-:root[data-theme="black"] .hero-highlight-label {
-  color: var(--text-primary);
-}
-
-/* ---- Learncraft featured badge ---- */
-.hero-learncraft-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: white;
-  font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-  padding: 0.8rem 1.2rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(139, 92, 246, 0.2));
-  border: 1px solid rgba(245, 158, 11, 0.45);
+  gap: 0.75rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: 14px;
   text-decoration: none;
-  max-width: 620px;
   transition: all 0.3s ease;
   cursor: pointer;
+  max-width: 520px;
+  border: 1px solid transparent;
 }
 
-.hero-learncraft-badge:hover {
+.hero-product-pill:hover {
   transform: translateY(-2px);
-  border-color: rgba(245, 158, 11, 0.7);
-  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.25);
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.28), rgba(139, 92, 246, 0.28));
 }
 
-.learncraft-badge-star {
-  font-size: 1.2rem;
-  color: #f59e0b;
-  animation: lcStarPulse 2s ease-in-out infinite;
+.pill-icon {
+  font-size: 1.5rem;
   flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
 }
 
-@keyframes lcStarPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.25); opacity: 0.8; }
+.pill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
 }
 
-.learncraft-badge-arrow {
-  color: #f59e0b;
-  font-weight: 700;
-  flex-shrink: 0;
+.pill-content strong {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.pill-content small {
+  font-size: 0.78rem;
+  color: rgba(229, 237, 251, 0.7);
+  font-weight: 400;
+}
+
+.pill-arrow {
+  font-size: 1.1rem;
+  color: rgba(229, 237, 251, 0.6);
   transition: transform 0.3s;
+  flex-shrink: 0;
 }
 
-.hero-learncraft-badge:hover .learncraft-badge-arrow {
+.hero-product-pill:hover .pill-arrow {
   transform: translateX(3px);
+  color: white;
+}
+
+/* PowerPoint AI pill */
+.pill-ppai {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(34, 211, 238, 0.13));
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.pill-ppai:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.28), rgba(34, 211, 238, 0.22));
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.25);
+}
+
+/* Flagship pill — LearnCraft Authoring Suite */
+.pill-flagship {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(139, 92, 246, 0.2));
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+  position: relative;
+}
+
+.pill-flagship:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.35), rgba(139, 92, 246, 0.3));
+  border-color: rgba(99, 102, 241, 0.75);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.35), 0 0 24px rgba(139, 92, 246, 0.2);
+}
+
+.pill-badge-flagship {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  flex-shrink: 0;
+  animation: flagshipGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes flagshipGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(99, 102, 241, 0.4); }
+  50% { box-shadow: 0 0 16px rgba(139, 92, 246, 0.7); }
+}
+
+/* Pitstop pill */
+.pill-pitstop {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(5, 150, 105, 0.13));
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.pill-pitstop:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(5, 150, 105, 0.22));
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 8px 28px rgba(16, 185, 129, 0.25);
+}
+
+@media (max-width: 600px) {
+  .hero-product-pill {
+    padding: 0.65rem 0.9rem;
+  }
+
+  .pill-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
 }
 
 .hero-actions {

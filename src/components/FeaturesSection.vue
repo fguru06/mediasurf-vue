@@ -2,10 +2,10 @@
   <section id="features" class="features">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">✨ Our Expertise</div>
-        <h2 class="section-title">End-to-End Course Development Capabilities</h2>
+        <div class="section-badge">💪 MediaSurf Capabilities</div>
+        <h2 class="section-title">End-to-End Learning Technology &amp; Services</h2>
         <p class="section-description">
-          We design learning experiences across technical training, onboarding, compliance, product enablement, and instructor-led programs.
+          From AI course generation to custom LMS development, we cover the full spectrum of learning technology.
         </p>
       </div>
 
@@ -29,70 +29,58 @@ export default {
     return {
       features: [
         {
-          icon: '💻',
-          title: 'LMS Platform Engineering',
-          description: 'Custom learning platforms with secure roles, integrations, and scalable learner delivery.',
+          icon: '🤖',
+          title: 'AI Course Generation',
+          description: 'Auto-generate complete courses with modules, lessons, quizzes, and images using LearnCraft AI.',
+          color: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
+        },
+        {
+          icon: '✏️',
+          title: 'Instructor Authoring',
+          description: 'Inline WYSIWYG editing with live preview, slide templates, and instructor review workflows.',
+          color: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)'
+        },
+        {
+          icon: '🔧',
+          title: 'Industry-Specific LMS',
+          description: 'Purpose-built platforms like Pitstop for automotive training with role-based learning paths.',
+          color: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
+        },
+        {
+          icon: '🧩',
+          title: 'Custom LMS Development',
+          description: 'Enterprise LMS platforms with AI integration, secure roles, and scalable learner delivery.',
           color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
           icon: '📚',
-          title: 'Course Development',
+          title: 'Curriculum & Course Design',
           description: 'Interactive modules, multimedia lessons, and structured learning paths for any subject area.',
           color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
-          icon: '🎓',
-          title: 'Technical and Product Training',
-          description: 'Hands-on skill development programs for software, tools, operations, and product adoption.',
-          color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
-        },
-        {
           icon: '🚀',
           title: 'Employee Onboarding',
-          description: 'Streamlined onboarding experiences that get new hires productive faster.',
+          description: 'AI-powered onboarding experiences that get new hires productive faster.',
           color: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         },
         {
-          icon: '❓',
-          title: 'Assessment and Evaluation',
-          description: 'Question banks, adaptive assessments, and rubric-driven evaluation for measurable outcomes.',
-          color: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+          icon: '📊',
+          title: 'Learning Analytics',
+          description: 'AI-driven skills gap detection, engagement metrics, and predictive progress insights.',
+          color: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)'
         },
         {
           icon: '📱',
-          title: 'Mobile Learning',
-          description: 'Responsive design ensuring your training works seamlessly across all devices.',
+          title: 'Mobile-First Design',
+          description: 'Responsive learning experiences that work seamlessly across all devices.',
           color: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
         },
         {
-          icon: '🤖',
-          title: 'Instructor Authoring with Learncraft',
-          description: 'Create and edit course content in Learncraft and use live preview to validate learner experience before launch.',
-          color: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
-        },
-        {
-          icon: '🧠',
-          title: 'Learning Strategy and Analytics',
-          description: 'Evidence-based planning, learner behavior insights, and performance analytics for continuous improvement.',
-          color: 'linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%)'
-        },
-        {
           icon: '🎨',
-          title: 'Custom Design',
-          description: 'Branded learning experiences that align with your company\'s visual identity.',
+          title: 'Branded Experiences',
+          description: 'Custom-designed learning platforms that align with your company\'s visual identity.',
           color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
-        },
-        {
-          icon: '🔎',
-          title: 'Authoring Workflow Automation',
-          description: 'Structured publishing workflows and reusable templates that speed up instructor production cycles.',
-          color: 'linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)'
-        },
-        {
-          icon: '📊',
-          title: 'Analytics & Reporting',
-          description: 'Comprehensive tracking and reporting tools to measure training effectiveness.',
-          color: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)'
         }
       ]
     }

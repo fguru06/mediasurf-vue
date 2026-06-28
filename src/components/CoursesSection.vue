@@ -1,104 +1,97 @@
 <template>
-  <section id="courses" class="courses">
+  <section id="solutions" class="solutions">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">🧭 Our Services</div>
-        <h2 class="section-title">Course Development and Learning Systems for Every Team</h2>
+        <div class="section-badge">⚙️ MediaSurf Solutions</div>
+        <h2 class="section-title">Custom LMS Development &amp; Corporate Learning Services</h2>
         <p class="section-description">
-          Authoring, course training development, LMS, and analytics for complete learning operations.
+          Beyond our products, we build custom learning platforms, design curriculum, and deliver end-to-end corporate training solutions tailored to your organization.
         </p>
       </div>
 
       <div class="tool-spotlight">
         <div class="spotlight-content">
-          <p class="spotlight-label">In-House Platform</p>
-          <h3>From Slide Authoring to Learncraft Delivery</h3>
+          <p class="spotlight-label">AI + Human Expertise</p>
+          <h3>Custom Learning Platforms, Powered by AI</h3>
           <p>
-            Start with our first slide-based presentation authoring tool to create multimedia lessons,
-            export the package, then import and preview it in Learncraft LMS before release.
+            Combine our AI course generator with custom LMS development, instructional design, and learning analytics. We build the platform, you own the results.
           </p>
           <div class="spotlight-points">
-            <span>Slide Authoring and Multimedia Export</span>
-            <span>Import into Learncraft LMS</span>
-            <span>Instructor Edit and Live Preview</span>
+            <span>Custom LMS Engineering</span>
+            <span>AI Course Generation Integration</span>
+            <span>Instructional Design Consulting</span>
           </div>
         </div>
         <div class="spotlight-cta-group">
-          <a
-            href="https://pp-ai-tool.mediasurf.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="spotlight-cta"
-            data-track-event="tool_cta_click"
-            data-track-category="courses"
-            data-track-label="open_presentation_authoring"
-          >
-            Launch Authoring Tool
-          </a>
           <router-link
-            to="/learncraft"
-            class="spotlight-cta secondary"
-            data-track-event="tool_cta_click"
-            data-track-category="courses"
-            data-track-label="view_learncraft_workflow"
+            to="/services/custom-lms-development"
+            class="spotlight-cta"
+            data-track-event="cta_click"
+            data-track-category="solutions"
+            data-track-label="custom_lms_development"
           >
-            Learncraft Workflow
+            Custom LMS Development
+          </router-link>
+          <router-link
+            to="/contact#contact-form"
+            class="spotlight-cta secondary"
+            data-track-event="cta_click"
+            data-track-category="solutions"
+            data-track-label="book_consultation"
+          >
+            Book a Consultation
           </router-link>
         </div>
       </div>
 
-      <div class="courses-grid">
-        <div class="course-card" v-for="(course, index) in courses" :key="index">
-          <div class="course-image" :style="{ background: course.gradient }">
-            <div class="course-hero">
-              <div class="course-hero-icon">{{ course.icon }}</div>
-              <div class="course-hero-label">{{ course.category }}</div>
+      <div class="solutions-grid">
+        <div class="solution-card" v-for="(solution, index) in solutions" :key="index">
+          <div class="solution-image" :style="{ background: solution.gradient }">
+            <div class="solution-hero">
+              <div class="solution-hero-icon">{{ solution.icon }}</div>
+              <div class="solution-hero-label">{{ solution.category }}</div>
             </div>
-            <div class="course-badge">{{ course.level }}</div>
+            <div class="solution-badge">{{ solution.level }}</div>
           </div>
-          <div class="course-content">
-            <div class="course-meta">
-              <span class="course-category">{{ course.category }}</span>
-              <span class="course-rating">⭐ {{ course.rating }}</span>
+          <div class="solution-content">
+            <div class="solution-meta">
+              <span class="solution-category">{{ solution.category }}</span>
+              <span class="solution-rating">⭐ {{ solution.rating }}</span>
             </div>
-            <h3 class="course-title">{{ course.title }}</h3>
-            <p class="course-description">{{ course.description }}</p>
-            <div class="course-stats">
+            <h3 class="solution-title">{{ solution.title }}</h3>
+            <p class="solution-description">{{ solution.description }}</p>
+            <div class="solution-stats">
               <div class="stat-item">
                 <span class="stat-icon">👥</span>
-                <span>{{ course.students }}</span>
+                <span>{{ solution.students }}</span>
               </div>
               <div class="stat-item">
                 <span class="stat-icon">⏱️</span>
-                <span>{{ course.duration }}</span>
+                <span>{{ solution.duration }}</span>
               </div>
               <div class="stat-item">
                 <span class="stat-icon">📹</span>
-                <span>{{ course.lessons }} lessons</span>
+                <span>{{ solution.lessons }} lessons</span>
               </div>
             </div>
-            <div class="course-footer">
-              <div class="course-price">
-                <span class="price-current">${{ course.price }}</span>
-                <span class="price-original" v-if="course.originalPrice">${{ course.originalPrice }}</span>
+            <div class="solution-footer">
+              <div class="solution-price">
+                <span class="price-current">${{ solution.price }}</span>
+                <span class="price-original" v-if="solution.originalPrice">${{ solution.originalPrice }}</span>
               </div>
-              <component
-                :is="course.link && course.link.startsWith('http') ? 'a' : 'router-link'"
-                :href="course.link && course.link.startsWith('http') ? course.link : null"
-                :target="course.link && course.link.startsWith('http') ? '_blank' : null"
-                :rel="course.link && course.link.startsWith('http') ? 'noopener noreferrer' : null"
-                :to="course.link && !course.link.startsWith('http') ? course.link : null"
+              <router-link
+                :to="solution.link"
                 class="btn-enroll"
               >
-                {{ course.link ? 'View Service' : 'Get Quote' }}
-              </component>
+                {{ solution.link ? 'View Service' : 'Get Quote' }}
+              </router-link>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="courses-cta">
-        <router-link to="/#courses" class="btn-view-all">View All Services →</router-link>
+      <div class="solutions-cta">
+        <router-link to="/contact#contact-form" class="btn-view-all">Discuss Your Project →</router-link>
       </div>
     </div>
   </section>
@@ -109,26 +102,11 @@ export default {
   name: 'CoursesSection',
   data() {
     return {
-      courses: [
-        {
-          title: 'Learncraft LMS — Best Product',
-          description: 'Our flagship LMS platform. Instructors create, edit, quiz, and live-preview course content. The most complete authoring-to-delivery workflow available.',
-          category: '⭐ Featured Product',
-          icon: '🏆',
-          level: 'Flagship',
-          rating: 'Best Seller',
-          students: 'Instructor Teams',
-          duration: 'Immediate Access',
-          lessons: 'Create & Deliver',
-          price: 'Access',
-          originalPrice: null,
-          link: '/learncraft',
-          gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #8b5cf6 100%)'
-        },
+      solutions: [
         {
           title: 'Custom LMS Development',
-          description: 'Enterprise LMS platform design with secure access controls, learner analytics, and integration-ready architecture for corporate training.',
-          category: 'Web Development',
+          description: 'Enterprise LMS platform design with AI integration, secure access controls, learner analytics, and scalable architecture for corporate training.',
+          category: 'LMS Engineering',
           icon: '🧩',
           level: 'Enterprise',
           rating: '5.0',
@@ -142,7 +120,7 @@ export default {
         },
         {
           title: 'Employee Onboarding Program',
-          description: 'Structured onboarding pathways with role-specific modules, progress milestones, and manager reporting to reduce time-to-productivity.',
+          description: 'Structured onboarding with role-based pathways, AI-generated content, progress milestones, and manager dashboards to reduce ramp-up time.',
           category: 'Corporate Training',
           icon: '👋',
           level: 'All Levels',
@@ -157,8 +135,8 @@ export default {
         },
         {
           title: 'Interactive E-Learning Modules',
-          description: 'Engaging modules with multimedia, scenario-based interactions, and practical activities for any course domain.',
-          category: 'E-Learning Content',
+          description: 'Engaging modules with multimedia, scenario-based interactions, AI-generated content, and hands-on activities for any domain.',
+          category: 'Content Development',
           icon: '🎓',
           level: 'Custom',
           rating: '4.8',
@@ -167,11 +145,12 @@ export default {
           lessons: 'Per module',
           price: 'Custom',
           originalPrice: null,
+          link: '/contact#contact-form',
           gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
         },
         {
           title: 'Technical Skills Training',
-          description: 'Technical and product capability programs tailored for developers, operations teams, and customer-facing roles.',
+          description: 'Technical capability programs for developers, operations teams, and customer-facing roles. Hands-on labs and real-world scenarios.',
           category: 'Technical Training',
           icon: '💻',
           level: 'Intermediate',
@@ -181,11 +160,12 @@ export default {
           lessons: '30-50 modules',
           price: 'Custom',
           originalPrice: null,
+          link: '/contact#contact-form',
           gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         },
         {
           title: 'Compliance & Safety Training',
-          description: 'Industry-specific compliance training with certification tracking, regulatory updates, and automated reporting.',
+          description: 'Industry-specific compliance with certification tracking, automated regulatory updates, audit-ready reporting, and expiry management.',
           category: 'Compliance',
           icon: '✅',
           level: 'Required',
@@ -195,12 +175,13 @@ export default {
           lessons: '15-25 modules',
           price: 'Custom',
           originalPrice: null,
+          link: '/contact#contact-form',
           gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
         },
         {
           title: 'Quiz & Assessment Platform',
-          description: 'Advanced assessment tools with multiple question types, adaptive testing, instant feedback, and detailed analytics.',
-          category: 'Quiz Development',
+          description: 'Advanced assessments with adaptive testing, AI-generated question banks, instant feedback, and detailed learner analytics dashboards.',
+          category: 'Assessment',
           icon: '📝',
           level: 'All Levels',
           rating: '5.0',
@@ -209,11 +190,12 @@ export default {
           lessons: 'Custom Banks',
           price: 'Custom',
           originalPrice: null,
+          link: '/contact#contact-form',
           gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
         },
         {
           title: 'AI-Enabled Learning Analytics',
-          description: 'Learning analytics dashboards with skills trends, engagement metrics, and progress insights across all course tracks.',
+          description: 'Analytics dashboards with AI-powered skills gap detection, engagement metrics, and predictive progress insights across all training tracks.',
           category: 'AI & Analytics',
           icon: '🤖',
           level: 'Enterprise',
@@ -223,12 +205,13 @@ export default {
           lessons: 'Custom Scope',
           price: 'Custom',
           originalPrice: null,
+          link: '/contact#contact-form',
           gradient: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
         },
         {
-          title: 'Learning Research & Decision Support',
-          description: 'Program evaluation, assessment validity, and research-backed strategy for complex learning decisions.',
-          category: 'Research',
+          title: 'Instructional Design Consulting',
+          description: 'Research-backed learning strategy, curriculum architecture, and assessment validity consulting for complex training initiatives.',
+          category: 'Consulting',
           icon: '🧠',
           level: 'Strategic',
           rating: '4.8',
@@ -237,6 +220,7 @@ export default {
           lessons: 'Custom Scope',
           price: 'Custom',
           originalPrice: null,
+          link: '/contact#contact-form',
           gradient: 'linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%)'
         }
       ]
@@ -246,7 +230,7 @@ export default {
 </script>
 
 <style scoped>
-.courses {
+.solutions {
   padding: var(--section-spacing) 0;
   background: var(--bg-white);
 }
@@ -337,14 +321,14 @@ export default {
 
 /* Typography styles inherited from global section-title and section-description */
 
-.courses-grid {
+.solutions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
-.course-card {
+.solution-card {
   background: var(--bg-white);
   border-radius: 16px;
   overflow: hidden;
@@ -354,12 +338,12 @@ export default {
   border: 1px solid #e5e7eb;
 }
 
-.course-card:hover {
+.solution-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.course-image {
+.solution-image {
   height: 200px;
   position: relative;
   display: flex;
@@ -367,7 +351,7 @@ export default {
   justify-content: center;
 }
 
-.course-image::before {
+.solution-image::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -377,7 +361,7 @@ export default {
   pointer-events: none;
 }
 
-.course-hero {
+.solution-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -389,7 +373,7 @@ export default {
   z-index: 1;
 }
 
-.course-hero-icon {
+.solution-hero-icon {
   width: 64px;
   height: 64px;
   border-radius: 18px;
@@ -403,7 +387,7 @@ export default {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.course-hero-label {
+.solution-hero-label {
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.6px;
@@ -415,7 +399,7 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.course-badge {
+.solution-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -427,18 +411,18 @@ export default {
   color: #1a1a1a;
 }
 
-.course-content {
+.solution-content {
   padding: 1.5rem;
 }
 
-.course-meta {
+.solution-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.course-category {
+.solution-category {
   background: var(--bg-light);
   color: var(--primary);
   padding: 0.3rem 0.8rem;
@@ -447,12 +431,12 @@ export default {
   font-weight: 600;
 }
 
-.course-rating {
+.solution-rating {
   font-weight: 600;
   color: var(--text-primary);
 }
 
-.course-title {
+.solution-title {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -460,14 +444,14 @@ export default {
   line-height: 1.3;
 }
 
-.course-description {
+.solution-description {
   color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 1.2rem;
 }
 
-.course-stats {
+.solution-stats {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 0;
@@ -488,13 +472,13 @@ export default {
   font-size: 1rem;
 }
 
-.course-footer {
+.solution-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.course-price {
+.solution-price {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
@@ -532,7 +516,7 @@ export default {
   box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
 }
 
-.courses-cta {
+.solutions-cta {
   text-align: center;
   margin-top: 3rem;
 }

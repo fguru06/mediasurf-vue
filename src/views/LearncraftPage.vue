@@ -23,7 +23,7 @@
                 Open Learncraft LMS
               </a>
               <a
-                href="https://pp-ai-tool.mediasurf.ca/"
+                href="https://learncraft.mediasurf.ca"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-secondary"

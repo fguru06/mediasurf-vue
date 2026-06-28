@@ -15,6 +15,7 @@ const homeSeoSchema = {
       url: 'https://mediasurf.ca',
       logo: 'https://mediasurf.ca/logo.svg',
       email: 'info@mediasurf.ca',
+      description: 'AI-first learning technology company building LearnCraft Authoring Suite (AI course generator + live editor), PowerPoint AI Tool (PPT-to-course converter), and PitStop (mobile mechanic marketplace).',
       sameAs: [
         'https://www.linkedin.com/company/mediasurf-tech',
         'https://x.com/mediasurftech'
@@ -47,7 +48,7 @@ const homeSeoSchema = {
     {
       '@type': 'ProfessionalService',
       '@id': 'https://mediasurf.ca/#professionalservice',
-      name: 'MediaSurf Technologies Professional Services',
+      name: 'MediaSurf Technologies — AI Learning Products & Custom LMS Solutions',
       provider: {
         '@id': 'https://mediasurf.ca/#organization'
       },
@@ -57,12 +58,24 @@ const homeSeoSchema = {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'AI Course Generator, LMS Development, Curriculum Authoring, Instructional Design, SCORM/xAPI Compliance, and Learning Analytics Services',
+        name: 'AI Course Generator, Course Authoring, Automotive LMS, Custom LMS Development, Instructional Design, and Learning Analytics',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
-              '@id': 'https://mediasurf.ca/#service-ai-course-generator'
+              '@id': 'https://mediasurf.ca/#product-learncraft-suite'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@id': 'https://mediasurf.ca/#product-pp-ai-tool'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@id': 'https://mediasurf.ca/#product-pitstop'
             }
           },
           {
@@ -80,42 +93,58 @@ const homeSeoSchema = {
           {
             '@type': 'Offer',
             itemOffered: {
-              '@id': 'https://mediasurf.ca/#service-curriculum-authoring'
-            }
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
               '@id': 'https://mediasurf.ca/#service-instructional-design'
-            }
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@id': 'https://mediasurf.ca/#service-learning-analytics'
             }
           }
         ]
       }
     },
     {
-      '@type': 'Service',
-      '@id': 'https://mediasurf.ca/#service-ai-course-generator',
-      name: 'AI Course Generator',
-      provider: {
+      '@type': 'Product',
+      '@id': 'https://mediasurf.ca/#product-learncraft-suite',
+      name: 'LearnCraft Authoring Suite',
+      description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
+      brand: {
         '@id': 'https://mediasurf.ca/#organization'
       },
-      serviceType: 'AI-Powered Course Authoring',
-      areaServed: {
-        '@type': 'State',
-        name: 'Ontario'
-      },
+      category: 'AI Course Generator & Editor',
       offers: {
         '@type': 'Offer',
         priceCurrency: 'CAD',
         availability: 'https://schema.org/InStock',
-        url: 'https://pp-ai-tool.mediasurf.ca/',
-        description: 'Best free AI course generator for building SCORM and xAPI-compliant courses. Generate slide-based multimedia course content with AI-powered instructional design.'
+        url: 'https://learncraft.mediasurf.ca/editor'
+      }
+    },
+    {
+      '@type': 'Product',
+      '@id': 'https://mediasurf.ca/#product-pp-ai-tool',
+      name: 'PowerPoint AI Tool',
+      description: 'AI-powered slide builder and course converter. Upload any PPT file and instantly convert it into lessons, modules, quizzes, or full courses with AI rewriting and slide enhancement.',
+      brand: {
+        '@id': 'https://mediasurf.ca/#organization'
+      },
+      category: 'AI Slide-to-Course Converter',
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'CAD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://learncraft.mediasurf.ca/'
+      }
+    },
+    {
+      '@type': 'Product',
+      '@id': 'https://mediasurf.ca/#product-pitstop',
+      name: 'PitStop',
+      description: 'Mobile mechanic marketplace connecting customers with certified mobile technicians. Customer-to-technician matching, real-time job tracking, AI-assisted diagnostics, and secure payments.',
+      brand: {
+        '@id': 'https://mediasurf.ca/#organization'
+      },
+      category: 'Mobile Mechanic Marketplace',
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'CAD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://pitstop.mediasurf.ca/'
       }
     },
     {
@@ -135,7 +164,7 @@ const homeSeoSchema = {
         priceCurrency: 'CAD',
         availability: 'https://schema.org/InStock',
         url: 'https://mediasurf.ca/services/custom-lms-development',
-        description: 'SCORM and xAPI-compliant custom LMS development with AI course generator integration, curriculum authoring, and learning analytics. Custom quote based on LMS scope and requirements.'
+        description: 'SCORM and xAPI-compliant custom LMS development with AI course generator integration, curriculum authoring, and learning analytics.'
       }
     },
     {
@@ -155,33 +184,13 @@ const homeSeoSchema = {
         priceCurrency: 'CAD',
         availability: 'https://schema.org/InStock',
         url: 'https://mediasurf.ca/services/employee-onboarding',
-        description: 'AI-powered employee onboarding and corporate training with SCORM/xAPI-compliant course delivery, curriculum authoring, instructional design, and role-based learning pathways.'
-      }
-    },
-    {
-      '@type': 'Service',
-      '@id': 'https://mediasurf.ca/#service-curriculum-authoring',
-      name: 'Curriculum Authoring',
-      provider: {
-        '@id': 'https://mediasurf.ca/#organization'
-      },
-      serviceType: 'Curriculum Development & Authoring',
-      areaServed: {
-        '@type': 'State',
-        name: 'Ontario'
-      },
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://mediasurf.ca/learncraft',
-        description: 'AI-assisted curriculum authoring for corporate training. Build SCORM/xAPI-compliant course curricula with instructional design best practices and export to any LMS.'
+        description: 'AI-powered employee onboarding and corporate training with SCORM/xAPI-compliant course delivery, curriculum authoring, and role-based learning pathways.'
       }
     },
     {
       '@type': 'Service',
       '@id': 'https://mediasurf.ca/#service-instructional-design',
-      name: 'Instructional Design Services',
+      name: 'Instructional Design & AI Learning Strategy',
       provider: {
         '@id': 'https://mediasurf.ca/#organization'
       },
@@ -195,73 +204,70 @@ const homeSeoSchema = {
         priceCurrency: 'CAD',
         availability: 'https://schema.org/InStock',
         url: 'https://mediasurf.ca/contact',
-        description: 'Professional instructional design services for SCORM and xAPI-compliant corporate training. AI-enhanced curriculum authoring with proven learning methodologies.'
-      }
-    },
-    {
-      '@type': 'Service',
-      '@id': 'https://mediasurf.ca/#service-learning-analytics',
-      name: 'Learning Analytics and Course Performance Reporting',
-      provider: {
-        '@id': 'https://mediasurf.ca/#organization'
-      },
-      serviceType: 'Learning Analytics',
-      areaServed: {
-        '@type': 'State',
-        name: 'Ontario'
-      },
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://mediasurf.ca/#courses',
-        description: 'SCORM/xAPI learning analytics dashboards and reporting for corporate training outcomes, instructional design effectiveness, and learner engagement trends.'
+        description: 'Professional instructional design services for AI-enhanced corporate training. SCORM and xAPI-compliant curriculum authoring with proven learning methodologies.'
       }
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://pp-ai-tool.mediasurf.ca/#app',
-      name: 'AI Course Generator & Presentation Authoring Tool',
+      '@id': 'https://learncraft.mediasurf.ca/#app',
+      name: 'LearnCraft AI — AI Course Generator & PPT to Course Converter',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
-      url: 'https://pp-ai-tool.mediasurf.ca/',
+      url: 'https://learncraft.mediasurf.ca/',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       },
       description:
-        'Best free AI course generator and slide-based authoring tool that creates SCORM and xAPI-compliant multimedia course content with AI-powered instructional design for export and LMS delivery workflows.',
+        'AI-powered course generator and PowerPoint-to-course converter. Upload PPT files and instantly convert slides into structured lessons, modules, and quizzes. AI rewriting, summarization, and slide enhancement.',
       featureList: [
-        'AI-powered slide-based course authoring',
-        'SCORM and xAPI-compliant content generation',
-        'AI-generated instructional design',
-        'Multimedia export output',
-        'Workflow-ready packaging for LMS import',
-        'Curriculum authoring and structuring'
+        'Upload PowerPoint and convert to courses',
+        'AI rewriting and summarization',
+        'Auto-generate quizzes and modules',
+        'Slide enhancement and visual generation',
+        'Export to LearnCraft LMS or SCORM/xAPI',
+        'One-click publish workflow'
       ]
     },
     {
       '@type': 'SoftwareApplication',
       '@id': 'https://learncraft.mediasurf.ca/#app',
-      name: 'Learncraft LMS & Curriculum Authoring Platform',
+      name: 'LearnCraft Authoring Suite — AI Generator + Live Editor',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
-      url: 'https://learncraft.mediasurf.ca/login',
+      url: 'https://learncraft.mediasurf.ca/editor',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       },
-      isPartOf: {
-        '@id': 'https://pp-ai-tool.mediasurf.ca/#app'
+      description:
+        'GPT-4o AI course generator with a live block-based editor. Generate complete SCORM/xAPI-compliant courses with auto-generated lessons, quizzes, flashcards, and branching scenarios.',
+      featureList: [
+        'GPT-4o AI-powered course generation',
+        'Live block-based editor',
+        'Auto-generated lessons, modules, and quizzes',
+        'Flashcard and branching scenario generation',
+        'SCORM and xAPI-compliant export',
+        'Publish to LearnCraft LMS'
+      ]
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://pitstop.mediasurf.ca/#app',
+      name: 'PitStop — Mobile Mechanic Marketplace',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      url: 'https://pitstop.mediasurf.ca/',
+      publisher: {
+        '@id': 'https://mediasurf.ca/#organization'
       },
       description:
-        'Learncraft is a SCORM/xAPI-compliant LMS and curriculum authoring platform. Instructors import AI-generated multimedia courses, edit content, apply instructional design strategies, and use live learner preview before publishing for corporate training.',
+        'Mobile mechanic marketplace connecting customers with certified technicians. Real-time job tracking, AI-assisted diagnostics, secure payments, and verified technician profiles.',
       featureList: [
-        'SCORM and xAPI-compliant course delivery',
-        'Import AI-generated multimedia courses',
-        'Curriculum authoring and course editing',
-        'Instructional design workflow',
-        'Live course preview',
-        'Instructor publishing and analytics',
-        'Corporate training management'
+        'Customer-to-technician matching and bidding',
+        'Real-time job tracking',
+        'AI-assisted diagnostics and smart work orders',
+        'Verified technician profiles and ratings',
+        'Secure in-app payments',
+        'Mobile-friendly booking experience'
       ]
     }
   ]

@@ -92,7 +92,7 @@ export default {
 <style scoped>
 .testimonials {
   padding: var(--section-spacing) 0;
-  background: var(--bg-light);
+  background: var(--bg-white);
 }
 
 .section-header {

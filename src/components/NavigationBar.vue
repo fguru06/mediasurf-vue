@@ -17,7 +17,16 @@
             Home
           </router-link>
           <router-link
-            to="/#courses"
+            to="/#products"
+            active-class=""
+            exact-active-class=""
+            :class="{ active: isProductsActive }"
+            @click="closeMenu"
+          >
+            Products
+          </router-link>
+          <router-link
+            to="/#solutions"
             active-class=""
             exact-active-class=""
             :class="{ active: isServicesActive }"
@@ -26,30 +35,22 @@
             Services
           </router-link>
           <router-link to="/about" active-class="active" @click="closeMenu">About</router-link>
-          <router-link
-            to="/#features"
-            active-class=""
-            exact-active-class=""
-            :class="{ active: isSolutionsActive }"
-            @click="closeMenu"
-          >
-            Solutions
-          </router-link>
           <router-link to="/blog" active-class="active" @click="closeMenu">Blog</router-link>
           <router-link to="/contact" active-class="active" @click="closeMenu">Contact</router-link>
         </div>
         
         <div class="nav-actions">
           <a
-            href="https://learncraft.mediasurf.ca/login"
+            href="https://learncraft.mediasurf.ca"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-learncraft"
+            class="btn-learncraft btn-learncraft-ai"
             data-track-event="cta_click"
             data-track-category="navigation"
-            data-track-label="nav_learncraft"
+            data-track-label="nav_learncraft_ai"
           >
-            <span class="btn-learncraft-star">★</span> Learncraft
+            <span class="btn-learncraft-star">✨</span> LearnCraft AI
+            <span class="btn-glow-pulse" aria-hidden="true"></span>
           </a>
           <router-link
             to="/contact#contact-form"
@@ -81,7 +82,7 @@ export default {
       activeSection: '',
       isScrolled: false,
       observer: null,
-      scrollSections: ['home', 'courses', 'features']
+      scrollSections: ['home', 'products', 'learncraft-ai', 'learncraft-editor', 'pitstop', 'solutions', 'features']
     }
   },
   computed: {
@@ -98,13 +99,13 @@ export default {
       // Also active when scrolling past hero but before courses
       return !this.activeSection
     },
+    isProductsActive() {
+      if (this.currentPath !== '/') return false
+      return this.activeSection === 'products' || this.activeSection === 'learncraft-ai' || this.activeSection === 'learncraft-editor' || this.activeSection === 'pitstop'
+    },
     isServicesActive() {
       if (this.currentPath !== '/') return false
-      return this.activeSection === 'courses'
-    },
-    isSolutionsActive() {
-      if (this.currentPath !== '/') return false
-      return this.activeSection === 'features'
+      return this.activeSection === 'solutions' || this.activeSection === 'features'
     }
   },
   watch: {
@@ -355,6 +356,52 @@ export default {
 .btn-learncraft:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+}
+
+.btn-learncraft-ai {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 35%, #06b6d4 70%, #22d3ee 100%);
+  background-size: 200% 200%;
+  animation: btnShimmer 3s ease-in-out infinite, btnPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.5), 0 4px 12px rgba(99, 102, 241, 0.3);
+  padding: 0.68rem 1.35rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.4px;
+  border-radius: 10px;
+  position: relative;
+  overflow: visible;
+}
+
+.btn-learncraft-ai:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.7), 0 0 50px rgba(34, 211, 238, 0.4), 0 6px 20px rgba(99, 102, 241, 0.45);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@keyframes btnShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes btnPulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(99, 102, 241, 0.5), 0 4px 12px rgba(99, 102, 241, 0.3); }
+  50% { box-shadow: 0 0 28px rgba(99, 102, 241, 0.7), 0 4px 16px rgba(34, 211, 238, 0.5); }
+}
+
+.btn-glow-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #22d3ee, #8b5cf6, #6366f1);
+  background-size: 300% 300%;
+  animation: glowRotate 2s linear infinite;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(6px);
+}
+
+@keyframes glowRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 :root[data-theme="black"] .btn-learncraft {

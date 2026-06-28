@@ -5,13 +5,22 @@
       <HeroSection @track="trackEvent" />
     </div>
     <div class="reveal-on-scroll">
+      <MediaSurfProductsSection />
+    </div>
+    <div class="reveal-on-scroll">
+      <LearnCraftAISection />
+    </div>
+    <div class="reveal-on-scroll">
+      <LearnCraftEditorSection />
+    </div>
+    <div class="reveal-on-scroll">
+      <PitstopLMSSection />
+    </div>
+    <div class="reveal-on-scroll">
       <FeaturesSection />
     </div>
     <div class="reveal-on-scroll">
       <CoursesSection />
-    </div>
-    <div class="reveal-on-scroll">
-      <WhyChooseSection />
     </div>
     <div class="reveal-on-scroll">
       <ProcessSection />
@@ -28,9 +37,12 @@
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue';
 import HeroSection from '../components/HeroSection.vue';
+import MediaSurfProductsSection from '../components/MediaSurfProductsSection.vue';
+import LearnCraftAISection from '../components/LearnCraftAISection.vue';
+import LearnCraftEditorSection from '../components/LearnCraftEditorSection.vue';
+import PitstopLMSSection from '../components/PitstopLMSSection.vue';
 import FeaturesSection from '../components/FeaturesSection.vue';
 import CoursesSection from '../components/CoursesSection.vue';
-import WhyChooseSection from '../components/WhyChooseSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import TestimonialsSection from '../components/TestimonialsSection.vue';
 import StatsSection from '../components/StatsSection.vue';

@@ -5,59 +5,59 @@ export const SEO_METADATA = {
   twitterSite: '@MediaSurfTech',
   pages: {
     home: {
-      title: 'AI Course Generator, LMS & Learning Analytics | MediaSurf Technologies',
+      title: 'AI Course Generator, AI LMS & Learning Products | MediaSurf Technologies',
       description:
-        'MediaSurf Technologies offers an AI course generator, slide-based authoring tool, Learncraft LMS, and learning analytics. Build SCORM/xAPI-compatible corporate training courses with your own instructional design workflow.',
+        'MediaSurf builds AI-powered learning products: LearnCraft Authoring Suite (AI course generator + live editor), PowerPoint AI Tool (slide-to-course converter), and PitStop (mobile mechanic marketplace). AI course creation, SCORM/xAPI LMS, and custom learning platforms.',
       keywords:
-        'AI course generator, best free AI course generator, LMS, learning management system, SCORM, xAPI, instructional design, corporate training, curriculum authoring, elearning platform, slide-based course authoring tool, multimedia course export, Learncraft LMS, learning analytics, course training development',
+        'AI course generator, AI course creation, AI LMS, AI learning platform, AI training automation, AI content generation, PowerPoint AI tool, PPT to course converter, AI slide builder, LearnCraft Authoring Suite, AI course authoring, PitStop marketplace, mobile mechanic, best free AI course generator, LMS, learning management system, SCORM, xAPI, instructional design, corporate training, curriculum authoring, elearning platform, custom LMS development, MediaSurf',
       image: '/og-image.svg'
     },
     about: {
-      title: 'About Us - AI-Powered Corporate Training & eLearning | MediaSurf Technologies',
+      title: 'About Us — AI-Powered Learning Technology | MediaSurf Technologies',
       description:
-        'Learn about MediaSurf Technologies, our mission to transform corporate education with AI course generators, instructional design expertise, and SCORM/xAPI-compatible elearning platforms.',
+        'MediaSurf Technologies is an AI-first learning tech company. Creators of LearnCraft Authoring Suite, PowerPoint AI Tool, and PitStop marketplace. Building the future of AI-powered education.',
       keywords:
-        'about MediaSurf, AI course generator company, instructional design experts, corporate training partner, elearning platform provider, SCORM, xAPI, educational technology, learning design',
+        'about MediaSurf, AI learning technology company, LearnCraft Authoring Suite, PowerPoint AI Tool, PitStop marketplace, AI course generator company, instructional design experts, corporate training partner, AI learning platform, SCORM, xAPI, educational technology',
       image: '/og-image.svg'
     },
     contact: {
-      title: 'Contact MediaSurf - AI Course Generator & LMS Experts',
+      title: 'Contact MediaSurf — AI Course Generator, Slide Converter & LMS Experts',
       description:
-        'Contact MediaSurf Technologies to discuss AI-powered course authoring, custom LMS development, SCORM/xAPI compliance, instructional design, and corporate training solutions.',
+        'Contact MediaSurf Technologies to discuss LearnCraft Authoring Suite, PowerPoint AI Tool, PitStop marketplace, custom LMS development, SCORM/xAPI compliance, and corporate training solutions.',
       keywords:
-        'contact MediaSurf, AI course generator consultation, LMS development quote, SCORM xAPI compliance, instructional design services, corporate training solutions, elearning platform inquiry',
+        'contact MediaSurf, AI course generator demo, PowerPoint AI tool demo, LearnCraft Authoring Suite trial, PitStop marketplace inquiry, custom LMS development quote, SCORM xAPI compliance, instructional design services, corporate training solutions',
       image: '/og-image.svg'
     },
     customLmsDevelopment: {
-      title: 'Custom LMS Development | SCORM & xAPI Compliant | MediaSurf Technologies',
+      title: 'Custom LMS Development | AI-Integrated | SCORM & xAPI | MediaSurf Technologies',
       description:
-        'Custom LMS development services for enterprise training. SCORM and xAPI-compliant learning management systems with AI course generation, curriculum authoring, instructional design, and learning analytics.',
+        'Custom LMS development with AI course generation, LearnCraft integration, and PowerPoint-to-course conversion. SCORM/xAPI-compliant platforms with instructional design and learning analytics.',
       keywords:
-        'custom LMS development, SCORM compliant LMS, xAPI learning management system, enterprise LMS, AI course generator integration, curriculum authoring, instructional design platform, corporate e-learning, learning analytics, corporate training Ontario',
+        'custom LMS development, AI LMS platform, SCORM compliant LMS, xAPI learning management system, enterprise LMS, AI course generator integration, LearnCraft LMS integration, PowerPoint to LMS, curriculum authoring, instructional design platform, corporate e-learning, learning analytics',
       image: '/og-image.svg'
     },
     employeeOnboarding: {
-      title: 'Employee Onboarding & Corporate Training Solutions | MediaSurf Technologies',
+      title: 'AI Employee Onboarding & Corporate Training | MediaSurf Technologies',
       description:
-        'SCORM/xAPI-compliant employee onboarding solutions with AI-powered course generation, role-based learning pathways, curriculum authoring, and measurable ramp-up performance analytics.',
+        'AI-powered employee onboarding with LearnCraft Authoring Suite and PowerPoint AI Tool. Role-based pathways, AI-generated content, SCORM/xAPI compliance, and measurable performance analytics.',
       keywords:
-        'employee onboarding program, corporate training platform, AI course generator onboarding, SCORM compliant onboarding, curriculum authoring tool, instructional design onboarding, elearning platform, onboarding training solution Ontario',
+        'AI employee onboarding, corporate training platform, AI course generator onboarding, PowerPoint to training, SCORM compliant onboarding, curriculum authoring tool, instructional design onboarding, AI learning platform, employee ramp-up',
       image: '/og-image.svg'
     },
     blog: {
-      title: 'eLearning & Corporate Training Blog | AI Course Generator Insights | MediaSurf Technologies',
+      title: 'AI eLearning Blog — Course Generators, LMS & Training Automation | MediaSurf',
       description:
-        'Expert insights on AI course generation, SCORM/xAPI standards, instructional design strategies, LMS development, curriculum authoring, and corporate training best practices.',
+        'Expert insights on AI course generation, PowerPoint-to-course conversion, SCORM/xAPI standards, instructional design, LMS development, and AI training automation best practices.',
       keywords:
-        'AI course generator blog, SCORM xAPI insights, instructional design tips, LMS development articles, corporate training best practices, curriculum authoring guide, elearning platform strategies',
+        'AI course generator blog, AI training automation, AI content generation, PowerPoint AI tool, PPT to SCORM, SCORM xAPI insights, instructional design tips, LMS development articles, corporate training best practices, elearning platform strategies',
       image: '/og-image.svg'
     },
     learncraft: {
-      title: 'Learncraft LMS & AI Course Generator | Presentation Authoring Tool | MediaSurf Technologies',
+      title: 'LearnCraft Authoring Suite — AI Course Generator + Live Editor | MediaSurf',
       description:
-        'Create SCORM/xAPI-compatible courses with our AI course generator and presentation authoring tool. Export to Learncraft LMS for instructor editing, curriculum authoring, live preview, and corporate training delivery.',
+        'LearnCraft Authoring Suite combines GPT-4o AI course generation with a live block-based editor. Generate lessons, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
       keywords:
-        'Learncraft LMS, AI course generator, best free AI course generator, presentation authoring tool, SCORM compliant, xAPI, curriculum authoring, instructional design, slide-based course authoring, multimedia export, live preview, corporate training, elearning platform',
+        'LearnCraft Authoring Suite, AI course generator, GPT-4o course generator, AI course authoring, block editor LMS, auto quiz generator, flashcard generator, branching scenarios, SCORM compliant, xAPI, curriculum authoring, instructional design, live preview, corporate training, elearning platform',
       image: '/og-image.svg'
     }
   }

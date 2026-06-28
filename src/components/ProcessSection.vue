@@ -54,7 +54,7 @@ export default {
 <style scoped>
 .process {
   padding: var(--section-spacing) 0;
-  background: var(--bg-white);
+  background: var(--bg-light);
 }
 
 .section-header {
