@@ -3,11 +3,5 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-# Priority crawling targets
-Allow: /services/
-Allow: /blog/
-Allow: /learncraft/
-
 Sitemap: https://mediasurf.ca/sitemap.xml
-Sitemap: https://mediasurf.ca/sitemap-blog.xml
 Sitemap: https://mediasurf.ca/sitemap-blog.xml
