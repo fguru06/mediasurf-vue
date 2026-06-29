@@ -427,9 +427,14 @@ h2 {
 .workflow-card,
 .preview-card {
   background: var(--bg-white);
-  border: 1px solid #dbe5ef;
+  border: 1px solid var(--text-light);
   border-radius: 14px;
   padding: 1.2rem;
+}
+
+:root[data-theme="black"] .workflow-card,
+:root[data-theme="black"] .preview-card {
+  border-color: #333;
 }
 
 .workflow-card h3,
@@ -473,11 +478,16 @@ h2 {
 .gallery-tile {
   position: relative;
   border-radius: 14px;
-  border: 1px solid #d5deea;
+  border: 1px solid var(--text-light);
   background-size: cover;
   background-position: center;
   overflow: hidden;
   box-shadow: 0 10px 28px rgba(7, 13, 30, 0.12);
+}
+
+:root[data-theme="black"] .gallery-tile {
+  border-color: #333;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-chip {

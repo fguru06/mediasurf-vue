@@ -138,17 +138,25 @@ export default {
   background: var(--bg-white);
   border-radius: 20px;
   padding: 2.5rem 2rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--text-light);
   transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
+:root[data-theme="black"] .product-card {
+  border-color: #333;
+}
+
 .product-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
   border-color: transparent;
+}
+
+:root[data-theme="black"] .product-card:hover {
+  box-shadow: 0 24px 48px rgba(255, 255, 255, 0.05);
 }
 
 .card-glow {

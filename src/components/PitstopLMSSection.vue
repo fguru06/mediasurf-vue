@@ -150,6 +150,10 @@ export default {
   background: linear-gradient(180deg, #f0fdf4 0%, #ecfdf5 50%, #f8fafc 100%);
 }
 
+:root[data-theme="black"] .pitstop-section {
+  background: linear-gradient(180deg, #0a1a0a 0%, #0d1a0d 50%, #0a0a0a 100%);
+}
+
 .pitstop-layout {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -193,9 +197,14 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: white;
+  background: var(--bg-white);
   border: 1px solid rgba(16, 185, 129, 0.15);
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.06);
+}
+
+:root[data-theme="black"] .ps-cap-icon {
+  border-color: #333;
+  box-shadow: none;
 }
 
 .ps-cap-item h4 {

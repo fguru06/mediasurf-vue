@@ -3,6 +3,11 @@ import { ref, onMounted } from 'vue';
 
 const currentTheme = ref('default');
 
+const toggleTheme = () => {
+  const next = currentTheme.value === 'black' ? 'default' : 'black';
+  setTheme(next);
+};
+
 const setTheme = (theme) => {
   currentTheme.value = theme;
   if (theme === 'default') {
@@ -15,98 +20,65 @@ const setTheme = (theme) => {
 
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
+  if (savedTheme === 'black') {
+    setTheme('black');
   }
 });
 </script>
 
 <template>
-  <div class="theme-switcher">
-    <span class="switcher-label">Theme:</span>
-    <button 
-      @click="setTheme('default')" 
-      class="theme-btn new-theme" 
-      :class="{ active: currentTheme === 'default' }"
-      title="New Theme (#194583)"
-    ></button>
-    <button 
-      @click="setTheme('legacy')" 
-      class="theme-btn legacy-theme"
-      :class="{ active: currentTheme === 'legacy' }"
-      title="Legacy Theme (#2563eb)"
-    ></button>
-    <button 
-      @click="setTheme('black')" 
-      class="theme-btn black-theme"
-      :class="{ active: currentTheme === 'black' }"
-      title="Black Theme (#111111)"
-    ></button>
-  </div>
+  <button
+    @click="toggleTheme"
+    class="theme-toggle"
+    :class="{ dark: currentTheme === 'black' }"
+    :title="currentTheme === 'black' ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+    :aria-label="currentTheme === 'black' ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+  >
+    <span class="toggle-icon">{{ currentTheme === 'black' ? '☀️' : '🌙' }}</span>
+  </button>
 </template>
 
 <style scoped>
-.theme-switcher {
+.theme-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
-  background: white;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   z-index: 9999;
-  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
 }
 
-.switcher-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #4b5563;
-}
-
-.theme-btn {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.theme-btn:hover {
+.theme-toggle:hover {
   transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
-.theme-btn.active {
-  border-color: #000;
-  transform: scale(1.1);
+.theme-toggle.dark {
+  background: #1a1a1a;
+  border-color: #333;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.06);
 }
 
-.theme-btn.active::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
+.theme-toggle.dark:hover {
+  box-shadow: 0 6px 18px rgba(255,255,255,0.1);
 }
 
-.new-theme {
-
-.black-theme {
-  background-color: #111111;
-}
-  background-color: #194583;
+.toggle-icon {
+  line-height: 1;
+  transition: transform 0.3s ease;
 }
 
-.legacy-theme {
-  background-color: #2563eb;
+.theme-toggle:hover .toggle-icon {
+  transform: rotate(15deg);
 }
 </style>

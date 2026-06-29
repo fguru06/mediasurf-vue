@@ -477,7 +477,7 @@ export default {
 /* Contact Info Cards */
 .contact-info-section {
   padding: 3rem 0;
-  background: var(--bg-gray-light);
+  background: var(--bg-light);
 }
 
 :root[data-theme="black"] .contact-info-section {

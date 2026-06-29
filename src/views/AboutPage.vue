@@ -417,7 +417,7 @@ const expertise = ref([
 /* Mission & Vision Section */
 .mission-vision-section {
   padding: 5rem 0;
-  background: var(--bg-gray-light);
+  background: var(--bg-light);
 }
 
 :root[data-theme="black"] .mission-vision-section {
@@ -580,7 +580,7 @@ const expertise = ref([
 }
 
 .stat-label {
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   font-weight: 600;
 }

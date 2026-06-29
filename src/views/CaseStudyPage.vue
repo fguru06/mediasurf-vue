@@ -91,7 +91,7 @@ export default {
   background: var(--bg-light);
   padding: 4rem 0;
   margin-bottom: 3rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--text-light);
 }
 
 .back-link {
@@ -158,9 +158,13 @@ export default {
 .stat-item {
   text-align: center;
   padding: 1.5rem;
-  background: var(--bg-card);
+  background: var(--bg-white);
   border-radius: 12px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="black"] .stat-item {
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.03);
 }
 
 .stat-number {
@@ -172,11 +176,15 @@ export default {
 }
 
 .sidebar-card {
-  background: var(--bg-card);
+  background: var(--bg-white);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--text-light);
   margin-bottom: 2rem;
+}
+
+:root[data-theme="black"] .sidebar-card {
+  border-color: #333;
 }
 
 .sidebar-card h3 {

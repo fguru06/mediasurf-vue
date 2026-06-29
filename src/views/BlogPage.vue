@@ -93,10 +93,14 @@ h1 {
 
 .post-card {
   background: var(--bg-white);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--text-light);
   border-radius: 14px;
   padding: 1.5rem;
   margin-bottom: 1rem;
+}
+
+:root[data-theme="black"] .post-card {
+  border-color: #333;
 }
 
 .post-tag {

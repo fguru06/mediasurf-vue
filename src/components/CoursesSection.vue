@@ -335,7 +335,12 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
   cursor: pointer;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--text-light);
+}
+
+:root[data-theme="black"] .solution-card {
+  border-color: #333;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.03);
 }
 
 .solution-card:hover {

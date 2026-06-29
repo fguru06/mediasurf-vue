@@ -117,9 +117,13 @@ h1 {
 
 .card {
   background: var(--bg-white);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--text-light);
   border-radius: 14px;
   padding: 1.5rem;
+}
+
+:root[data-theme="black"] .card {
+  border-color: #333;
 }
 
 h2 {

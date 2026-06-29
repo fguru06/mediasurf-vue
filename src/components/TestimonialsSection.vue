@@ -113,9 +113,13 @@ export default {
   background: var(--gradient-surface);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--text-light);
   position: relative;
   transition: all 0.3s;
+}
+
+:root[data-theme="black"] .testimonial-card {
+  border-color: #333;
 }
 
 .testimonial-card:hover {
@@ -124,16 +128,20 @@ export default {
   border-color: var(--primary);
 }
 
+:root[data-theme="black"] .testimonial-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+}
+
 .quote-icon {
   font-size: 4rem;
-  color: #e5e7eb;
+  color: var(--text-light);
   line-height: 1;
   margin-bottom: 1rem;
   font-family: Georgia, serif;
 }
 
 .testimonial-text {
-  color: #4a5568;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-size: 1rem;
@@ -165,13 +173,13 @@ export default {
 
 .author-name {
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 0.2rem;
 }
 
 .author-role {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .testimonial-rating {

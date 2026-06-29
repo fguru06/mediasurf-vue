@@ -112,7 +112,7 @@ export default {
   background: var(--bg-white);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--text-light);
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -121,6 +121,14 @@ export default {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border-color: transparent;
+}
+
+:root[data-theme="black"] .feature-card {
+  border-color: #333;
+}
+
+:root[data-theme="black"] .feature-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
 }
 
 .feature-icon {

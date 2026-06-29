@@ -121,6 +121,10 @@ export default {
   background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 50%, #f8fafc 100%);
 }
 
+:root[data-theme="black"] .lcai-section {
+  background: linear-gradient(180deg, #0a0a0a 0%, #111122 50%, #0a0a0a 100%);
+}
+
 .lcai-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,9 +168,14 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-white);
+  border: 1px solid var(--text-light);
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+:root[data-theme="black"] .cap-icon {
+  border-color: #333;
+  box-shadow: none;
 }
 
 .capability-item h4 {

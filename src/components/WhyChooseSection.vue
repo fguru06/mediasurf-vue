@@ -147,20 +147,20 @@ export default {
 .benefit-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-primary);
   margin-bottom: 0.4rem;
 }
 
 .benefit-description {
   font-size: 0.98rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .btn-learn-more {
   padding: 1rem 2rem;
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-white);
   border: none;
   border-radius: 12px;
   font-weight: 600;
