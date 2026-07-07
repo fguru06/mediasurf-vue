@@ -17,6 +17,9 @@
       <PitstopLMSSection />
     </div>
     <div class="reveal-on-scroll">
+      <CreatorLoomSection />
+    </div>
+    <div class="reveal-on-scroll">
       <FeaturesSection />
     </div>
     <div class="reveal-on-scroll">
@@ -41,6 +44,7 @@ import MediaSurfProductsSection from '../components/MediaSurfProductsSection.vue
 import LearnCraftAISection from '../components/LearnCraftAISection.vue';
 import LearnCraftEditorSection from '../components/LearnCraftEditorSection.vue';
 import PitstopLMSSection from '../components/PitstopLMSSection.vue';
+import CreatorLoomSection from '../components/CreatorLoomSection.vue';
 import FeaturesSection from '../components/FeaturesSection.vue';
 import CoursesSection from '../components/CoursesSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';

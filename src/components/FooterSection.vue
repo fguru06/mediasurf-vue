@@ -80,6 +80,16 @@
                 Learncraft Authoring Tool
               </router-link>
             </li>
+            <li>
+              <router-link
+                to="/creatorloom"
+                data-track-event="cta_click"
+                data-track-category="footer"
+                data-track-label="footer_creatorloom"
+              >
+                CreatorLoom Video Studio
+              </router-link>
+            </li>
             <li><a href="#">Support</a></li>
             <li><a href="#">Request Demo</a></li>
             <li><router-link to="/contact#contact-form">Get Quote</router-link></li>

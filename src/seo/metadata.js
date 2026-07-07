@@ -7,9 +7,9 @@ export const SEO_METADATA = {
     home: {
       title: 'AI Course Generator, AI LMS & Learning Products | MediaSurf Technologies',
       description:
-        'MediaSurf builds AI-powered learning products: LearnCraft Authoring Suite (AI course generator + live editor), PowerPoint AI Tool (slide-to-course converter), and PitStop (mobile mechanic marketplace). AI course creation, SCORM/xAPI LMS, and custom learning platforms.',
+        'MediaSurf builds AI-powered learning products: LearnCraft Authoring Suite (AI course generator + live editor), PowerPoint AI Tool (slide-to-course converter), CreatorLoom (AI video course generator & studio), and PitStop (mobile mechanic marketplace). AI course creation, SCORM/xAPI LMS, and custom learning platforms.',
       keywords:
-        'AI course generator, AI course creation, AI LMS, AI learning platform, AI training automation, AI content generation, PowerPoint AI tool, PPT to course converter, AI slide builder, LearnCraft Authoring Suite, AI course authoring, PitStop marketplace, mobile mechanic, best free AI course generator, LMS, learning management system, SCORM, xAPI, instructional design, corporate training, curriculum authoring, elearning platform, custom LMS development, MediaSurf',
+        'AI course generator, AI course creation, AI LMS, AI learning platform, AI training automation, AI content generation, AI video course generator, AI video authoring, CreatorLoom, PowerPoint AI tool, PPT to course converter, AI slide builder, LearnCraft Authoring Suite, AI course authoring, PitStop marketplace, mobile mechanic, best free AI course generator, LMS, learning management system, SCORM, xAPI, instructional design, corporate training, curriculum authoring, elearning platform, custom LMS development, MediaSurf',
       image: '/og-image.svg'
     },
     about: {
@@ -58,6 +58,14 @@ export const SEO_METADATA = {
         'LearnCraft Authoring Suite combines GPT-4o AI course generation with a live block-based editor. Generate lessons, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
       keywords:
         'LearnCraft Authoring Suite, AI course generator, GPT-4o course generator, AI course authoring, block editor LMS, auto quiz generator, flashcard generator, branching scenarios, SCORM compliant, xAPI, curriculum authoring, instructional design, live preview, corporate training, elearning platform',
+      image: '/og-image.svg'
+    },
+    creatorloom: {
+      title: 'CreatorLoom — AI Video Course Generator & Authoring Studio | MediaSurf',
+      description:
+        'CreatorLoom is a fully AI-powered video course generation and authoring platform. Generate complete video courses with AI scripts, voiceovers, visuals, and animations — no filming required. Publish to any LMS or platform.',
+      keywords:
+        'CreatorLoom, AI video course generator, AI video authoring, AI video creation, AI script generator, AI voiceover, video course creator, AI course authoring, AI animation generator, AI video production, SCORM, xAPI, LMS video courses, no-code video creation, AI content studio, MediaSurf',
       image: '/og-image.svg'
     },
     privacy: {

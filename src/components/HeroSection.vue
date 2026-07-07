@@ -70,6 +70,20 @@
               </span>
               <span class="pill-arrow">&rarr;</span>
             </a>
+            <a
+              href="https://creatorloom.mediasurf.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-product-pill pill-creatorloom"
+              @click="$emit('track', 'hero_creatorloom')"
+            >
+              <span class="pill-icon">🎬</span>
+              <span class="pill-content">
+                <strong>CreatorLoom</strong>
+                <small>AI Video Course Generator &amp; Studio</small>
+              </span>
+              <span class="pill-arrow">&rarr;</span>
+            </a>
           </div>
 
           <div class="hero-actions">
@@ -469,6 +483,18 @@ export default {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(5, 150, 105, 0.22));
   border-color: rgba(16, 185, 129, 0.6);
   box-shadow: 0 8px 28px rgba(16, 185, 129, 0.25);
+}
+
+/* CreatorLoom pill */
+.pill-creatorloom {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(217, 119, 6, 0.13));
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.pill-creatorloom:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.28), rgba(217, 119, 6, 0.22));
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 8px 28px rgba(245, 158, 11, 0.25);
 }
 
 @media (max-width: 600px) {

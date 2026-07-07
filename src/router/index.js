@@ -6,6 +6,7 @@ import CustomLmsDevelopmentPage from '../views/CustomLmsDevelopmentPage.vue';
 import EmployeeOnboardingPage from '../views/EmployeeOnboardingPage.vue';
 import BlogPage from '../views/BlogPage.vue';
 import LearncraftPage from '../views/LearncraftPage.vue';
+import CreatorLoomPage from '../views/CreatorLoomPage.vue';
 import PrivacyPage from '../views/PrivacyPage.vue';
 import TermsPage from '../views/TermsPage.vue';
 import CookiePolicyPage from '../views/CookiePolicyPage.vue';
@@ -53,6 +54,12 @@ const routes = [
     name: 'Learncraft',
     component: LearncraftPage,
     meta: SEO_METADATA.pages.learncraft
+  },
+  {
+    path: '/creatorloom',
+    name: 'CreatorLoom',
+    component: CreatorLoomPage,
+    meta: SEO_METADATA.pages.creatorloom
   },
   {
     path: '/privacy',

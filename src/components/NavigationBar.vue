@@ -82,7 +82,7 @@ export default {
       activeSection: '',
       isScrolled: false,
       observer: null,
-      scrollSections: ['home', 'products', 'learncraft-ai', 'learncraft-editor', 'pitstop', 'solutions', 'features']
+      scrollSections: ['home', 'products', 'learncraft-ai', 'learncraft-editor', 'pitstop', 'creatorloom', 'solutions', 'features']
     }
   },
   computed: {
@@ -101,7 +101,7 @@ export default {
     },
     isProductsActive() {
       if (this.currentPath !== '/') return false
-      return this.activeSection === 'products' || this.activeSection === 'learncraft-ai' || this.activeSection === 'learncraft-editor' || this.activeSection === 'pitstop'
+      return this.activeSection === 'products' || this.activeSection === 'learncraft-ai' || this.activeSection === 'learncraft-editor' || this.activeSection === 'pitstop' || this.activeSection === 'creatorloom'
     },
     isServicesActive() {
       if (this.currentPath !== '/') return false

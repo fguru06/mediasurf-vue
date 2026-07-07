@@ -5,7 +5,7 @@
         <div class="section-badge">🚀 MediaSurf Products</div>
         <h2 class="section-title">AI-Powered Learning Products, Built for Scale</h2>
         <p class="section-description">
-          Three flagship products designed to cover every learning workflow — from AI-generated courses to hands-on technical training.
+          Four flagship products designed to cover every learning workflow — from AI-generated courses to AI video authoring and hands-on technical training.
         </p>
       </div>
 
@@ -102,6 +102,37 @@
             Explore PitStop Marketplace &rarr;
           </a>
         </article>
+
+        <!-- CreatorLoom -->
+        <article class="product-card card-creatorloom">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-icon-wrapper">
+            <span class="card-icon">🎬</span>
+          </div>
+          <div class="card-badge badge-creatorloom">AI Video Authoring</div>
+          <h3 class="card-title">CreatorLoom</h3>
+          <p class="card-subtitle">AI Video Course Generator &amp; Authoring Studio</p>
+          <p class="card-description">
+            CreatorLoom is a fully AI-powered video course generation and authoring platform. Describe your topic and our AI engine auto-generates complete video courses — scripts, voiceovers, on-screen visuals, and animations — all ready to publish. Built for creators who want to launch professional video courses at scale without filming a single frame.
+          </p>
+          <ul class="card-features">
+            <li>AI-generated video scripts, voiceovers &amp; visuals</li>
+            <li>Full course authoring with scene-by-scene editor</li>
+            <li>Auto-generated animations, captions &amp; branding</li>
+            <li>Publish to LMS, YouTube, or embed anywhere</li>
+          </ul>
+          <a
+            href="https://creatorloom.mediasurf.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-cta cta-creatorloom"
+            data-track-event="cta_click"
+            data-track-category="products"
+            data-track-label="open_creatorloom"
+          >
+            Open CreatorLoom Studio &rarr;
+          </a>
+        </article>
       </div>
     </div>
   </section>
@@ -184,6 +215,10 @@ export default {
   background: radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
 }
 
+.card-creatorloom .card-glow {
+  background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+}
+
 .card-icon-wrapper {
   position: relative;
   z-index: 1;
@@ -218,6 +253,11 @@ export default {
   border-color: rgba(16, 185, 129, 0.2);
 }
 
+.card-creatorloom .card-icon {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.06));
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
 .card-badge {
   position: relative;
   z-index: 1;
@@ -248,6 +288,12 @@ export default {
   background: rgba(16, 185, 129, 0.1);
   color: #059669;
   border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badge-creatorloom {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 .card-title {
@@ -307,6 +353,7 @@ export default {
 .card-suite .card-features li::before { color: #6366f1; }
 .card-ppai .card-features li::before { color: #2563eb; }
 .card-pitstop .card-features li::before { color: #059669; }
+.card-creatorloom .card-features li::before { color: #d97706; }
 
 .card-cta {
   position: relative;
@@ -353,6 +400,16 @@ export default {
 .cta-pitstop:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+}
+
+.cta-creatorloom {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.cta-creatorloom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
 }
 
 @media (max-width: 768px) {
