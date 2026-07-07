@@ -241,19 +241,6 @@
               </div>
             </div>
 
-            <!-- Business Hours -->
-            <div class="sidebar-card hours-card">
-              <h3>Business Hours</h3>
-              <div class="hours-row">
-                <span>Monday - Friday:</span>
-                <span class="hours-time">9:00 AM - 6:00 PM PST</span>
-              </div>
-              <div class="hours-row">
-                <span>Saturday - Sunday:</span>
-                <span class="hours-time">Closed</span>
-              </div>
-              <p class="hours-note">* We typically respond to all inquiries within 24 hours during business days.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -788,39 +775,6 @@ export default {
   font-size: 0.95rem;
   opacity: 0.9;
   color: white;
-}
-
-/* Business Hours */
-.hours-card h3 {
-  margin-bottom: 1.5rem;
-}
-
-.hours-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #e2e8f0;
-  color: var(--text-secondary);
-}
-
-:root[data-theme="black"] .hours-row {
-  border-bottom-color: #333;
-}
-
-.hours-row:last-of-type {
-  margin-bottom: 1rem;
-}
-
-.hours-time {
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.hours-note {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin: 0;
-  font-style: italic;
 }
 
 /* CTA Section */
