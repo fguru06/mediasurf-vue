@@ -10,8 +10,7 @@
             {{ stat.icon }}
           </div>
           <div class="stat-content">
-            <div class="stat-number">{{ stat.number }}</div>
-            <div class="stat-label">{{ stat.label }}</div>
+            <div class="stat-headline">{{ stat.headline }}</div>
             <div class="stat-description">{{ stat.description }}</div>
           </div>
         </div>
@@ -28,30 +27,26 @@ export default {
       stats: [
         {
           icon: '🤝',
-          number: '150+',
-          label: 'Happy Clients',
-          description: 'Companies worldwide trust our solutions',
+          headline: 'Trusted Partnerships',
+          description: 'Collaborating with organizations to modernize learning',
           gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
-          icon: '📚',
-          number: '200+',
-          label: 'Projects Delivered',
-          description: 'Custom training and e-learning solutions',
+          icon: '💻',
+          headline: 'Innovative Projects',
+          description: 'Building AI‑powered authoring and LMS solutions',
           gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
           icon: '🏆',
-          number: '98%',
-          label: 'Client Satisfaction',
-          description: 'Consistently exceeding expectations',
+          headline: 'Commitment to Quality',
+          description: 'Delivering excellence in every engagement',
           gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
         },
         {
           icon: '⚡',
-          number: '50K+',
-          label: 'Employees Trained',
-          description: 'Through our client programs',
+          headline: 'Empowering Teams',
+          description: 'Helping educators and trainers scale their impact',
           gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         }
       ]
@@ -145,11 +140,11 @@ export default {
   margin-bottom: 0.5rem;
 }
 
-.stat-label {
-  font-size: 1.1rem;
+.stat-headline {
+  font-size: 1.15rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .stat-description {
