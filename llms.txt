@@ -1,0 +1,31 @@
+# MediaSurf Technologies — llms.txt
+# https://llmstxt.org
+
+# About
+MediaSurf Technologies is an AI-first learning technology company based in Waterloo, Ontario, Canada.
+We build AI-powered learning products and custom LMS platforms for corporate training and education.
+
+# Products
+- LearnCraft Authoring Suite: AI course generator (GPT-4o) + live block-based editor. Generates lessons, quizzes, flashcards, branching scenarios. Exports SCORM/xAPI. https://learncraft.mediasurf.ca
+- CreatorLoom: AI video course generator & authoring studio. Generates scripts, voiceovers, visuals, and animations — no filming required. https://creatorloom.mediasurf.ca
+- PowerPoint AI Tool: Upload any PPT and convert slides to structured lessons, modules, and quizzes. https://learncraft.mediasurf.ca
+- PitStop: Mobile mechanic marketplace connecting customers with certified mobile technicians. https://pitstop.mediasurf.ca
+
+# Services
+- Custom LMS Development: SCORM/xAPI-compliant platforms with AI integration, analytics, and SSO. https://mediasurf.ca/services/custom-lms-development
+- Employee Onboarding & Corporate Training: Role-based learning pathways, AI-generated content, measurable outcomes. https://mediasurf.ca/services/employee-onboarding
+
+# Contact
+Email: info@mediasurf.ca
+Location: Waterloo, ON, Canada
+Website: https://mediasurf.ca
+LinkedIn: https://www.linkedin.com/company/mediasurf-tech
+Twitter/X: https://x.com/mediasurftech
+
+# Key pages
+- Home: https://mediasurf.ca/
+- LearnCraft product: https://mediasurf.ca/learncraft
+- CreatorLoom product: https://mediasurf.ca/creatorloom
+- Blog: https://mediasurf.ca/blog
+- About: https://mediasurf.ca/about
+- Contact: https://mediasurf.ca/contact
