@@ -1,7 +1,8 @@
 <template></template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted } from 'vue';
+import { computed } from 'vue';
+import { useHead } from '@unhead/vue';
 
 const props = defineProps({
   schemaId: {
@@ -54,23 +55,13 @@ const serviceSchema = computed(() => ({
   }
 }));
 
-onMounted(() => {
-  let scriptEl = document.getElementById(scriptElId.value);
-
-  if (!scriptEl) {
-    scriptEl = document.createElement('script');
-    scriptEl.setAttribute('type', 'application/ld+json');
-    scriptEl.setAttribute('id', scriptElId.value);
-    document.head.appendChild(scriptEl);
-  }
-
-  scriptEl.textContent = JSON.stringify(serviceSchema.value);
-});
-
-onBeforeUnmount(() => {
-  const scriptEl = document.getElementById(scriptElId.value);
-  if (scriptEl) {
-    scriptEl.remove();
-  }
-});
+useHead(computed(() => ({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(serviceSchema.value),
+      id: `json-ld-${props.schemaId}`,
+    }
+  ],
+})));
 </script>

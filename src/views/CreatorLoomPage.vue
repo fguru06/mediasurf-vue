@@ -152,8 +152,61 @@
 <script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import { useHead } from '@unhead/vue';
 
 const route = useRoute();
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      id: 'json-ld-creatorloom',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'SoftwareApplication',
+            '@id': 'https://mediasurf.ca/#app-creatorloom',
+            name: 'CreatorLoom — AI Video Course Generator & Studio',
+            applicationCategory: 'EducationalApplication',
+            operatingSystem: 'Web',
+            url: 'https://creatorloom.mediasurf.ca',
+            publisher: { '@id': 'https://mediasurf.ca/#organization' },
+            description: 'Fully AI-powered video course generation and authoring. Generate complete video courses with AI scripts, voiceovers, visuals, and animations — no filming required.',
+            featureList: [
+              'AI script generation',
+              'AI voiceover engine with multiple languages',
+              'Auto-generated visuals and animations',
+              'Scene-by-scene editor',
+              'SCORM, xAPI, and MP4 export',
+              'Learner analytics and engagement tracking'
+            ]
+          },
+          {
+            '@type': 'Product',
+            '@id': 'https://mediasurf.ca/#product-creatorloom',
+            name: 'CreatorLoom',
+            description: 'Fully AI-powered video course generation and authoring platform. Generate complete video courses with AI scripts, voiceovers, visuals, and animations — no filming required.',
+            brand: { '@id': 'https://mediasurf.ca/#organization' },
+            category: 'AI Video Course Generator & Studio',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'CAD',
+              availability: 'https://schema.org/InStock',
+              url: 'https://creatorloom.mediasurf.ca'
+            }
+          },
+          {
+            '@type': 'Organization',
+            '@id': 'https://mediasurf.ca/#organization',
+            name: 'MediaSurf Technologies',
+            url: 'https://mediasurf.ca'
+          }
+        ]
+      })
+    }
+  ]
+});
 
 const activeVariant = computed(() => {
   const raw = String(route.query.variant || 'a').toLowerCase();

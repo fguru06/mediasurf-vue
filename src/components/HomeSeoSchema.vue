@@ -1,9 +1,7 @@
 <template></template>
 
 <script setup>
-import { onBeforeUnmount, onMounted } from 'vue';
-
-const schemaScriptId = 'home-seo-schema';
+import { useHead } from '@unhead/vue';
 
 const homeSeoSchema = {
   '@context': 'https://schema.org',
@@ -32,7 +30,7 @@ const homeSeoSchema = {
       '@id': 'https://mediasurf.ca/#localbusiness',
       name: 'MediaSurf Technologies',
       url: 'https://mediasurf.ca',
-      image: 'https://mediasurf.ca/og-image.svg',
+      image: 'https://mediasurf.ca/og-image.png',
       email: 'info@mediasurf.ca',
       areaServed: {
         '@type': 'State',
@@ -273,23 +271,13 @@ const homeSeoSchema = {
   ]
 };
 
-onMounted(() => {
-  let scriptEl = document.getElementById(schemaScriptId);
-
-  if (!scriptEl) {
-    scriptEl = document.createElement('script');
-    scriptEl.setAttribute('type', 'application/ld+json');
-    scriptEl.setAttribute('id', schemaScriptId);
-    document.head.appendChild(scriptEl);
-  }
-
-  scriptEl.textContent = JSON.stringify(homeSeoSchema);
-});
-
-onBeforeUnmount(() => {
-  const scriptEl = document.getElementById(schemaScriptId);
-  if (scriptEl) {
-    scriptEl.remove();
-  }
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(homeSeoSchema),
+      id: 'home-seo-schema',
+    }
+  ],
 });
 </script>

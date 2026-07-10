@@ -165,8 +165,61 @@
 <script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import { useHead } from '@unhead/vue';
 
 const route = useRoute();
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      id: 'json-ld-learncraft',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'SoftwareApplication',
+            '@id': 'https://learncraft.mediasurf.ca/#app',
+            name: 'LearnCraft Authoring Suite — AI Generator + Live Editor',
+            applicationCategory: 'EducationalApplication',
+            operatingSystem: 'Web',
+            url: 'https://learncraft.mediasurf.ca/editor',
+            publisher: { '@id': 'https://mediasurf.ca/#organization' },
+            description: 'GPT-4o AI course generator with a live block-based editor. Generate complete SCORM/xAPI-compliant courses with auto-generated lessons, quizzes, flashcards, and branching scenarios.',
+            featureList: [
+              'GPT-4o AI-powered course generation',
+              'Live block-based editor',
+              'Auto-generated lessons, modules, and quizzes',
+              'Flashcard and branching scenario generation',
+              'SCORM and xAPI-compliant export',
+              'Publish to LearnCraft LMS'
+            ]
+          },
+          {
+            '@type': 'Product',
+            '@id': 'https://mediasurf.ca/#product-learncraft-suite',
+            name: 'LearnCraft Authoring Suite',
+            description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
+            brand: { '@id': 'https://mediasurf.ca/#organization' },
+            category: 'AI Course Generator & Editor',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'CAD',
+              availability: 'https://schema.org/InStock',
+              url: 'https://learncraft.mediasurf.ca/editor'
+            }
+          },
+          {
+            '@type': 'Organization',
+            '@id': 'https://mediasurf.ca/#organization',
+            name: 'MediaSurf Technologies',
+            url: 'https://mediasurf.ca'
+          }
+        ]
+      })
+    }
+  ]
+});
 
 const activeVariant = computed(() => {
   const raw = String(route.query.variant || 'a').toLowerCase();
