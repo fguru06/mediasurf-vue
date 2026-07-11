@@ -13,7 +13,7 @@
       image: '/og-image.png'
     },
     about: {
-      title: 'About Us â€” AI-Powered Learning Technology | MediaSurf Technologies',
+      title: 'About Us — AI-Powered Learning Technology | MediaSurf Technologies',
       description:
         'MediaSurf Technologies is an AI-first learning tech company. Creators of LearnCraft Authoring Suite, PowerPoint AI Tool, and PitStop marketplace. Building the future of AI-powered education.',
       keywords:
@@ -21,7 +21,7 @@
       image: '/og-image.png'
     },
     contact: {
-      title: 'Contact MediaSurf â€” AI Course Generator, Slide Converter & LMS Experts',
+      title: 'Contact MediaSurf — AI Course Generator, Slide Converter & LMS Experts',
       description:
         'Contact MediaSurf Technologies to discuss LearnCraft Authoring Suite, PowerPoint AI Tool, PitStop marketplace, custom LMS development, SCORM/xAPI compliance, and corporate training solutions.',
       keywords:
@@ -45,7 +45,7 @@
       image: '/og-image.png'
     },
     blog: {
-      title: 'AI eLearning Blog â€” Course Generators, LMS & Training Automation | MediaSurf',
+      title: 'AI eLearning Blog — Course Generators, LMS & Training Automation | MediaSurf',
       description:
         'Expert insights on AI course generation, PowerPoint-to-course conversion, SCORM/xAPI standards, instructional design, LMS development, and AI training automation best practices.',
       keywords:
@@ -53,7 +53,7 @@
       image: '/og-image.png'
     },
     learncraft: {
-      title: 'LearnCraft Authoring Suite â€” AI Course Generator + Live Editor | MediaSurf',
+      title: 'LearnCraft Authoring Suite — AI Course Generator + Live Editor | MediaSurf',
       description:
         'LearnCraft Authoring Suite combines GPT-4o AI course generation with a live block-based editor. Generate lessons, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
       keywords:
@@ -61,9 +61,9 @@
       image: '/og-image.png'
     },
     creatorloom: {
-      title: 'CreatorLoom â€” AI Video Course Generator & Authoring Studio | MediaSurf',
+      title: 'CreatorLoom — AI Video Course Generator & Authoring Studio | MediaSurf',
       description:
-        'CreatorLoom is a fully AI-powered video course generation and authoring platform. Generate complete video courses with AI scripts, voiceovers, visuals, and animations â€” no filming required. Publish to any LMS or platform.',
+        'CreatorLoom is a fully AI-powered video course generation and authoring platform. Generate complete video courses with AI scripts, voiceovers, visuals, and animations — no filming required. Publish to any LMS or platform.',
       keywords:
         'CreatorLoom, AI video course generator, AI video authoring, AI video creation, AI script generator, AI voiceover, video course creator, AI course authoring, AI animation generator, AI video production, SCORM, xAPI, LMS video courses, no-code video creation, AI content studio, MediaSurf',
       image: '/og-image.png'
@@ -71,7 +71,7 @@
     privacy: {
       title: 'Privacy Policy | MediaSurf Technologies',
       description:
-        'MediaSurf Technologies Privacy Policy â€” how we collect, use, and protect your personal data. PIPEDA and GDPR compliant. Learn about your data rights.',
+        'MediaSurf Technologies Privacy Policy — how we collect, use, and protect your personal data. PIPEDA and GDPR compliant. Learn about your data rights.',
       keywords:
         'privacy policy, data protection, PIPEDA, GDPR, personal data, MediaSurf privacy',
       image: '/og-image.png'
@@ -79,7 +79,7 @@
     terms: {
       title: 'Terms of Service | MediaSurf Technologies',
       description:
-        'Terms of Service for MediaSurf Technologies â€” governing your use of our website, LearnCraft, PitStop, and all related services.',
+        'Terms of Service for MediaSurf Technologies — governing your use of our website, LearnCraft, PitStop, and all related services.',
       keywords:
         'terms of service, terms and conditions, MediaSurf terms, legal agreement',
       image: '/og-image.png'
@@ -87,7 +87,7 @@
     cookiePolicy: {
       title: 'Cookie Policy | MediaSurf Technologies',
       description:
-        'MediaSurf Technologies Cookie Policy â€” how we use cookies, Google Analytics, and tracking technologies. Manage your cookie preferences.',
+        'MediaSurf Technologies Cookie Policy — how we use cookies, Google Analytics, and tracking technologies. Manage your cookie preferences.',
       keywords:
         'cookie policy, cookies, Google Analytics, tracking, cookie consent, MediaSurf cookies',
       image: '/og-image.png'
