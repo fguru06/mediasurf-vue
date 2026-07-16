@@ -3,14 +3,14 @@
     <div class="container">
       <div class="lcai-layout">
         <div class="lcai-copy">
-          <div class="section-badge">🤖 LearnCraft AI</div>
+          <div class="section-badge">🤖 <strong>AI eLearning Authoring Suite</strong></div>
           <h2 class="section-title lcai-title">
-            Generate Courses<br>
-            With AI — in Minutes,<br>
-            Not Weeks
+            <strong>AI eLearning Authoring Suite</strong><br>
+            for Course Creation<br>
+            That Delivers Results
           </h2>
           <p class="lcai-description">
-            LearnCraft AI is our flagship AI course generator. Describe your topic, and our engine auto-generates complete course structures — modules, lessons, quizzes, images, and SCORM-ready outlines — all in one flow.
+            LearnCraft AI is our flagship <strong>AI eLearning course creation and authoring platform</strong>. Describe your topic, and our engine auto-generates complete course structures — modules, lessons, quizzes, images, and SCORM-ready outlines — all in one flow.
           </p>
 
           <div class="lcai-capabilities">

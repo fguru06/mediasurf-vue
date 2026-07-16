@@ -16,12 +16,12 @@
             AI-First Learning Technology Company
           </div>
           <h1 class="hero-title">
-            AI-Powered Products<br>
-            &amp; Custom Learning<br>
-            Platforms That Scale
+            <strong>AI eLearning Course Creation</strong><br>
+            &amp; Authoring Platforms<br>
+            That Scale
           </h1>
           <p class="hero-description">
-            MediaSurf builds AI course generators, instructor authoring tools, and industry-specific LMS platforms.
+            MediaSurf builds <strong>AI course generators</strong>, instructor <strong>authoring tools</strong>, and industry-specific LMS platforms.
             From automated content creation to hands-on training delivery — we power the full learning lifecycle.
           </p>
 
@@ -109,9 +109,9 @@
             </router-link>
           </div>
           <div class="hero-trust-list" aria-label="Platform capabilities">
-            <span>AI-Powered Course Generation</span>
-            <span>SCORM &amp; xAPI Compliant</span>
-            <span>Enterprise-Ready LMS</span>
+            <span><strong>AI-Powered Course Generation</strong></span>
+            <span><strong>SCORM &amp; xAPI Compliant</strong></span>
+            <span><strong>Enterprise-Ready LMS</strong></span>
           </div>
         </div>
 
