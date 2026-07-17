@@ -28,21 +28,7 @@
           <!-- Product pills -->
           <div class="hero-products">
             <a
-              href="https://learncraft.mediasurf.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-product-pill pill-ppai"
-              @click="$emit('track', 'hero_pp_ai_tool')"
-            >
-              <span class="pill-icon">📊</span>
-              <span class="pill-content">
-                <strong>PowerPoint AI Tool</strong>
-                <small>AI-Powered Slide Builder &amp; Course Converter</small>
-              </span>
-              <span class="pill-arrow">&rarr;</span>
-            </a>
-            <a
-              href="https://learncraft.mediasurf.ca/editor"
+              href="https://learncraftedu.ca"
               target="_blank"
               rel="noopener noreferrer"
               class="hero-product-pill pill-flagship"
@@ -57,7 +43,7 @@
               <span class="pill-arrow">&rarr;</span>
             </a>
             <a
-              href="https://pitstop.mediasurf.ca/"
+              href="https://pitstopservices.ca/"
               target="_blank"
               rel="noopener noreferrer"
               class="hero-product-pill pill-pitstop"
@@ -81,6 +67,20 @@
               <span class="pill-content">
                 <strong>CreatorLoom</strong>
                 <small>AI Video Course Generator &amp; Studio</small>
+              </span>
+              <span class="pill-arrow">&rarr;</span>
+            </a>
+            <a
+              href="https://pp-ai-tool.mediasurf.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-product-pill pill-ppai"
+              @click="$emit('track', 'hero_pp_ai_tool')"
+            >
+              <span class="pill-icon">📊</span>
+              <span class="pill-content">
+                <strong>PowerPoint AI Tool</strong>
+                <small>AI-Powered Slide Builder &amp; Course Converter</small>
               </span>
               <span class="pill-arrow">&rarr;</span>
             </a>
