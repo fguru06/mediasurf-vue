@@ -183,18 +183,14 @@ useHead({
             ]
           },
           {
-            '@type': 'Product',
+            '@type': 'SoftwareApplication',
             '@id': 'https://mediasurf.ca/#product-creatorloom',
             name: 'CreatorLoom',
             description: 'Fully AI-powered video course generation and authoring platform. Generate complete video courses with AI scripts, voiceovers, visuals, and animations — no filming required.',
-            brand: { '@id': 'https://mediasurf.ca/#organization' },
-            category: 'AI Video Course Generator & Studio',
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'CAD',
-              availability: 'https://schema.org/InStock',
-              url: 'https://creatorloom.mediasurf.ca'
-            }
+            applicationCategory: 'EducationalApplication',
+            operatingSystem: 'Web',
+            url: 'https://creatorloom.mediasurf.ca',
+            publisher: { '@id': 'https://mediasurf.ca/#organization' }
           },
           {
             '@type': 'Organization',

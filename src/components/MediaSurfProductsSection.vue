@@ -29,7 +29,7 @@
             <li>Publish to LearnCraft LMS or export SCORM</li>
           </ul>
           <a
-            href="https://learncraftedu.ca/editor"
+            href="https://learncraft.mediasurf.ca/editor"
             target="_blank"
             rel="noopener noreferrer"
             class="card-cta cta-suite"
@@ -91,7 +91,7 @@
             <li>Verified technician profiles and ratings</li>
           </ul>
           <a
-            href="https://pitstopservices.ca/"
+            href="https://pitstop.mediasurf.ca/"
             target="_blank"
             rel="noopener noreferrer"
             class="card-cta cta-pitstop"

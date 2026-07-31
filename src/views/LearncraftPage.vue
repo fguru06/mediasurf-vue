@@ -196,18 +196,14 @@ useHead({
             ]
           },
           {
-            '@type': 'Product',
+            '@type': 'SoftwareApplication',
             '@id': 'https://mediasurf.ca/#product-learncraft-suite',
             name: 'LearnCraft Authoring Suite',
             description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
-            brand: { '@id': 'https://mediasurf.ca/#organization' },
-            category: 'AI Course Generator & Editor',
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'CAD',
-              availability: 'https://schema.org/InStock',
-              url: 'https://learncraft.mediasurf.ca/editor'
-            }
+            applicationCategory: 'EducationalApplication',
+            operatingSystem: 'Web',
+            url: 'https://learncraft.mediasurf.ca/editor',
+            publisher: { '@id': 'https://mediasurf.ca/#organization' }
           },
           {
             '@type': 'Organization',

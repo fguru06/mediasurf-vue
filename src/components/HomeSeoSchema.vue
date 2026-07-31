@@ -98,51 +98,39 @@ const homeSeoSchema = {
       }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-learncraft-suite',
       name: 'LearnCraft Authoring Suite',
       description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
-      brand: {
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Web',
+      url: 'https://learncraft.mediasurf.ca/editor',
+      publisher: {
         '@id': 'https://mediasurf.ca/#organization'
-      },
-      category: 'AI Course Generator & Editor',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://learncraft.mediasurf.ca/editor'
       }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-pp-ai-tool',
       name: 'PowerPoint AI Tool',
       description: 'AI-powered slide builder and course converter. Upload any PPT file and instantly convert it into lessons, modules, quizzes, or full courses with AI rewriting and slide enhancement.',
-      brand: {
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Web',
+      url: 'https://learncraft.mediasurf.ca/',
+      publisher: {
         '@id': 'https://mediasurf.ca/#organization'
-      },
-      category: 'AI Slide-to-Course Converter',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://learncraft.mediasurf.ca/'
       }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-pitstop',
       name: 'PitStop',
       description: 'Mobile mechanic marketplace connecting customers with certified mobile technicians. Customer-to-technician matching, real-time job tracking, AI-assisted diagnostics, and secure payments.',
-      brand: {
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      url: 'https://pitstop.mediasurf.ca/',
+      publisher: {
         '@id': 'https://mediasurf.ca/#organization'
-      },
-      category: 'Mobile Mechanic Marketplace',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://pitstop.mediasurf.ca/'
       }
     },
     {
@@ -207,7 +195,7 @@ const homeSeoSchema = {
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://learncraft.mediasurf.ca/#app',
+      '@id': 'https://learncraft.mediasurf.ca/#app-ppt',
       name: 'LearnCraft AI — AI Course Generator & PPT to Course Converter',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
@@ -228,7 +216,7 @@ const homeSeoSchema = {
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://learncraft.mediasurf.ca/#app',
+      '@id': 'https://learncraft.mediasurf.ca/#app-editor',
       name: 'LearnCraft Authoring Suite — AI Generator + Live Editor',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',

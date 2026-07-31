@@ -24,60 +24,44 @@ const jsonLd = {
       }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-learncraft-suite',
       name: 'LearnCraft Authoring Suite',
       description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
-      brand: { '@id': 'https://mediasurf.ca/#organization' },
-      category: 'AI Course Generator & Editor',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://learncraft.mediasurf.ca/editor'
-      }
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Web',
+      url: 'https://learncraft.mediasurf.ca/editor',
+      publisher: { '@id': 'https://mediasurf.ca/#organization' }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-pp-ai-tool',
       name: 'PowerPoint AI Tool',
       description: 'AI-powered slide builder and course converter. Upload any PPT file and instantly convert it into lessons, modules, quizzes, or full courses with AI rewriting and slide enhancement.',
-      brand: { '@id': 'https://mediasurf.ca/#organization' },
-      category: 'AI Slide-to-Course Converter',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://learncraft.mediasurf.ca/'
-      }
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Web',
+      url: 'https://learncraft.mediasurf.ca/',
+      publisher: { '@id': 'https://mediasurf.ca/#organization' }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-creatorloom',
       name: 'CreatorLoom',
       description: 'Fully AI-powered video course generation and authoring platform. Generate complete video courses with AI scripts, voiceovers, visuals, and animations — no filming required.',
-      brand: { '@id': 'https://mediasurf.ca/#organization' },
-      category: 'AI Video Course Generator & Studio',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://learncraft.mediasurf.ca/creatorloom'
-      }
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Web',
+      url: 'https://learncraft.mediasurf.ca/creatorloom',
+      publisher: { '@id': 'https://mediasurf.ca/#organization' }
     },
     {
-      '@type': 'Product',
+      '@type': 'SoftwareApplication',
       '@id': 'https://mediasurf.ca/#product-pitstop',
       name: 'PitStop',
       description: 'Mobile mechanic marketplace connecting customers with certified mobile technicians. Real-time job tracking, AI-assisted diagnostics, secure payments, and verified technician profiles.',
-      brand: { '@id': 'https://mediasurf.ca/#organization' },
-      category: 'Mobile Mechanic Marketplace',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'CAD',
-        availability: 'https://schema.org/InStock',
-        url: 'https://pitstop.mediasurf.ca/'
-      }
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      url: 'https://pitstop.mediasurf.ca/',
+      publisher: { '@id': 'https://mediasurf.ca/#organization' }
     },
     {
       '@type': 'Service',
