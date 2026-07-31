@@ -104,7 +104,7 @@ const homeSeoSchema = {
       description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
-      url: 'https://learncraft.mediasurf.ca/editor',
+      url: 'https://learncraftedu.ca/editor',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       }
@@ -116,7 +116,7 @@ const homeSeoSchema = {
       description: 'AI-powered slide builder and course converter. Upload any PPT file and instantly convert it into lessons, modules, quizzes, or full courses with AI rewriting and slide enhancement.',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
-      url: 'https://learncraft.mediasurf.ca/',
+      url: 'https://learncraftedu.ca/',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       }
@@ -128,7 +128,7 @@ const homeSeoSchema = {
       description: 'Mobile mechanic marketplace connecting customers with certified mobile technicians. Customer-to-technician matching, real-time job tracking, AI-assisted diagnostics, and secure payments.',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
-      url: 'https://pitstop.mediasurf.ca/',
+      url: 'https://pitstopservices.ca/',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       }
@@ -195,11 +195,11 @@ const homeSeoSchema = {
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://learncraft.mediasurf.ca/#app-ppt',
+      '@id': 'https://learncraftedu.ca/#app-ppt',
       name: 'LearnCraft AI — AI Course Generator & PPT to Course Converter',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
-      url: 'https://learncraft.mediasurf.ca/',
+      url: 'https://learncraftedu.ca/',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       },
@@ -216,11 +216,11 @@ const homeSeoSchema = {
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://learncraft.mediasurf.ca/#app-editor',
+      '@id': 'https://learncraftedu.ca/#app-editor',
       name: 'LearnCraft Authoring Suite — AI Generator + Live Editor',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
-      url: 'https://learncraft.mediasurf.ca/editor',
+      url: 'https://learncraftedu.ca/editor',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       },
@@ -237,11 +237,11 @@ const homeSeoSchema = {
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://pitstop.mediasurf.ca/#app',
+      '@id': 'https://pitstopservices.ca/#app',
       name: 'PitStop — Mobile Mechanic Marketplace',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
-      url: 'https://pitstop.mediasurf.ca/',
+      url: 'https://pitstopservices.ca/',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
       },

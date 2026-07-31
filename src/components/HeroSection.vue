@@ -28,7 +28,7 @@
           <!-- Product pills -->
           <div class="hero-products">
             <a
-              href="https://learncraft.mediasurf.ca"
+              href="https://learncraftedu.ca"
               target="_blank"
               rel="noopener noreferrer"
               class="hero-product-pill pill-flagship"
@@ -43,7 +43,7 @@
               <span class="pill-arrow">&rarr;</span>
             </a>
             <a
-              href="https://pitstop.mediasurf.ca/"
+              href="https://pitstopservices.ca/"
               target="_blank"
               rel="noopener noreferrer"
               class="hero-product-pill pill-pitstop"

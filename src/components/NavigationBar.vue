@@ -41,7 +41,7 @@
         
         <div class="nav-actions">
           <a
-            href="https://learncraft.mediasurf.ca"
+            href="https://learncraftedu.ca"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-learncraft btn-learncraft-ai"

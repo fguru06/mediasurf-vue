@@ -46,7 +46,7 @@
 
           <div class="pitstop-actions">
             <a
-              href="https://pitstop.mediasurf.ca/"
+              href="https://pitstopservices.ca/"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-pitstop-primary"
@@ -57,7 +57,7 @@
               Explore PitStop Marketplace &rarr;
             </a>
             <a
-              href="https://pitstop.mediasurf.ca/"
+              href="https://pitstopservices.ca/"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-pitstop-secondary"

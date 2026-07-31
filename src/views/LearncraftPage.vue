@@ -12,7 +12,7 @@
 
             <div class="hero-actions">
               <a
-                href="https://learncraft.mediasurf.ca/login"
+                href="https://learncraftedu.ca/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-primary"
@@ -23,7 +23,7 @@
                 Open Learncraft LMS
               </a>
               <a
-                href="https://learncraft.mediasurf.ca"
+                href="https://learncraftedu.ca"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-secondary"
@@ -179,11 +179,11 @@ useHead({
         '@graph': [
           {
             '@type': 'SoftwareApplication',
-            '@id': 'https://learncraft.mediasurf.ca/#app',
+            '@id': 'https://learncraftedu.ca/#app',
             name: 'LearnCraft Authoring Suite — AI Generator + Live Editor',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Web',
-            url: 'https://learncraft.mediasurf.ca/editor',
+            url: 'https://learncraftedu.ca/editor',
             publisher: { '@id': 'https://mediasurf.ca/#organization' },
             description: 'GPT-4o AI course generator with a live block-based editor. Generate complete SCORM/xAPI-compliant courses with auto-generated lessons, quizzes, flashcards, and branching scenarios.',
             featureList: [
@@ -202,7 +202,7 @@ useHead({
             description: 'AI course generator (GPT-4o) combined with a live block-based editor. Generate lessons, modules, quizzes, flashcards, and branching scenarios. Publish to LearnCraft LMS or export SCORM/xAPI.',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Web',
-            url: 'https://learncraft.mediasurf.ca/editor',
+            url: 'https://learncraftedu.ca/editor',
             publisher: { '@id': 'https://mediasurf.ca/#organization' }
           },
           {
