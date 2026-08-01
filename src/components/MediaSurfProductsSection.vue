@@ -41,37 +41,6 @@
           </a>
         </article>
 
-        <!-- PowerPoint AI Tool -->
-        <article class="product-card card-ppai">
-          <div class="card-glow" aria-hidden="true"></div>
-          <div class="card-icon-wrapper">
-            <span class="card-icon">📊</span>
-          </div>
-          <div class="card-badge badge-ppai">AI Authoring</div>
-          <h3 class="card-title">PowerPoint AI Tool</h3>
-          <p class="card-subtitle">AI-Powered Slide Builder &amp; Course Converter</p>
-          <p class="card-description">
-            The PowerPoint AI Tool transforms slides into structured learning content. Upload any PPT file and instantly convert it into lessons, modules, quizzes, or full courses. Edit slides, rewrite content, generate visuals, and publish directly to LearnCraft LMS.
-          </p>
-          <ul class="card-features">
-            <li>Upload PowerPoint and convert to courses</li>
-            <li>AI rewriting, summarization, and slide enhancement</li>
-            <li>Auto-generate quizzes, modules, and lesson blocks</li>
-            <li>Export to LearnCraft LMS or SCORM</li>
-          </ul>
-          <a
-            href="https://learncraftedu.ca"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="card-cta cta-ppai"
-            data-track-event="cta_click"
-            data-track-category="products"
-            data-track-label="try_pp_ai_tool"
-          >
-            Try PowerPoint AI Tool &rarr;
-          </a>
-        </article>
-
         <!-- PitStop -->
         <article class="product-card card-pitstop">
           <div class="card-glow" aria-hidden="true"></div>
@@ -131,6 +100,37 @@
             data-track-label="open_creatorloom"
           >
             Open CreatorLoom Studio &rarr;
+          </a>
+        </article>
+
+                <!-- PowerPoint AI Tool -->
+        <article class="product-card card-ppai">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-icon-wrapper">
+            <span class="card-icon">📊</span>
+          </div>
+          <div class="card-badge badge-ppai">AI Authoring</div>
+          <h3 class="card-title">PowerPoint AI Tool</h3>
+          <p class="card-subtitle">AI-Powered Slide Builder &amp; Course Converter</p>
+          <p class="card-description">
+            The PowerPoint AI Tool transforms slides into structured learning content. Upload any PPT file and instantly convert it into lessons, modules, quizzes, or full courses. Edit slides, rewrite content, generate visuals, and publish directly to LearnCraft LMS.
+          </p>
+          <ul class="card-features">
+            <li>Upload PowerPoint and convert to courses</li>
+            <li>AI rewriting, summarization, and slide enhancement</li>
+            <li>Auto-generate quizzes, modules, and lesson blocks</li>
+            <li>Export to LearnCraft LMS or SCORM</li>
+          </ul>
+          <a
+            href="https://learncraftedu.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-cta cta-ppai"
+            data-track-event="cta_click"
+            data-track-category="products"
+            data-track-label="try_pp_ai_tool"
+          >
+            Try PowerPoint AI Tool &rarr;
           </a>
         </article>
       </div>
