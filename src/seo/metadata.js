@@ -5,51 +5,51 @@
   twitterSite: '@MediaSurfTech',
   pages: {
     home: {
-      title: 'AI Course Generator, AI LMS & Learning Products | MediaSurf Technologies',
+      title: 'Custom Web Development & AI-Powered Learning Platforms | MediaSurf Technologies',
       description:
-        'MediaSurf builds AI-powered learning products: LearnCraft Authoring Suite (AI course generator + live editor), PowerPoint AI Tool (slide-to-course converter), CreatorLoom (AI video course generator & studio), and PitStop (mobile mechanic marketplace). AI course creation, SCORM/xAPI LMS, and custom learning platforms.',
+        'MediaSurf Technologies Inc. is a B2B digital technology partner specializing in custom front-end engineering (Vue.js, React, Next.js, Tailwind CSS) and AI-powered learning platforms. We build modern web apps, SCORM/xAPI LMS platforms, and AI course generators for agencies and enterprises.',
       keywords:
-        'AI course generator, AI course creation, AI LMS, AI learning platform, AI training automation, AI content generation, AI video course generator, AI video authoring, CreatorLoom, PowerPoint AI tool, PPT to course converter, AI slide builder, LearnCraft Authoring Suite, AI course authoring, PitStop marketplace, mobile mechanic, best free AI course generator, LMS, learning management system, SCORM, xAPI, instructional design, corporate training, curriculum authoring, elearning platform, custom LMS development, MediaSurf',
+        'custom web development, front-end engineering, Vue.js developer, React developer, Next.js developer, Tailwind CSS, B2B web development, agency sub-contracting, white-label development, AI course generator, AI LMS, AI learning platform, SCORM, xAPI, custom LMS development, LearnCraft Authoring Suite, CreatorLoom, AI video course generator, PitStop marketplace, MediaSurf',
       image: '/og-image.png'
     },
     about: {
-      title: 'About Us — AI-Powered Learning Technology | MediaSurf Technologies',
+      title: 'About — B2B Digital Technology & AI Solutions Studio | MediaSurf Technologies',
       description:
-        'MediaSurf Technologies is an AI-first learning tech company. Creators of LearnCraft Authoring Suite, PowerPoint AI Tool, and PitStop marketplace. Building the future of AI-powered education.',
+        'MediaSurf Technologies Inc. is a B2B digital technology studio based in Waterloo, ON. We specialize in front-end engineering (Vue.js, React, Next.js, Tailwind CSS), custom web applications, and AI-powered learning platforms. White-label agency partner.',
       keywords:
-        'about MediaSurf, AI learning technology company, LearnCraft Authoring Suite, PowerPoint AI Tool, PitStop marketplace, AI course generator company, instructional design experts, corporate training partner, AI learning platform, SCORM, xAPI, educational technology',
+        'about MediaSurf, B2B digital technology studio, front-end engineering company, Vue.js development, React development, Next.js development, Tailwind CSS, web development agency Ontario, Waterloo tech company, AI learning platforms, LearnCraft Authoring Suite, AI course generator, SCORM, xAPI, white-label development, MediaSurf',
       image: '/og-image.png'
     },
     contact: {
-      title: 'Contact MediaSurf — AI Course Generator, Slide Converter & LMS Experts',
+      title: 'Contact — B2B Web Development & AI Solutions | MediaSurf Technologies',
       description:
-        'Contact MediaSurf Technologies to discuss LearnCraft Authoring Suite, PowerPoint AI Tool, PitStop marketplace, custom LMS development, SCORM/xAPI compliance, and corporate training solutions.',
+        'Contact MediaSurf Technologies for custom front-end engineering, agency sub-contracting, white-label development, AI-powered learning platforms, custom LMS development, and SCORM/xAPI solutions. Based in Waterloo, ON.',
       keywords:
-        'contact MediaSurf, AI course generator demo, PowerPoint AI tool demo, LearnCraft Authoring Suite trial, PitStop marketplace inquiry, custom LMS development quote, SCORM xAPI compliance, instructional design services, corporate training solutions',
+        'contact MediaSurf, hire Vue.js developer, hire React developer, front-end development quote, agency sub-contracting, white-label development partner, AI course generator demo, custom LMS development quote, SCORM xAPI compliance, Waterloo web development, MediaSurf',
       image: '/og-image.png'
     },
     customLmsDevelopment: {
-      title: 'Custom LMS Development | AI-Integrated | SCORM & xAPI | MediaSurf Technologies',
+      title: 'Custom LMS & Web App Development | SCORM/xAPI | MediaSurf Technologies',
       description:
-        'Custom LMS development with AI course generation, LearnCraft integration, and PowerPoint-to-course conversion. SCORM/xAPI-compliant platforms with instructional design and learning analytics.',
+        'Custom LMS development with AI course generation, Vue.js/React front-ends, and SCORM/xAPI compliance. Full-stack learning platforms built for enterprises — from authoring tools to learner analytics dashboards.',
       keywords:
-        'custom LMS development, AI LMS platform, SCORM compliant LMS, xAPI learning management system, enterprise LMS, AI course generator integration, LearnCraft LMS integration, PowerPoint to LMS, curriculum authoring, instructional design platform, corporate e-learning, learning analytics',
+        'custom LMS development, AI LMS platform, SCORM compliant LMS, xAPI learning management system, Vue.js LMS, React LMS, enterprise LMS, AI course generator integration, LearnCraft LMS integration, curriculum authoring, corporate e-learning, learning analytics, MediaSurf',
       image: '/og-image.png'
     },
     employeeOnboarding: {
-      title: 'AI Employee Onboarding & Corporate Training | MediaSurf Technologies',
+      title: 'Employee Onboarding & Corporate Training Platforms | MediaSurf Technologies',
       description:
-        'AI-powered employee onboarding with LearnCraft Authoring Suite and PowerPoint AI Tool. Role-based pathways, AI-generated content, SCORM/xAPI compliance, and measurable performance analytics.',
+        'Custom employee onboarding and corporate training platforms built with modern front-end stacks (Vue.js, React) and AI-powered content generation. Role-based pathways, SCORM/xAPI compliance, and performance analytics.',
       keywords:
-        'AI employee onboarding, corporate training platform, AI course generator onboarding, PowerPoint to training, SCORM compliant onboarding, curriculum authoring tool, instructional design onboarding, AI learning platform, employee ramp-up',
+        'employee onboarding platform, corporate training platform, AI course generator onboarding, SCORM compliant onboarding, curriculum authoring tool, AI learning platform, employee ramp-up, custom web application, Vue.js training platform, React training dashboard, MediaSurf',
       image: '/og-image.png'
     },
     blog: {
-      title: 'AI eLearning Blog — Course Generators, LMS & Training Automation | MediaSurf',
+      title: 'Blog — Web Development, AI & Learning Technology | MediaSurf Technologies',
       description:
-        'Expert insights on AI course generation, PowerPoint-to-course conversion, SCORM/xAPI standards, instructional design, LMS development, and AI training automation best practices.',
+        'Insights on front-end engineering (Vue.js, React, Next.js), AI-powered course generation, SCORM/xAPI standards, custom LMS development, and B2B agency partnerships from the MediaSurf team.',
       keywords:
-        'AI course generator blog, AI training automation, AI content generation, PowerPoint AI tool, PPT to SCORM, SCORM xAPI insights, instructional design tips, LMS development articles, corporate training best practices, elearning platform strategies',
+        'web development blog, Vue.js blog, React blog, front-end engineering blog, AI course generator blog, SCORM xAPI insights, LMS development articles, B2B agency partnerships, custom web applications, MediaSurf blog',
       image: '/og-image.png'
     },
     learncraft: {
