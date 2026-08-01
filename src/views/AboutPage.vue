@@ -7,26 +7,24 @@
         <div class="hero-content">
           <div class="hero-badge">About Us</div>
           <h1 class="hero-title">
-            Transforming Corporate Learning Through 
-            <span class="gradient-text">Innovation & Technology</span>
+            A B2B Digital Technology Studio<br>
+            <span class="gradient-text">Built for Modern Teams</span>
           </h1>
           <p class="hero-description">
-            We're a team of passionate developers and learning experts dedicated to 
-            transforming corporate education through innovative technology solutions,
-            including AI-assisted learning and research-driven insights.
+            MediaSurf Technologies Inc. is a specialized front-end engineering and AI solutions partner. We build high-performance web applications, custom learning platforms, and scalable digital products for agencies, enterprises, and fast-moving teams.
           </p>
           <div class="hero-stats">
             <div class="hero-stat">
-              <div class="stat-value">500+</div>
-              <div class="stat-label">Projects Delivered</div>
+              <div class="stat-value">Vue.js / React / Next.js</div>
+              <div class="stat-label">Core Front-End Stack</div>
             </div>
             <div class="hero-stat">
-              <div class="stat-value">95%</div>
-              <div class="stat-label">Client Satisfaction</div>
+              <div class="stat-value">B2B &amp; Agency-First</div>
+              <div class="stat-label">Partnership Model</div>
             </div>
             <div class="hero-stat">
-              <div class="stat-value">10+</div>
-              <div class="stat-label">Years Experience</div>
+              <div class="stat-value">AI + LMS</div>
+              <div class="stat-label">Specialized Expertise</div>
             </div>
           </div>
         </div>
@@ -50,9 +48,7 @@
             </div>
             <div class="card-content">
               <p>
-                To empower organizations with world-class e-learning solutions and web 
-                technologies that enhance employee development, streamline onboarding, 
-                and create engaging educational experiences that drive business success.
+                To equip agencies and enterprises with production-grade front-end engineering and AI-powered learning tools — delivering clean, maintainable code and scalable platforms that ship on time and perform at scale.
               </p>
             </div>
           </div>
@@ -70,9 +66,7 @@
             </div>
             <div class="card-content">
               <p>
-                To be the leading partner for corporate learning transformation, recognized 
-                for innovation, quality, and the measurable impact we create in organizational 
-                learning and development across industries.
+                To be the go-to white-label development partner for digital agencies and the trusted engineering team behind ambitious AI learning products — recognized for code quality, reliability, and real business impact.
               </p>
             </div>
           </div>
@@ -87,28 +81,22 @@
           <div class="team-content">
             <h2 class="section-title">Who We Are</h2>
             <p class="text-content">
-              MediaSurf Technologies is a specialized consulting firm that bridges the gap 
-              between technology and corporate learning. Our team brings together expertise 
-              in web development, instructional design, AI learning tools, and educational technology.
+              MediaSurf Technologies Inc. is a B2B digital technology studio built around modern front-end engineering and AI-powered platform development. We specialize in Vue.js (Composition API), React, Next.js, and Tailwind CSS — combining deep JavaScript expertise with applied AI/ML for learning platforms.
             </p>
             <p class="text-content">
-              We also create custom authoring tools for organizations to generate and download
-              presentations and learning content with AI-assisted generation, tailored to their
-              unique workflows and business requirements.
+              Our team designs and builds custom web applications, SaaS dashboards, course authoring tools, and SCORM/xAPI-compliant LMS platforms. Everything we ship is performance-optimized, accessible, and delivered on spec.
             </p>
             <p class="text-content">
-              We work on a contractual basis with organizations of all sizes, from startups 
-              to Fortune 500 companies, delivering customized solutions that meet their 
-              unique learning and development challenges.
+              We operate on a B2B contractual basis — partnering with digital agencies for overflow and white-label development, and working directly with enterprises to build custom learning and web platforms. From startups to established organizations, we adapt to your stack and workflow.
             </p>
             <div class="stats-grid">
               <div class="stat-card">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years Experience</div>
+                <div class="stat-number">⚡</div>
+                <div class="stat-label">Front-End Engineering</div>
               </div>
               <div class="stat-card">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Expert Team</div>
+                <div class="stat-number">🤖</div>
+                <div class="stat-label">AI Platform Development</div>
               </div>
             </div>
           </div>
@@ -206,10 +194,9 @@
       <div class="cta-overlay"></div>
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Let's Build Something Amazing Together</h2>
+          <h2 class="cta-title">Let's Build Something Great Together</h2>
           <p class="cta-description">
-            Ready to elevate your corporate learning programs? Get in touch with us today 
-            and discover how we can transform your organization's learning experience.
+            Need a reliable front-end partner for your next project or an engineering team to build your AI learning platform? Get in touch — we'd love to hear about what you're building.
           </p>
           <div class="cta-buttons">
             <router-link to="/contact" class="cta-button primary">
@@ -262,17 +249,17 @@ onBeforeUnmount(() => {
 });
 
 const expertise = ref([
-  'Learning Management Systems (LMS)',
-  'Custom Authoring Tools for AI Content Generation',
-  'Interactive Course Development',
-  'Custom Web Applications',
-  'AI Learning Assistants & Automation',
-  'Learning Analytics & Decision Support',
-  'Mobile-Responsive Design',
-  'Assessment & Quiz Platforms',
-  'Video-Based Learning',
-  'Gamification Solutions',
-  'API Integration',
+  'Vue.js (Composition API) & React / Next.js',
+  'Tailwind CSS & Component Library Design',
+  'Custom Web Applications & SaaS Dashboards',
+  'AI-Powered Course Authoring & LMS Platforms',
+  'SCORM / xAPI-Compliant Content Delivery',
+  'Performance Optimization & Core Web Vitals',
+  'White-Label Agency Sub-Contracting',
+  'Figma-to-Code & Design System Implementation',
+  'API Integration & Headless CMS',
+  'Accessibility (a11y) & Responsive Design',
+  'Legacy App Modernization',
 ]);
 </script>
 
@@ -398,10 +385,11 @@ const expertise = ref([
 }
 
 .stat-value {
-  font-size: 2.25rem;
-  font-weight: 800;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: white;
   margin-bottom: 0.25rem;
+  white-space: nowrap;
 }
 
 .stat-label {

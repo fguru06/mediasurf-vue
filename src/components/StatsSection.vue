@@ -2,7 +2,7 @@
   <section class="stats">
     <div class="container">
       <div class="sr-only">
-        <h2>Corporate E-Learning and LMS Development Impact</h2>
+        <h2>B2B Digital Technology &amp; AI Solutions Impact</h2>
       </div>
       <div class="stats-grid">
         <div class="stat-card" v-for="(stat, index) in stats" :key="index">
@@ -26,27 +26,27 @@ export default {
     return {
       stats: [
         {
-          icon: '🤝',
-          headline: 'Trusted Partnerships',
-          description: 'Collaborating with organizations to modernize learning',
+          icon: '⚡',
+          headline: 'Modern Front-End Stack',
+          description: 'Vue.js, React, Next.js, Tailwind CSS — production-grade engineering',
           gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
-          icon: '💻',
-          headline: 'Innovative Projects',
-          description: 'Building AI‑powered authoring and LMS solutions',
+          icon: '🤝',
+          headline: 'B2B & Agency-First',
+          description: 'White-label development partner for digital agencies and enterprises',
           gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
-          icon: '🏆',
-          headline: 'Commitment to Quality',
-          description: 'Delivering excellence in every engagement',
+          icon: '🤖',
+          headline: 'AI & LMS Expertise',
+          description: 'AI course generators, authoring tools, and SCORM/xAPI-compliant platforms',
           gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
         },
         {
-          icon: '⚡',
-          headline: 'Empowering Teams',
-          description: 'Helping educators and trainers scale their impact',
+          icon: '🚀',
+          headline: 'Ship Fast, Ship Clean',
+          description: 'Performance-optimized, accessible code delivered on time and on spec',
           gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         }
       ]

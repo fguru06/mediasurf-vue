@@ -211,8 +211,8 @@
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <h4>Expert Team</h4>
-                  <p>Experienced developers and learning specialists</p>
+                  <h4>Modern Tech Stack</h4>
+                  <p>Vue.js, React, Next.js, Tailwind CSS — production-grade</p>
                 </div>
               </div>
               <div class="benefit">
@@ -223,8 +223,8 @@
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <h4>Flexible Contracts</h4>
-                  <p>Tailored engagement models to fit your needs</p>
+                  <h4>Flexible Engagements</h4>
+                  <p>B2B contracts, white-label, and overflow capacity</p>
                 </div>
               </div>
               <div class="benefit">
@@ -235,8 +235,8 @@
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <h4>Proven Results</h4>
-                  <p>95% client satisfaction and repeat business</p>
+                  <h4>Clean Code, On Spec</h4>
+                  <p>Performance-optimized, accessible, documented delivery</p>
                 </div>
               </div>
             </div>
