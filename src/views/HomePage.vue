@@ -5,6 +5,9 @@
       <HeroSection @track="trackEvent" />
     </div>
     <div class="reveal-on-scroll">
+      <B2BAgencySection />
+    </div>
+    <div class="reveal-on-scroll">
       <MediaSurfProductsSection />
     </div>
     <div class="reveal-on-scroll">
@@ -40,6 +43,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted } from 'vue';
 import HeroSection from '../components/HeroSection.vue';
+import B2BAgencySection from '../components/B2BAgencySection.vue';
 import MediaSurfProductsSection from '../components/MediaSurfProductsSection.vue';
 import LearnCraftAISection from '../components/LearnCraftAISection.vue';
 import LearnCraftEditorSection from '../components/LearnCraftEditorSection.vue';

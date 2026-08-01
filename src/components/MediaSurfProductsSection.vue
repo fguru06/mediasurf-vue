@@ -3,9 +3,9 @@
     <div class="container">
       <div class="section-header">
         <div class="section-badge">🚀 MediaSurf Products</div>
-        <h2 class="section-title">AI-Powered Learning Products, Built for Scale</h2>
+        <h2 class="section-title">AI-Powered Learning Products — Proof of Our Engineering Depth</h2>
         <p class="section-description">
-          Four flagship products designed to cover every learning workflow — from AI-generated courses to AI video authoring and hands-on technical training.
+          Four flagship products built in-house, demonstrating our full-stack capabilities across AI, front-end engineering, and platform development. From AI-generated courses to marketplace platforms — we build products that scale.
         </p>
       </div>
 

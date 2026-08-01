@@ -13,7 +13,7 @@ const homeSeoSchema = {
       url: 'https://mediasurf.ca',
       logo: 'https://mediasurf.ca/logo.svg',
       email: 'info@mediasurf.ca',
-      description: 'AI-first learning technology company building LearnCraft Authoring Suite (AI course generator + live editor), PowerPoint AI Tool (PPT-to-course converter), and PitStop (mobile mechanic marketplace).',
+      description: 'B2B digital technology partner specializing in front-end web development (Vue.js, React, Next.js, Tailwind CSS), custom web applications, AI-powered learning platforms (LearnCraft Authoring Suite, PowerPoint AI Tool), and marketplace platforms (PitStop).',
       sameAs: [
         'https://www.linkedin.com/company/mediasurf-tech',
         'https://x.com/mediasurftech'
@@ -46,7 +46,7 @@ const homeSeoSchema = {
     {
       '@type': 'ProfessionalService',
       '@id': 'https://mediasurf.ca/#professionalservice',
-      name: 'MediaSurf Technologies — AI Learning Products & Custom LMS Solutions',
+      name: 'MediaSurf Technologies — B2B Digital Technology, Web Development & AI Learning Solutions',
       provider: {
         '@id': 'https://mediasurf.ca/#organization'
       },
@@ -56,8 +56,20 @@ const homeSeoSchema = {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'AI Course Generator, Course Authoring, Automotive LMS, Custom LMS Development, Instructional Design, and Learning Analytics',
+        name: 'Front-End Web Development, Agency Sub-Contracting, Custom Web Applications, AI Course Generator, Course Authoring, Automotive LMS, Custom LMS Development, Instructional Design, and Learning Analytics',
         itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@id': 'https://mediasurf.ca/#service-b2b-webdev'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@id': 'https://mediasurf.ca/#service-agency-subcontracting'
+            }
+          },
           {
             '@type': 'Offer',
             itemOffered: {
@@ -131,6 +143,46 @@ const homeSeoSchema = {
       url: 'https://pitstopservices.ca/',
       publisher: {
         '@id': 'https://mediasurf.ca/#organization'
+      }
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://mediasurf.ca/#service-b2b-webdev',
+      name: 'Front-End Web Development & Custom Web Applications',
+      provider: {
+        '@id': 'https://mediasurf.ca/#organization'
+      },
+      serviceType: 'Custom Web Development & Front-End Engineering',
+      areaServed: {
+        '@type': 'State',
+        name: 'Ontario'
+      },
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'CAD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://mediasurf.ca/contact',
+        description: 'Production-grade Vue.js (Composition API), React, Next.js, and Tailwind CSS front-end engineering. Custom web applications, SaaS dashboards, client portals, and performance modernization for agencies and enterprises.'
+      }
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://mediasurf.ca/#service-agency-subcontracting',
+      name: 'Agency Sub-Contracting & White-Label Development',
+      provider: {
+        '@id': 'https://mediasurf.ca/#organization'
+      },
+      serviceType: 'White-Label Agency Development Partner',
+      areaServed: {
+        '@type': 'State',
+        name: 'Ontario'
+      },
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'CAD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://mediasurf.ca/contact',
+        description: 'Overflow development capacity for digital agencies. White-label front-end engineering integrated into your existing toolchain (Jira, Slack, Figma, GitHub). Clean, documented code delivered on time and on spec.'
       }
     },
     {

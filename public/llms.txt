@@ -2,14 +2,20 @@
 # https://llmstxt.org
 
 # About
-MediaSurf Technologies is an AI-first learning technology company based in Waterloo, Ontario, Canada.
-We build AI-powered learning products and custom LMS platforms for corporate training and education.
+MediaSurf Technologies Inc. is a B2B digital technology partner based in Waterloo, Ontario, Canada.
+We specialize in front-end web development (Vue.js, React, Next.js, Tailwind CSS) and AI-powered learning platforms.
+
+# B2B Services
+- Front-End Engineering: Vue.js (Composition API), React, Next.js, Tailwind CSS — production-grade web applications. https://mediasurf.ca/contact
+- Agency Sub-Contracting: White-label overflow development integrated into your workflow. https://mediasurf.ca/contact
+- Custom Web Applications: SaaS dashboards, client portals, internal tools. https://mediasurf.ca/contact
+- Performance & Modernization: Core Web Vitals, framework migrations, legacy app modernization. https://mediasurf.ca/contact
 
 # Products
-- LearnCraft Authoring Suite: AI course generator (GPT-4o) + live block-based editor. Generates lessons, quizzes, flashcards, branching scenarios. Exports SCORM/xAPI. https://learncraft.mediasurf.ca
+- LearnCraft Authoring Suite: AI course generator (GPT-4o) + live block-based editor. Generates lessons, quizzes, flashcards, branching scenarios. Exports SCORM/xAPI. https://learncraftedu.ca
 - CreatorLoom: AI video course generator & authoring studio. Generates scripts, voiceovers, visuals, and animations — no filming required. https://creatorloom.mediasurf.ca
-- PowerPoint AI Tool: Upload any PPT and convert slides to structured lessons, modules, and quizzes. https://learncraft.mediasurf.ca
-- PitStop: Mobile mechanic marketplace connecting customers with certified mobile technicians. https://pitstop.mediasurf.ca
+- PowerPoint AI Tool: Upload any PPT and convert slides to structured lessons, modules, and quizzes. https://learncraftedu.ca
+- PitStop: Mobile mechanic marketplace connecting customers with certified mobile technicians. https://pitstopservices.ca
 
 # Services
 - Custom LMS Development: SCORM/xAPI-compliant platforms with AI integration, analytics, and SSO. https://mediasurf.ca/services/custom-lms-development

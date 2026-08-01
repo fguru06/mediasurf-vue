@@ -13,16 +13,19 @@
         <div class="hero-text">
           <div class="badge">
             <span class="badge-dot" aria-hidden="true"></span>
-            AI-First Learning Technology Company
+            B2B Digital Technology &amp; AI Solutions Partner
           </div>
           <h1 class="hero-title">
-            <strong>AI eLearning Course Creation</strong><br>
-            &amp; Authoring Platforms<br>
-            That Scale
+            <strong>Custom Web Development</strong><br>
+            &amp; AI-Powered Digital<br>
+            Solutions
           </h1>
+          <p class="hero-subheadline">
+            Engineering modern web apps, scalable platforms, and intelligent learning tools for agencies, enterprises, and fast-moving teams.
+          </p>
           <p class="hero-description">
-            MediaSurf builds <strong>AI course generators</strong>, instructor <strong>authoring tools</strong>, and industry-specific LMS platforms.
-            From automated content creation to hands-on training delivery — we power the full learning lifecycle.
+            MediaSurf Technologies Inc. is a <strong>B2B digital technology partner</strong> specializing in high-end front-end engineering, custom web applications, and AI-powered eLearning platforms.
+            We help agencies and enterprises ship modern, performant digital products — from Vue.js/React apps to SCORM-compliant LMS platforms.
           </p>
 
           <!-- Product pills -->
@@ -88,14 +91,14 @@
 
           <div class="hero-actions">
             <a
-              href="#products"
+              href="#b2b-services"
               class="btn-primary-lg"
-              @click="$emit('track', 'hero_explore_products')"
+              @click="$emit('track', 'hero_b2b_services')"
               data-track-event="cta_click"
               data-track-category="hero"
-              data-track-label="explore_products"
+              data-track-label="view_b2b_services"
             >
-              Explore Our Products
+              B2B Development Services
             </a>
             <router-link
               to="/contact#contact-form"
@@ -109,9 +112,9 @@
             </router-link>
           </div>
           <div class="hero-trust-list" aria-label="Platform capabilities">
-            <span><strong>AI-Powered Course Generation</strong></span>
-            <span><strong>SCORM &amp; xAPI Compliant</strong></span>
-            <span><strong>Enterprise-Ready LMS</strong></span>
+            <span><strong>Vue.js · React · Next.js</strong></span>
+            <span><strong>Tailwind CSS · Front-End Engineering</strong></span>
+            <span><strong>AI-Powered LMS &amp; SCORM/xAPI</strong></span>
           </div>
         </div>
 
@@ -357,6 +360,15 @@ export default {
   line-height: 1.7;
   margin-bottom: 2.5rem;
   max-width: 540px;
+}
+
+.hero-subheadline {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 500;
+  color: rgba(229, 237, 251, 0.75);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
 }
 
 /* ---- Product Pills ---- */

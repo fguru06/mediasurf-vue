@@ -3,9 +3,9 @@
     <div class="container">
       <div class="section-header">
         <div class="section-badge">💪 MediaSurf Capabilities</div>
-        <h2 class="section-title">End-to-End Learning Technology &amp; Services</h2>
+        <h2 class="section-title">Full-Stack Digital Solutions &amp; AI Learning Technology</h2>
         <p class="section-description">
-          From AI course generation to custom LMS development, we cover the full spectrum of learning technology.
+          From custom web applications and front-end engineering to AI course generation and LMS platforms — we deliver end-to-end digital products.
         </p>
       </div>
 
@@ -29,57 +29,57 @@ export default {
     return {
       features: [
         {
+          icon: '⚡',
+          title: 'Front-End Engineering',
+          description: 'Vue.js (Composition API), React, Next.js, and Tailwind CSS — production-grade apps with clean, maintainable code.',
+          color: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
+        },
+        {
+          icon: '🔄',
+          title: 'Agency Sub-Contracting',
+          description: 'White-label development capacity integrated into your workflow. We deliver on time, on spec, every time.',
+          color: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)'
+        },
+        {
           icon: '🤖',
           title: 'AI Course Generation',
           description: 'Auto-generate complete courses with modules, lessons, quizzes, and images using LearnCraft AI.',
-          color: 'linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)'
+          color: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
         },
         {
           icon: '✏️',
           title: 'Instructor Authoring',
           description: 'Inline WYSIWYG editing with live preview, slide templates, and instructor review workflows.',
-          color: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)'
+          color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
-          icon: '🔧',
-          title: 'Industry-Specific LMS',
-          description: 'Purpose-built platforms like Pitstop for automotive training with role-based learning paths.',
-          color: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
+          icon: '🖥️',
+          title: 'Custom Web Applications',
+          description: 'SaaS dashboards, client portals, and internal tools built with modern front-end frameworks.',
+          color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
           icon: '🧩',
           title: 'Custom LMS Development',
           description: 'Enterprise LMS platforms with AI integration, secure roles, and scalable learner delivery.',
-          color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-        },
-        {
-          icon: '📚',
-          title: 'Curriculum & Course Design',
-          description: 'Interactive modules, multimedia lessons, and structured learning paths for any subject area.',
-          color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
-        },
-        {
-          icon: '🚀',
-          title: 'Employee Onboarding',
-          description: 'AI-powered onboarding experiences that get new hires productive faster.',
           color: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         },
         {
-          icon: '📊',
-          title: 'Learning Analytics',
-          description: 'AI-driven skills gap detection, engagement metrics, and predictive progress insights.',
+          icon: '🚀',
+          title: 'Performance & Modernization',
+          description: 'Core Web Vitals optimization, framework migrations, and legacy app modernization for faster, leaner products.',
           color: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)'
         },
         {
           icon: '📱',
           title: 'Mobile-First Design',
-          description: 'Responsive learning experiences that work seamlessly across all devices.',
+          description: 'Responsive, accessible experiences that work seamlessly across all devices and screen sizes.',
           color: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
         },
         {
           icon: '🎨',
           title: 'Branded Experiences',
-          description: 'Custom-designed learning platforms that align with your company\'s visual identity.',
+          description: 'Custom-designed platforms aligned with your company\'s visual identity and design system.',
           color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
         }
       ]

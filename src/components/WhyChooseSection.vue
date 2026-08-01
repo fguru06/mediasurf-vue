@@ -15,9 +15,8 @@
         <div class="content-side">
           <h2 class="section-title">Why Choose MediaSurf Tech?</h2>
           <p class="section-description">
-            We understand the unique challenges of corporate learning and development. 
-            Our team combines technical expertise with educational insights to deliver 
-            solutions that drive real results.
+            We're a B2B digital technology partner that combines deep front-end engineering expertise with AI-powered learning solutions. 
+            Agencies trust us for overflow development capacity; enterprises trust us for custom LMS platforms — both backed by clean code and reliable delivery.
           </p>
 
           <div class="benefits">
@@ -50,26 +49,26 @@ export default {
       benefits: [
         {
           icon: '🧩',
-          title: 'Custom Solutions',
-          description: 'Tailored to your specific corporate learning needs',
+          title: 'Agency-Ready Delivery',
+          description: 'White-label development that integrates seamlessly into your existing workflows and toolchain',
           color: '#dbeafe'
         },
         {
           icon: '🎯',
-          title: 'Results-Driven',
-          description: 'Focus on measurable learning outcomes',
+          title: 'Full-Stack Expertise',
+          description: 'Vue.js, React, Next.js, Tailwind CSS — modern front-end stacks paired with AI/ML integration',
           color: '#dbeafe'
         },
         {
           icon: '⚡',
-          title: 'Fast Delivery',
-          description: 'Efficient project timelines without compromising quality',
+          title: 'Fast, Reliable Execution',
+          description: 'Efficient project timelines without compromising code quality or performance',
           color: '#dbeafe'
         },
         {
           icon: '🧠',
-          title: 'AI + Research Depth',
-          description: 'Expertise in learning analytics, evaluation, and complex decision support',
+          title: 'AI + Learning Science',
+          description: 'Expertise in AI course generation, learning analytics, LMS platforms, and SCORM/xAPI',
           color: '#dbeafe'
         }
       ]
