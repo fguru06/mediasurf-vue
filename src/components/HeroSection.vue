@@ -16,105 +16,58 @@
             B2B Digital Technology &amp; AI Solutions Partner
           </div>
           <h1 class="hero-title">
-            <strong>Custom Web Development</strong><br>
-            &amp; AI-Powered Digital<br>
-            Solutions
+            Custom Web Development<br>
+            &amp; AI-Powered Learning<br>
+            Platforms
           </h1>
           <p class="hero-subheadline">
-            Engineering modern web apps, scalable platforms, and intelligent learning tools for agencies, enterprises, and fast-moving teams.
+            MediaSurf Technologies provides B2B front-end engineering, custom web applications, and AI course generators — powering the full learning lifecycle for agencies and enterprises.
           </p>
-          <p class="hero-description">
-            MediaSurf Technologies Inc. is a <strong>B2B digital technology partner</strong> specializing in high-end front-end engineering, custom web applications, and AI-powered eLearning platforms.
-            We help agencies and enterprises ship modern, performant digital products — from Vue.js/React apps to SCORM-compliant LMS platforms.
-          </p>
-
-          <!-- Product pills -->
-          <div class="hero-products">
-            <a
-              href="https://learncraftedu.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-product-pill pill-flagship"
-              @click="$emit('track', 'hero_learncraft_suite')"
-            >
-              <span class="pill-icon">✨</span>
-              <span class="pill-content">
-                <strong>LearnCraft Authoring Suite</strong>
-                <small>AI Course Generator &amp; Live Editor</small>
-              </span>
-              <span class="pill-badge-flagship">Flagship</span>
-              <span class="pill-arrow">&rarr;</span>
-            </a>
-            <a
-              href="https://pitstopservices.ca/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-product-pill pill-pitstop"
-              @click="$emit('track', 'hero_pitstop')"
-            >
-              <span class="pill-icon">🔧</span>
-              <span class="pill-content">
-                <strong>PitStop</strong>
-                <small>Mobile Mechanic Marketplace</small>
-              </span>
-              <span class="pill-arrow">&rarr;</span>
-            </a>
-            <a
-              href="https://creatorloom.mediasurf.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-product-pill pill-creatorloom"
-              @click="$emit('track', 'hero_creatorloom')"
-            >
-              <span class="pill-icon">🎬</span>
-              <span class="pill-content">
-                <strong>CreatorLoom</strong>
-                <small>AI Video Course Generator &amp; Studio</small>
-              </span>
-              <span class="pill-arrow">&rarr;</span>
-            </a>
-            <a
-              href="https://pp-ai-tool.mediasurf.ca/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-product-pill pill-ppai"
-              @click="$emit('track', 'hero_pp_ai_tool')"
-            >
-              <span class="pill-icon">📊</span>
-              <span class="pill-content">
-                <strong>PowerPoint AI Tool</strong>
-                <small>AI-Powered Slide Builder &amp; Course Converter</small>
-              </span>
-              <span class="pill-arrow">&rarr;</span>
-            </a>
-          </div>
 
           <div class="hero-actions">
             <a
               href="#b2b-services"
               class="btn-primary-lg"
-              @click="$emit('track', 'hero_b2b_services')"
+              @click="$emit('track', 'hero_services')"
               data-track-event="cta_click"
               data-track-category="hero"
-              data-track-label="view_b2b_services"
+              data-track-label="explore_services"
             >
-              B2B Development Services
+              Explore Services
             </a>
-            <router-link
-              to="/contact#contact-form"
+            <a
+              href="#products"
               class="btn-secondary-lg"
-              @click="$emit('track', 'hero_book_call')"
+              @click="$emit('track', 'hero_products')"
               data-track-event="cta_click"
               data-track-category="hero"
-              data-track-label="book_discovery_call"
+              data-track-label="view_products"
             >
-              Book Discovery Call
-            </router-link>
+              View Products
+            </a>
           </div>
-          <div class="hero-trust-list" aria-label="Platform capabilities">
-            <span><strong>Vue.js · React · Next.js</strong></span>
-            <span><strong>Tailwind CSS · Front-End Engineering</strong></span>
-            <span><strong>AI-Powered LMS &amp; SCORM/xAPI</strong></span>
+
+          <p class="hero-micro-tagline">
+            Available for B2B Sub-Contracts &amp; Agency Overflow Development
+          </p>
+
+          <div class="hero-capabilities-row" aria-label="Core capabilities">
+            <div class="cap-chip">
+              <span class="cap-chip-icon">🔄</span>
+              Agency Sub-Contracting
+            </div>
+            <div class="cap-chip">
+              <span class="cap-chip-icon">⚡</span>
+              Front-End Engineering
+            </div>
+            <div class="cap-chip">
+              <span class="cap-chip-icon">⚛️</span>
+              Vue.js / React / Next.js
+            </div>
+            <div class="cap-chip">
+              <span class="cap-chip-icon">🤖</span>
+              AI Learning Platforms
+            </div>
           </div>
         </div>
 
@@ -133,6 +86,63 @@
               <span class="collage-chip">{{ card.chip }}</span>
               <div class="panel-glow" aria-hidden="true"></div>
             </div>
+          </div>
+
+          <!-- Product pills under image -->
+          <div class="hero-image-pills">
+            <a
+              href="https://learncraftedu.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="image-pill pill-flagship"
+              @click="$emit('track', 'hero_learncraft_suite')"
+            >
+              <span class="image-pill-icon">✨</span>
+              <span class="image-pill-content">
+                <strong>LearnCraft Suite</strong>
+                <small>AI Course Generator &amp; Editor</small>
+              </span>
+              <span class="image-pill-badge">Flagship</span>
+            </a>
+            <a
+              href="https://pitstopservices.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="image-pill pill-pitstop"
+              @click="$emit('track', 'hero_pitstop')"
+            >
+              <span class="image-pill-icon">🔧</span>
+              <span class="image-pill-content">
+                <strong>PitStop</strong>
+                <small>Mobile Mechanic Marketplace</small>
+              </span>
+            </a>
+            <a
+              href="https://creatorloom.mediasurf.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="image-pill pill-creatorloom"
+              @click="$emit('track', 'hero_creatorloom')"
+            >
+              <span class="image-pill-icon">🎬</span>
+              <span class="image-pill-content">
+                <strong>CreatorLoom</strong>
+                <small>AI Video Course Studio</small>
+              </span>
+            </a>
+            <a
+              href="https://pp-ai-tool.mediasurf.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="image-pill pill-ppai"
+              @click="$emit('track', 'hero_pp_ai_tool')"
+            >
+              <span class="image-pill-icon">📊</span>
+              <span class="image-pill-content">
+                <strong>PowerPoint AI Tool</strong>
+                <small>Slide Builder &amp; Converter</small>
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -212,12 +222,12 @@ export default {
    Hero Section — Navy → Indigo Gradient
    ============================================= */
 .hero {
-  padding: clamp(7.5rem, 12vw, 9rem) 0 var(--section-spacing);
+  padding: clamp(7rem, 10vw, 8rem) 0 clamp(4rem, 6vw, 5rem);
   background: linear-gradient(135deg, #0a1628 0%, #141c3a 30%, #1a2156 60%, #1e266d 100%);
   overflow: hidden;
-  min-height: 90vh;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -292,9 +302,9 @@ export default {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -363,20 +373,138 @@ export default {
 }
 
 .hero-subheadline {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  font-weight: 500;
-  color: rgba(229, 237, 251, 0.75);
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  max-width: 600px;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 400;
+  color: rgba(229, 237, 251, 0.72);
+  line-height: 1.55;
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+.hero-description {
+  display: none;
 }
 
 /* ---- Product Pills ---- */
 .hero-products {
+  display: none;
+}
+
+/* ---- Product Pills Under Hero Image ---- */
+.hero-image-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.image-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.image-pill:hover {
+  transform: translateY(-1px);
+}
+
+.image-pill-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.image-pill-content {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  margin-bottom: 2rem;
+  gap: 0.1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.image-pill-content strong {
+  font-size: 0.72rem;
+  color: white;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.image-pill-content small {
+  font-size: 0.62rem;
+  color: rgba(229, 237, 251, 0.6);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.image-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Pill color variants */
+.image-pill.pill-flagship {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.15));
+  border-color: rgba(99, 102, 241, 0.35);
+}
+.image-pill.pill-flagship:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.25));
+  border-color: rgba(99, 102, 241, 0.55);
+}
+
+.image-pill.pill-pitstop {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.15));
+  border-color: rgba(16, 185, 129, 0.35);
+}
+.image-pill.pill-pitstop:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.25));
+  border-color: rgba(16, 185, 129, 0.55);
+}
+
+.image-pill.pill-creatorloom {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.15));
+  border-color: rgba(245, 158, 11, 0.35);
+}
+.image-pill.pill-creatorloom:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.25));
+  border-color: rgba(245, 158, 11, 0.55);
+}
+
+.image-pill.pill-ppai {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(34, 211, 238, 0.15));
+  border-color: rgba(59, 130, 246, 0.35);
+}
+.image-pill.pill-ppai:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(34, 211, 238, 0.25));
+  border-color: rgba(59, 130, 246, 0.55);
+}
+
+@media (max-width: 600px) {
+  .hero-image-pills {
+    grid-template-columns: 1fr;
+  }
 }
 
 .hero-product-pill {
@@ -524,25 +652,53 @@ export default {
 .hero-actions {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-micro-tagline {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(56, 189, 248, 0.85);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.12);
 }
 
 .hero-trust-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  display: none;
 }
 
-.hero-trust-list span {
+/* ---- Capabilities Row ---- */
+.hero-capabilities-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(147, 197, 253, 0.12);
+}
+
+.cap-chip {
   display: inline-flex;
   align-items: center;
-  padding: 0.35rem 0.7rem;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 999px;
   font-size: 0.78rem;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   color: #e5edfb;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(147, 197, 253, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(147, 197, 253, 0.15);
+  transition: all 0.2s;
+}
+
+.cap-chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(147, 197, 253, 0.3);
+}
+
+.cap-chip-icon {
+  font-size: 0.85rem;
 }
 
 .btn-primary-lg {
@@ -598,13 +754,13 @@ export default {
 .hero-image {
   position: relative;
   animation: fadeInRight 0.8s ease-out;
-  padding-top: 1rem;
   perspective: 800px;
+  margin-top: 0;
 }
 
 .collage-frame {
   position: relative;
-  min-height: 750px;
+  min-height: 500px;
   border-radius: 22px;
   border: 1px solid rgba(147, 197, 253, 0.18);
   background: linear-gradient(145deg, rgba(13, 30, 66, 0.55), rgba(26, 33, 86, 0.45));
@@ -629,6 +785,7 @@ export default {
   text-transform: uppercase;
   font-weight: 700;
   backdrop-filter: blur(6px);
+  display: none;
 }
 
 /* ---- Interactive panels with hover effects ---- */
@@ -835,19 +992,19 @@ export default {
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
-  .hero-description {
+  .hero-subheadline {
     max-width: 100%;
   }
 
   .collage-frame {
-    min-height: 560px;
+    min-height: 380px;
   }
 
   .hero-image {
