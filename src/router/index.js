@@ -53,6 +53,8 @@ const routes = [
   { path: '/privacy', name: 'Privacy', component: PrivacyPage, meta: { ...pages.privacy, head: makeHead({ path: '/privacy', meta: pages.privacy }) } },
   { path: '/terms', name: 'Terms', component: TermsPage, meta: { ...pages.terms, head: makeHead({ path: '/terms', meta: pages.terms }) } },
   { path: '/cookie-policy', name: 'CookiePolicy', component: CookiePolicyPage, meta: { ...pages.cookiePolicy, head: makeHead({ path: '/cookie-policy', meta: pages.cookiePolicy }) } },
+  // Catch-all redirect for unknown routes — sends them to home
+  { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/' },
 ]
 
 export default routes

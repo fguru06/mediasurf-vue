@@ -52,6 +52,13 @@ export const createApp = ViteSSG(
   ({ app, router, routes, isClient, initialState }) => {
     if (isClient) {
       setupGlobalClickTracking()
+
+      // Handle GitHub Pages 404 redirect (sessionStorage set by 404.html)
+      const savedPath = sessionStorage.getItem('gh-redirect')
+      if (savedPath) {
+        sessionStorage.removeItem('gh-redirect')
+        router.replace(savedPath)
+      }
     }
 
     router.beforeEach((to, from, next) => {

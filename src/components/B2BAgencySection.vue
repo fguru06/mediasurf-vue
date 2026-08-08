@@ -159,9 +159,9 @@ export default {
 /* Grid */
 .b2b-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 3rem;
 }
 
